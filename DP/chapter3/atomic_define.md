@@ -4,10 +4,10 @@
 
 |id     |描述                  |数据类型    |  
 |-------|-------------------|----------|
-| 1     | RelayServer配置      | string     |
-| 2     | MsgServer配置        | string     | 
-| 3     | CidOSSConfig配置     | string     | 
-| 4     | ClientOSSConfig配置  | string     | 
+| +1     | RelayServer配置      | string     |
+| +2     | MsgServer配置        | string     | 
+| +3     | CidOSSConfig配置     | string     | 
+| +4     | ClientOSSConfig配置  | string     | 
 
 
 
