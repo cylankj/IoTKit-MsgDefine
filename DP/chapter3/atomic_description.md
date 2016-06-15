@@ -48,22 +48,23 @@
 ## 是否有返回值
 
 如果需要返回值：
-对应消息ID [RobotDataRsp = 20202]
+终端会收到响应消息ID [RobotDataRsp = 20202]
 
 ## 是否展示图表
 
 此数据是否需要在APP端以图表形式展示
 如果需要图表：
-对应消息ID [RobotGetData = 20200] , limit > 1
+1 客户端展示列表时，调用消息ID [RobotGetData = 20200] , limit > 1获取数据。
+2 服务器需要对消息ID，CID及ACCOUNT做TCP消息计数，需要对ACCOUNT做APNS和GCM消息计数; 消息计数复用加菲狗KVS.
+3 客户端删除消息时，调用消息ID [RobotDelData = 20203]
 
 ## APP多终端是否需要同步
 
 如果需要同步：
-其他APP终端在线时，会收到消息[RobotDataRsp = 20202]，APP根据实际情况处理；
-每次上线后，APP端需调用[RobotGetData = 20200]同步最新配置。
-如果APP未做同步，多终端操作可能覆盖数据。
+1 其他APP终端在线时，会收到消息[RobotDataRsp = 20202]，APP根据实际情况处理。注：不包含分享帐号。
+2 每次上线后，APP端需调用[RobotGetData = 20200]同步最新配置。
+3 如果APP未做同步，多终端操作可能覆盖数据。
 
-注：不包含分享帐号。
 
 ## 是否推送消息到APP端
 

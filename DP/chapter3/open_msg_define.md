@@ -91,6 +91,48 @@
 
 * time 由服务器提供，客户端更新该消息的缓存时间戳。
 
+
+---
+
+## 2.4 消息定义 - 删除请求
+
+
+|  定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | TCP消息唯一标识：20203 |
+|caller| string | 源端标识 |
+|callee| string | 目的端标识 |
+|seq|int64| 序列号 |
+|idList | array | data消息数组 |
+
+| idList定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | 开放功能唯一标识 |
+|time| int64| 删除时间点 |
+
+* time 如果time为真，删除匹配条件的单条记录。如果time为0, 删除该id的全部消息。
+
+---
+
+## 2.5 消息定义 - 删除响应
+
+
+|  定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | TCP消息唯一标识：20204 |
+|caller| string | 源端标识 |
+|callee| string | 目的端标识 |
+|seq|int64| 序列号 |
+|dataList | array | data消息数组 |
+
+| data定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | 开放功能唯一标识 |
+|time| int64| 更新时间点 |
+|ret| int | 返回值 |
+
+* time 原样返回客户端的请求数据，只增加ret作为响应码。
+
 # 三、 公有功能消息定义：
 
 ## 3.1 全局配置类消息定义
@@ -218,10 +260,6 @@
 |time| int64| 时间点 |
 |version|string|  字符串|
  
-|  value定义 |  类型|   描述 | 
-|---|---|---|
-|version|string| 软件版本号 |
-|sysVersion|string| 系统版本号 |
 
 ---
  
