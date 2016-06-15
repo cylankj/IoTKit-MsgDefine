@@ -81,7 +81,7 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|dataList | array | data消息数组 |
+|dataList | array | 消息数组 |
 
 | data定义 |  类型|   描述 | 
 |---|---|---|
@@ -103,9 +103,9 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|idList | array | data消息数组 |
+|idList | array | 消息数组 |
 
-| idList定义 |  类型|   描述 | 
+| 元素定义 |  类型|   描述 | 
 |---|---|---|
 |id| int | 开放功能唯一标识 |
 |time| int64| 删除时间点 |
@@ -123,15 +123,52 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|dataList | array | data消息数组 |
+|dataList | array | 消息数组 |
 
-| data定义 |  类型|   描述 | 
+| 元素定义 |  类型|   描述 | 
 |---|---|---|
 |id| int | 开放功能唯一标识 |
 |time| int64| 更新时间点 |
 |ret| int | 返回值 |
 
 * time 原样返回客户端的请求数据，只增加ret作为响应码。
+
+
+## 2.6 消息定义 - 查询计数
+
+
+|  定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | TCP消息唯一标识：20205 |
+|caller| string | 源端标识 |
+|callee| string | 目的端标识 |
+|seq|int64| 序列号 |
+|idList | array | 消息数组 |
+
+| idList定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | 开放功能唯一标识 |
+
+
+---
+
+## 2.7 消息定义 - 查询计数响应
+
+
+|  定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | TCP消息唯一标识：20206 |
+|caller| string | 源端标识 |
+|callee| string | 目的端标识 |
+|seq|int64| 序列号 |
+|dataList | array | data消息数组 |
+
+| data定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | 开放功能唯一标识 |
+|count| int | 计数 |
+
+
 
 # 三、 公有功能消息定义：
 
@@ -302,7 +339,7 @@
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|file|int|协商命名规则为：time_id.jpg。目前有三张图片，用位来表示。第一张0x001。第二张0x010。第三张0x100。三张都有就是0x111|
+|file|int|协商命名规则为：time_id.jpg。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
 |type|int|海外或国内存储地区。128消息下发填充|
 
 
