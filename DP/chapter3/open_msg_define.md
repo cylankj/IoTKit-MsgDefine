@@ -17,20 +17,20 @@
  
 # 二、新增通用消息定义：
 
-## 2.1 消息定义 - 查询请求
+## 2.1 消息定义 - 查询请求 RobotGetData = 20200
 
 |  定义 |  类型|   描述 | 
 | --- | --- | --- |
-|id| int | TCP消息唯一标识：20200 |
+|id| int | TCP消息唯一标识 |
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
 |limit|int| 查询条数 |
 |asc|bool| 升降序 |
-|idList|array| 被查询功能的消息列表 |
+|reqList|array| 被查询功能的消息列表 |
 
 
-| idList定义 |  类型|   描述 | 
+| 定义 |  类型|   描述 | 
 |---|---|---|
 |id| int | 开放功能唯一标识 |
 |time| int64| 查询时间点 |
@@ -46,11 +46,11 @@
 
 ---
 
-## 2.2 消息定义 - 查询响应 + 设备上报消息 + 配置请求
+## 2.2 消息定义 - 查询响应 RobotGetDataRsp = 20201 
 
 |  定义 |  类型|   描述 | 
 |---|---|---|
-|id| int | TCP消息唯一标识：20201 |
+|id| int | TCP消息唯一标识 |
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
@@ -65,25 +65,42 @@
 
 说明：
 
-* 每个data都是一个开放功能的完整定义。下文为消息定义。
+* 每个data都是一个开放功能的完整定义。
+
+## 2.2 消息定义 -  设备上报消息 + 配置请求 RobotSetData = 20202 
+
+|  定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | TCP消息唯一标识 |
+|caller| string | 源端标识 |
+|callee| string | 目的端标识 |
+|seq|int64| 序列号 |
+|reqList | array | 消息数组 |
+
+| 元素定义 |  类型|   描述 | 
+|---|---|---|
+|id| int | 开放功能唯一标识 |
+|time| int64| 更新时间点 |
+|value| int, string, bool, ...| 基础类型： |
+
 * 如果操作需要响应码，通过data的value中增加retCode实现。
 
 
 ---
 
-## 2.3 消息定义 - 配置响应
+## 2.3 消息定义 - 配置响应 RobotSetDataRsp = 20203
 
 由开放功能定义表格返回值列决定是否要响应该消息。
 
 |  定义 |  类型|   描述 | 
 |---|---|---|
-|id| int | TCP消息唯一标识：20202 |
+|id| int | TCP消息唯一标识 |
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
 |dataList | array | 消息数组 |
 
-| data定义 |  类型|   描述 | 
+| 元素定义 |  类型|   描述 | 
 |---|---|---|
 |id| int | 开放功能唯一标识 |
 |time| int64| 更新时间点 |
@@ -94,16 +111,16 @@
 
 ---
 
-## 2.4 消息定义 - 删除请求
+## 2.4 消息定义 - 删除请求 RobotDelData = 20204
 
 
 |  定义 |  类型|   描述 | 
 |---|---|---|
-|id| int | TCP消息唯一标识：20203 |
+|id| int | TCP消息唯一标识|
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|idList | array | 消息数组 |
+|reqList | array | 消息数组 |
 
 | 元素定义 |  类型|   描述 | 
 |---|---|---|
@@ -114,12 +131,12 @@
 
 ---
 
-## 2.5 消息定义 - 删除响应
+## 2.5 消息定义 - 删除响应 RobotDelDataRsp = 20205
 
 
 |  定义 |  类型|   描述 | 
 |---|---|---|
-|id| int | TCP消息唯一标识：20204 |
+|id| int | TCP消息唯一标识 |
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
@@ -134,30 +151,30 @@
 * time 原样返回客户端的请求数据，只增加ret作为响应码。
 
 
-## 2.6 消息定义 - 查询计数
+## 2.6 消息定义 - 查询计数 RobotCountData = 20206
 
 
 |  定义 |  类型|   描述 | 
 |---|---|---|
-|id| int | TCP消息唯一标识：20205 |
+|id| int | TCP消息唯一标识 |
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|idList | array | 消息数组 |
+|reqList | array | 消息数组 |
 
-| idList定义 |  类型|   描述 | 
+| 定义 |  类型|   描述 | 
 |---|---|---|
 |id| int | 开放功能唯一标识 |
 
 
 ---
 
-## 2.7 消息定义 - 查询计数响应
+## 2.7 消息定义 - 查询计数响应 RobotCountDataRsp = 20207
 
 
 |  定义 |  类型|   描述 | 
 |---|---|---|
-|id| int | TCP消息唯一标识：20206 |
+|id| int | TCP消息唯一标识 |
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
