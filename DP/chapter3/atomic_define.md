@@ -1,20 +1,20 @@
 # 预定义消息概述
 
-## 一、全局配置类定义 ID_BEGIN = 0
+## 一、全局配置类定义 RID_BEGIN_CFG = 0
 
 |id     |描述                  |数据类型    |  
 |-------|-------------------|----------|
-| 1     | RelayServer配置      | string     |
-| 2     | MsgServer配置        | string     | 
-| 3     | CidOSSConfig配置     | string     | 
-| 4     | ClientOSSConfig配置  | string     | 
+| +1     | RelayServer配置      | string     |
+| +2     | MsgServer配置        | string     | 
+| +3     | CidOSSConfig配置     | string     | 
+| +4     | ClientOSSConfig配置  | string     | 
 
 
 
-## 二、局域网消息定义 ID_BEGIN = 100
+## 二、局域网消息定义 RID_BEGIN_UDP = 100
 
 
-## 三、开放功能定义表格 ID_BEGIN = 200
+## 三、开放功能定义表格 RID_BEGIN_OPEN = 200
 
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
 |-------|----------|----------|----------|----------|------------ |---------|---------|------|------|
