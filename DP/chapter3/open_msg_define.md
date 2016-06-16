@@ -432,9 +432,149 @@
 |time| int64| 时间点 |
 |uptime|int| 开机时间 |
   
-   
+
 ---
-  
+
+*  设置设备名称 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|alias|string| 设备名 |
+
+
+---
+
+*  提交WIFI信息 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string| msgpack字符串 |
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|postType|int| 0-绑定，1-设置WiFi|
+|SSID |string| / |
+|password|string| 密码 |
+|encryType |string| 加密方式 |
+|channel|string| 频段 |
+
+
+---
+
+
+*  门铃留言设置 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string| msgpack字符串 |
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|auto|bool| 自动留言设置|
+|noAnswer |bool|未接听时留言设置|
+
+
+---
+
+
+*  延迟摄影设置 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string| msgpack字符串 |
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|interval|int| 间隔时间|
+|duration |int|拍摄时长|
+|beginTime |int64|开始时间|
+
+
+---
+
+
+*  摄像头待机 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|enable|bool| / |
+
+
+---
+
+
+*  延迟摄影设置 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string| msgpack字符串 |
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|picFile|int| 协商命名规则为：time.jpg。|
+|ossType |int|海外或国内存储地区。128消息下发填充|
+|isOk |bool|接听状态|
+|audio |bool|是否有留言|
+
+
+---
+
+
+*  门磁消息通知开关设置 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|enable|bool| / |
+
+
+---
+
+
+*  每日精彩消息 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string| msgpack字符串 |
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|msgType|int| 0-附带图片，1-附带视频|
+|ossType |int|海外或国内存储地区。128消息下发填充|
+|fileName |string|附件文件名|
+
+---
+
+*  设置设备名称 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|alias|string| 设备名 |
+---
+ 
+
 * APP端多条查询消息 - 状态类
   
 组合查询 - 如同时查询SD卡和网络类型的消息请求：设备列表cidlist使用这种方式。
