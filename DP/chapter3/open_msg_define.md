@@ -41,7 +41,7 @@
 * 如果asc为否，服务器返回time时间点前的数据，之后的数据不返回。
 * 如果time置为0, 默认使用服务器当前时间。
 * 如果查询单条记录，limit置为1。
-* 如果查询列表，limit >1 && limit <=100。 此时，将未读消息计数清零。
+* 如果查询列表，limit >1 && limit <=100。
 * 服务器或相应端将响应的seq号与请求的seq保持相同，以保证消息的一一对应。
 
 
@@ -151,7 +151,7 @@
 * time 原样返回客户端的请求数据，只增加ret作为响应码。
 
 
-## 2.6 消息定义 - 查询未读消息计数 RobotCountData = 20206
+## 2.6 消息定义 - 未读消息计数 RobotCountData = 20206
 
 
 |  定义 |  类型|   描述 | 
@@ -160,16 +160,16 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
+|act|int| 操作：查询未读消息计数， 将未读消息计数清零(不需要响应RobotCountDataRsp) enum {RobotCountDataQuery, RobotCountDataClear}|
 |reqList | array | 消息数组 |
 
 | 定义 |  类型|   描述 | 
 |---|---|---|
 |id| int | 开放功能唯一标识 |
 
-
 ---
 
-## 2.7 消息定义 - 查询未读消息计数响应 RobotCountDataRsp = 20207
+## 2.7 消息定义 - 未读消息计数响应 RobotCountDataRsp = 20207
 
 
 |  定义 |  类型|   描述 | 
@@ -178,6 +178,7 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
+|act|int| 操作：查询未读消息计数 enum {RobotCountDataQuery}|
 |dataList | array | data消息数组 |
 
 | data定义 |  类型|   描述 | 
@@ -363,6 +364,7 @@
 ---
 
 *  控制设备麦克风
+
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
