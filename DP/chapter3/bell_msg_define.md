@@ -1,5 +1,4 @@
-
----
+## MIDBellCallMsg = MIDBellBegin +1
 
 *  门铃呼叫状态 
 
@@ -17,6 +16,8 @@
 |type|int| 区分云存储海内外地址 |
 
 ---
+
+## MIDBellLeaveMsg = MIDBellBegin +2
 
 *  门铃留言设置 
 
