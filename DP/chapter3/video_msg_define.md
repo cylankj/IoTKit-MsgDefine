@@ -1,4 +1,6 @@
----
+
+
+## MIDVideoMic = MIDVideoBegin +1
 
 *  控制设备麦克风
 
@@ -9,6 +11,8 @@
 |mike|bool| 开启/关闭麦克风 |
   
  ---
+
+## MIDVideoSpeaker = MIDVideoBegin +2
 
 *  控制设备喇叭
 
@@ -21,10 +25,14 @@
   
  ---
 
+## MIDVideoAutoRecord = MIDVideoBegin +3
+ 
 * 自动录像配置
 
 
  ---
+
+## MIDVideoDirection = MIDVideoBegin +4
 
 *  控制设备画面翻转
 
