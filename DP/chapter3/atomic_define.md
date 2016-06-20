@@ -44,7 +44,7 @@
 ## 五、门铃功能定义 MIDBellBegin = 400
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
 |-------|----------|----------|----------|----------|------------ |---------|---------|------|------|
-| MIDBellCallStatus = MIDBellBegin +1    | 门铃呼叫状态   | 否   | string     | 是        | 显示         | 无      |有       | 否 | 否 |
+| MIDBellCallMsg = MIDBellBegin +1    | 门铃呼叫状态   | 否   | string     | 是        | 显示         | 无      |有       | 否 | 否 |
 | MIDBellLeaveMsg = MIDBellBegin +2    | 留言设置(门铃)     | 否 | int     | 是        | 控制         | 有      |无       | 是 | 否 |
 
 
