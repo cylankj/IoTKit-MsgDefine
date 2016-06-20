@@ -1,3 +1,4 @@
+## MIDBaseNet=MIDBaseBegin +1
 
 * 设备上报网络类型 
 
