@@ -1,3 +1,4 @@
+## MIDCameraWarnEnable = MIDCameraBegin +1
 
 * 设备报警开关配置
 
@@ -9,6 +10,8 @@
 
 
 ---
+
+## MIDCameraWarnTime = MIDCameraBegin +2
 
 *  设备报警时间段配置
 
@@ -27,13 +30,19 @@
  
 ---
 
+## MIDCameraWarnSensitivity = MIDCameraBegin +3
+
 *  报警灵敏度配置
 
 ---
 
+## MIDCameraWarnSound = MIDCameraBegin +4
+
 *  报警提示音配置
 
 ---
+
+## MIDCameraWarnMsg = MIDCameraBegin +5 
 
 *  设备报警消息
 
@@ -52,6 +61,7 @@
 
 ---
 
+## MIDCameraTimeLapse = MIDCameraBegin +6
 
 *  延迟摄影设置 
 
@@ -73,6 +83,8 @@
 
 ---
 
+## MIDCameraWonder = MIDCameraBegin +7
+
 *  每日精彩消息 
 
 |  data定义 |    类型| 描述 | 
@@ -90,6 +102,7 @@
 
 ---
 
+## MIDCameraStandby = MIDCameraBegin +8
 
 *  摄像头待机 
 
