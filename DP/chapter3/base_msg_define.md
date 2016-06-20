@@ -18,6 +18,8 @@
 
 ---
 
+## MIDBaseMac = MIDBaseBegin +2
+
 * 设备上报MAC地址
 
 |  data定义 |  类型|   描述 | 
@@ -30,6 +32,8 @@
 
 ---
 
+## MIDBaseSD = MIDBaseBegin +3
+
 *  设备上报SD卡开关信息
 
 |  data定义 |    类型| 描述 | 
@@ -38,6 +42,8 @@
 |sdcard|int|是否有卡|
 
 ---
+
+## MIDBaseSDStatus = MIDBaseBegin +4
 
 *  设备上报SD卡容量信息
 
@@ -59,6 +65,8 @@
 
 ---
 
+## MIDBasePower = MIDBaseBegin +5
+
 *  是否连接电源线
 
 |  data定义 |    类型| 描述 | 
@@ -67,6 +75,8 @@
 |power|int| 是否 |
 
 ---
+
+## MIDBaseBattery = MIDBaseBegin +6
 
 *  设备上报剩余电量
 
@@ -77,6 +87,8 @@
 |battery|int|电量 百分比|
 
 ---
+
+## MIDBaseVersion = MIDBaseBegin +7
 
 * 设备上报软件版本号 
 
@@ -89,6 +101,8 @@
 
 ---
  
+## MIDBaseSysVersion = MIDBaseBegin +8
+
 *  设备上报系统版本号
 
 |  data定义 |    类型| 描述 |
@@ -99,6 +113,8 @@
 
 ---
  
+## MIDBaseLED = MIDBaseBegin +9
+
 * 设备指示灯配置
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -107,6 +123,8 @@
 |led|int| 指示灯 |
 
 ---
+
+## MIDBaseUptime = MIDBaseBegin +10
 
 *  上报开机时间消息 
 
@@ -118,6 +136,8 @@
 
 
 ---
+
+## MIDBaseClientLog = MIDBaseBegin +11
 
 *  提交WIFI信息 
 
@@ -138,6 +158,8 @@
 
 
 ---
+
+## MIDBaseCidLog = MIDBaseBegin +12
 
 *  上报日志消息 
 
