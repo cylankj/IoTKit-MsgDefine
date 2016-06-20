@@ -1,3 +1,4 @@
+## MIDDSNoticeMsgEnable = MIDDoorSensorBegin +1
 
 *  门磁消息通知开关设置 
 
