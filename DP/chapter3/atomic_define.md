@@ -16,13 +16,14 @@
 
 ## 三、基础功能定义 MIDBaseBegin = 200
 
+
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
 |-------|----------|----------|----------|----------|------------ |---------|---------|------|------|
 | MIDBaseNet = MIDBaseBegin +1 | 网络类型  | 否        | string     | 是        | 显示         | 无      |无       | 否 | 是 |
 | MIDBaseMac = MIDBaseBegin +2 | MAC地址   | 是        | string     | 是        | 显示         | 无      |无       | 否 | 否 |
-| MIDBaseSDEnable = MIDBaseBegin +3 | SD卡开关信息  | 否        | int     | 是        | 显示         | 无      |无       | 否 | 是 |
+| MIDBaseSD = MIDBaseBegin +3 | 是否接入SD卡  | 否        | bool     | 是        | 显示         | 无      |无       | 否 | 是 |
 | MIDBaseSDStatus = MIDBaseBegin +4     | SD卡容量信息  | 否        | string     | 是        | 显示         | 无      |无       | 否 | 是 |
-| MIDBasePower = MIDBaseBegin +5     | 是否连接电源线  | 否        | int        | 是        | 显示         | 无      |无       | 否 | 是 |
+| MIDBasePower = MIDBaseBegin +5     | 是否连接电源线  | 否        | bool        | 是        | 显示         | 无      |无       | 否 | 是 |
 | MIDBaseBattery = MIDBaseBegin +6     | 剩余电量  | 否        | int        | 是        | 显示         | 无      |无       | 否 | 是 |
 | MIDBaseVersion = MIDBaseBegin +7     | 软件版本号    | 否        | string     | 是        | 显示         | 无      |无       | 否 | 是 |
 | MIDBaseSysVersion = MIDBaseBegin +8     | 系统版本号| 否        | string     | 是        | 显示         | 无      |无       | 否 | 是 |
@@ -36,9 +37,9 @@
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
 |-------|----------|----------|----------|----------|------------ |---------|---------|------|------|
 | MIDVideoMic = MIDVideoBegin +1    | 控制设备麦克风 | 否   | bool       | 是        | 控制         | 无      |无       | 否 | 否 |
-| MIDVideoSpeaker = MIDVideoBegin +2    | 控制设备喇叭   | 否   | bool       | 是        | 控制         | 无      |无       | 否 | 否 |
-| MIDVideoAutoRecord = MIDVideoBegin +3    | 自动录像配置   | 否   | int        | 是        | 控制         | 无      |无       | 否 | 否 |
-| MIDVideoDirection = MIDVideoBegin +4    | 控制设备画面翻转   | 否   | int        | 是        | 控制         | 无      |无       | 否 | 否|
+| MIDVideoSpeaker = MIDVideoBegin +2   | 控制设备喇叭   | 否   | bool       | 是        | 控制         | 无      |无       | 否 | 否 |
+| MIDVideoAutoRecord = MIDVideoBegin +3 | 自动录像配置   | 否   | int        | 是        | 控制         | 无      |无       | 否 | 否 |
+| MIDVideoDirection = MIDVideoBegin +4 | 控制设备画面翻转   | 否   | int        | 是        | 控制         | 无      |无       | 否 | 否|
 
 ## 五、门铃功能定义 MIDBellBegin = 400
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
@@ -50,7 +51,7 @@
 ## 六、摄像头功能定义 MIDCameraBegin = 500
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
 |-------|----------|----------|----------|----------|------------ |---------|---------|------|------|
-| MIDCameraWarnEnable = MIDCameraBegin +1    | 报警开关配置  | 否        | int     | 是        | 控制         | 是     |无       | 是 | 否 |
+| MIDCameraWarnEnable = MIDCameraBegin +1    | 报警开关配置  | 否        | bool     | 是        | 控制         | 是     |无       | 是 | 否 |
 | MIDCameraWarnTime = MIDCameraBegin +2    | 报警时间段配置  | 否        | string     | 是        | 控制         | 是     |无       | 是 | 否 |
 | MIDCameraWarnSensitivity  = MIDCameraBegin +3    | 报警灵敏度配置  | 否        | int     | 是        | 控制         | 是     |无       | 是 | 否 |
 | MIDCameraWarnSound = MIDCameraBegin +4   | 报警提示音配置  | 否        | int     | 是        | 控制         | 是     |无       | 是 | 否 |
