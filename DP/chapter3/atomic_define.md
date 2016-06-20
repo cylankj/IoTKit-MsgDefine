@@ -19,7 +19,7 @@
 
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
 |-------|----------|----------|----------|----------|------------ |---------|---------|------|------|
-| [MIDBaseNet = MIDBaseBegin +1](base_msg_define.md/)| 网络类型  | 否        | string     | 是        | 显示         | 无      |无       | 否 | 是 |
+| [MIDBaseNet = MIDBaseBegin +1](base_msg_define.md/设备上报网络类型)| 网络类型  | 否        | string     | 是        | 显示         | 无      |无       | 否 | 是 |
 | MIDBaseMac = MIDBaseBegin +2 | MAC地址   | 是        | string     | 是        | 显示         | 无      |无       | 否 | 否 |
 | MIDBaseSD = MIDBaseBegin +3 | 是否接入SD卡  | 否        | bool     | 是        | 显示         | 无      |无       | 否 | 是 |
 | MIDBaseSDStatus = MIDBaseBegin +4     | SD卡容量信息  | 否        | string     | 是        | 显示         | 无      |无       | 否 | 是 |
