@@ -1,3 +1,4 @@
+## MIDRelayServerDP = MIDCFGBegin+1
 
 *   RelayServer配置
 
@@ -12,6 +13,8 @@
  
 --------------------------------------------------------------------------------------------------------------------------
 
+## MIDMsgServerDP = MIDCFGBegin+2
+
 *  MsgServer配置
 
 |  data定义 |    类型| 描述 | 
@@ -24,6 +27,7 @@
  
 -------
 
+## MIDCidOSSConfigDP = MIDCFGBegin+3
 
 *  CidOSSConfig配置
 
@@ -37,6 +41,7 @@
  
 ----------------------------------------------------------------------------------------------------------------------------
 
+## MIDClientOSSConfigDP = MIDCFGBegin+4
 
 *  ClientOSSConfig配置
 
