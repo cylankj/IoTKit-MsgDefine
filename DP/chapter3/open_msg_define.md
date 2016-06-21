@@ -68,6 +68,7 @@
 
 * 每个data都是一个开放功能的完整定义。
 * 服务器遍历reqList查询，对每个req生成一个dataList，将所有dataList组合成数组。
+* 终端可以根据消息id对应的dataList计算出数量。
 
 ## 2.3 消息定义 -  设备上报消息 + 配置请求 RobotSetData = 20202 
 
