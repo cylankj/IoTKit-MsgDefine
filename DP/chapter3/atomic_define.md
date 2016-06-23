@@ -29,8 +29,8 @@
 | [MIDBaseSysVersion = MIDBaseBegin +8](base_msg_define.md#midbasesysversion-midbasebegin-8)     | 系统版本号| 否 | string     | 是                 | 显示         | 无      |无       | 否 | 是 |
 | [MIDBaseLED = MIDBaseBegin +9](base_msg_define.md#midbaseled-midbasebegin-9)     | 设备指示灯配置   | 否   | int      | 是                        | 控制         | 无      |无       | 是 | 否 |
 | [MIDBaseUptime = MIDBaseBegin +10](base_msg_define.md#midbaseuptime-midbasebegin-10)    | 开机时间         | 否 | int        | 是                 | 显示         | 无      |无       | 否 | 否 |
-| [MIDBaseClientLog = MIDBaseBegin +11](base_msg_define.md#midbaseclientlog-midbasebegin-11) | 客户端上报日志消息（提交WIFI信息）| 否 | string | 否 | 显示         | 无      |无       | 否 | 否 |
-| [MIDBaseCidLog = MIDBaseBegin +12](base_msg_define.md#midbasecidlog-midbasebegin-12)    | 设备上报日志消息 | 否 | string     | 否                 | 控制         | 无      |无       | 否 | 否 |
+| [MIDBaseClientLog = MIDBaseBegin +11](base_msg_define.md#midbaseclientlog-midbasebegin-11) | 客户端上报日志消息（提交WIFI信息）| 否 | string | 否 | 无         | 无      |无       | 否 | 否 |
+| [MIDBaseCidLog = MIDBaseBegin +12](base_msg_define.md#midbasecidlog-midbasebegin-12)    | 设备上报日志消息 | 否 | string     | 否                 | 无         | 无      |无       | 否 | 否 |
 
 
 ## 四、音视频功能定义 MIDVideoBegin = 300
