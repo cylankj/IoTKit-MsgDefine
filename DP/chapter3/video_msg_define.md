@@ -1,4 +1,3 @@
-
 ## MIDVideoMic = MIDVideoBegin +1
 
 *  控制设备麦克风
@@ -37,7 +36,7 @@
 |time| int64| 时间点 |
 |auto_record|int|  0 侦测到异常时， 1为24小时启用录像，2 从不录像 |
 
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8 ---
+* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8 
 
 ---
 
