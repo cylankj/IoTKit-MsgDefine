@@ -181,7 +181,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 ## MIDBaseCidLog = MIDBaseBegin +12
 
-*  上报日志消息 
+*  上报日志消息 （3.0新增）
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -189,4 +189,4 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |log|string| 格式已OK的字符串 |
   
-3.0新增
+
