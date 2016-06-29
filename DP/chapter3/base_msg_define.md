@@ -190,3 +190,12 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |log|string| 格式已OK的字符串 |
   
 
+## MIDBaseP2PVersion = MIDBaseBegin +13
+
+* 上报P2P版本号 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 数据更新时间点 |
+|version|int|  p2p版本 |
