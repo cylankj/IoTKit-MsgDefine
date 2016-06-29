@@ -206,7 +206,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 ## MIDBaseFormatSD = MIDBaseBegin +14
 
-*  设备上报SD卡开关信息
+*  格式化SD卡
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
