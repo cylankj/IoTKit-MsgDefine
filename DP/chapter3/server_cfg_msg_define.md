@@ -57,12 +57,3 @@
 
 
 ------
-## MIDP2PVersion = MIDCFGBegin+5
-
-|  data定义 |    类型| 描述 | 
-|---|---|---|
-|id|int| 功能消息唯一标识|
-|time| int64| 数据更新时间点 |
-|version|int|  p2p版本 |
-
-* 存入cass，仅支持管理员配置，屏蔽客户端和设备端的修改权限，修改后实时生效。
