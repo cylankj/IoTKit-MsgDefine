@@ -123,7 +123,7 @@
 
 ---
 
-## MIDCameraStandby = MIDCameraBegin +8
+## MIDCameraLive = MIDCameraBegin +8
 
 *  摄像头待机 (3.0 新增) 
 
