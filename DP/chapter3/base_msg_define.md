@@ -44,6 +44,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
 |sdcard|int|是否有卡|
 
 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-0
@@ -57,12 +58,12 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
 |value|string|  msgpack字符串|
 
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|sdcard|int|是否有卡|
 |storage|int|卡容量 单位byte|
 |storage_used|int|已用空间 单位byte|
 |sdcard_errno |int|错误号|
@@ -189,6 +190,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |log|string| 格式已OK的字符串 |
   
+---
 
 ## MIDBaseP2PVersion = MIDBaseBegin +13
 
@@ -199,3 +201,19 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |id|int| 功能消息唯一标识|
 |time| int64| 数据更新时间点 |
 |version|int|  p2p版本 |
+
+--- 
+
+## MIDBaseFormatSD = MIDBaseBegin +14
+
+*  设备上报SD卡开关信息
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|int|占位字段，暂未使用|
+
+http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#SDCARD_FORMAT_TO_CID-118
+
+---
