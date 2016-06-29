@@ -59,7 +59,7 @@
 | [MIDCameraWarnMsg = MIDCameraBegin +5](camera_msg_define.md#midcamerawarnmsg-midcamerabegin-5)    | 报警消息  | 否        | string     | 是        | 显示         | 无      |有       | 否 | 是 |
 | [MIDCameraTimeLapse = MIDCameraBegin +6](camera_msg_define.md#midcameratimelapse-midcamerabegin-6)    | 延迟摄影设置    | 否 | string     | 是        | 控制         | 有      |无       | 是 | 否 |
 | [MIDCameraWonder = MIDCameraBegin +7](camera_msg_define.md#midcamerawonder-midcamerabegin-7)    | 每日精彩消息     | 否 | string     | 是        | 显示         | 无      |无       | 否 | 否 |
-| [MIDCameraStandby = MIDCameraBegin +8](camera_msg_define.md#midcamerastandby-midcamerabegin-8)    | 待机设置(摄像头)   | 否 | bool        | 是        | 控制         | 有      |无       | 是 | 否 |
+| [MIDCameraLive = MIDCameraBegin +8](camera_msg_define.md#midcameralive-midcamerabegin-8)    | 是否开启直播 (摄像头待机设置)   | 否 | bool        | 是        | 控制         | 有      |无       | 是 | 否 |
 
 
 ## 七、门磁功能定义 MIDDoorSensorBegin = 600
