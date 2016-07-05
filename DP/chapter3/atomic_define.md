@@ -38,12 +38,12 @@
 | [MIDBaseIsMobile = MIDBaseBegin +17](base_msg_define.md#midbaseled-midbasebegin-17)         | 设备优先使用移动网络配置          | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
 
 ## 四、音视频功能定义 MIDVideoBegin = 300
-| id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
-|-------|----------|----------|----------|----------|------------ |---------|---------|------|------|
-| [MIDVideoMic = MIDVideoBegin +1](video_msg_define.md#midvideomic-midvideobegin-1)    | 控制设备麦克风 | 否   | bool              | 是             | 控制         | 无      |无       | 否 | 否 |
-| [MIDVideoSpeaker = MIDVideoBegin +2](video_msg_define.md#midvideospeaker-midvideobegin-2)   | 控制设备喇叭   | 否   | bool       | 是             | 控制         | 无      |无       | 否 | 否 |
-| [MIDVideoAutoRecord = MIDVideoBegin +3](video_msg_define.md#midvideoautorecord-midvideobegin-3) | 自动录像配置   | 否   | int        | 是         | 控制         | 无      |无       | 是 | 否 |
-| [MIDVideoDirection = MIDVideoBegin +4](video_msg_define.md#midvideodirection-midvideobegin-4) | 控制设备画面翻转   | 否   | int        | 是       | 控制         | 无      |无       | 否 | 否|
+| id                                                                                              |描述                    |是否唯一   |数据类型    |APP可见   |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
+|-------                                                                                          |----------              |---------- |----------  |----------|------------  |---------      |---------        |------                 |------|
+| [MIDVideoMic = MIDVideoBegin +1](video_msg_define.md#midvideomic-midvideobegin-1)               | [未启用]控制设备麦克风 | 否        | bool       | 是       | 控制         | 无            |无               | 否                    | 否 |
+| [MIDVideoSpeaker = MIDVideoBegin +2](video_msg_define.md#midvideospeaker-midvideobegin-2)       | [未启用]控制设备喇叭   | 否        | bool       | 是       | 控制         | 无            |无               | 否                    | 否 |
+| [MIDVideoAutoRecord = MIDVideoBegin +3](video_msg_define.md#midvideoautorecord-midvideobegin-3) | 自动录像配置           | 否        | int        | 是       | 控制         | 无            |无               | 是                    | 否 |
+| [MIDVideoDirection = MIDVideoBegin +4](video_msg_define.md#midvideodirection-midvideobegin-4)   | 控制设备画面翻转       | 否        | int        | 是       | 控制         | 无            |无               | 否                    | 否|
 
 ## 五、门铃功能定义 MIDBellBegin = 400
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
