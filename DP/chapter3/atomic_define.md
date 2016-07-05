@@ -31,8 +31,11 @@
 | [MIDBaseUptime = MIDBaseBegin +10](base_msg_define.md#midbaseuptime-midbasebegin-10)        | 开机时间                          | 否        | int        | 是        | 显示         | 无                |无            | 否           | 否 |
 | [MIDBaseClientLog = MIDBaseBegin +11](base_msg_define.md#midbaseclientlog-midbasebegin-11)  | 客户端上报日志消息（提交WIFI信息）| 否        | string     | 否        | 无           | 无                |无            | 否           | 否 |
 | [MIDBaseCidLog = MIDBaseBegin +12](base_msg_define.md#midbasecidlog-midbasebegin-12)        | 设备上报日志消息                  | 否        | string     | 否        | 无           | 无                |无            | 否           | 否 |
-| [MIDBaseP2PVersion = MIDBaseBegin +12](base_msg_define.md#midbasep2pversion-midbasebegin-13)| 设备P2P版本号                     | 否        | int        | 否        | 无           | 无                |无            | 否           | 是 |
-
+| [MIDBaseP2PVersion = MIDBaseBegin +13](base_msg_define.md#midbasep2pversion-midbasebegin-13)| 设备P2P版本号                     | 否        | int        | 否        | 无           | 无                |无            | 否           | 是 |
+| [MIDBaseTimezoneOffset = MIDBaseBegin +14](base_msg_define.md#midbaseled-midbasebegin-14)   | 设备时区配置                      | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
+| [MIDBaseIsPushFlow = MIDBaseBegin +15](base_msg_define.md#midbaseled-midbasebegin-15)       | 设备推流配置                      | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
+| [MIDBaseIsNTSC = MIDBaseBegin +16](base_msg_define.md#midbaseled-midbasebegin-16)           | 设备电流频率配置                  | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
+| [MIDBaseIsMobile = MIDBaseBegin +17](base_msg_define.md#midbaseled-midbasebegin-17)         | 设备优先使用移动网络配置          | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
 
 ## 四、音视频功能定义 MIDVideoBegin = 300
 | id     |描述       |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
