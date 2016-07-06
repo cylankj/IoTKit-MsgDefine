@@ -17,7 +17,7 @@
  
 # 二、新增通用消息定义：
 
-## 2.1 消息定义 - 查询请求 RobotGetData = 20200
+## 2.1 消息定义 - 查询请求 MIDRobotGetData = 20200
 
 |  定义 |  类型|   描述 | 
 | --- | --- | --- |
@@ -47,7 +47,7 @@
 
 ---
 
-## 2.2 消息定义 - 查询响应 RobotGetDataRsp = 20201 
+## 2.2 消息定义 - 查询响应 MIDRobotGetDataRsp = 20201 
 
 |  定义 |  类型|   描述 | 
 |---|---|---|
@@ -70,7 +70,7 @@
 * 服务器遍历reqList查询，对每个req生成一个dataList，将所有dataList组合成数组。
 * 终端可以根据消息id对应的dataList计算出数量。
 
-## 2.3 消息定义 -  设备上报消息 + 配置请求 RobotSetData = 20202 
+## 2.3 消息定义 -  设备上报消息 + 配置请求 MIDRobotSetData = 20202 
 
 |  定义 |  类型|   描述 | 
 |---|---|---|
@@ -90,7 +90,7 @@
 
 ---
 
-## 2.4 消息定义 - 配置响应 RobotSetDataRsp = 20203
+## 2.4 消息定义 - 配置响应 MIDRobotSetDataRsp = 20203
 
 由开放功能定义表格返回值列决定是否要响应该消息。
 
@@ -113,7 +113,7 @@
 
 ---
 
-## 2.5 消息定义 - 删除请求 RobotDelData = 20204
+## 2.5 消息定义 - 删除请求 MIDRobotDelData = 20204
 
 
 |  定义 |  类型|   描述 | 
@@ -133,7 +133,7 @@
 
 ---
 
-## 2.6 消息定义 - 删除响应 RobotDelDataRsp = 20205
+## 2.6 消息定义 - 删除响应 MIDRobotDelDataRsp = 20205
 
 
 |  定义 |  类型|   描述 | 
@@ -153,7 +153,7 @@
 * time 原样返回客户端的请求数据，只增加ret作为响应码。
 
 
-## 2.7 消息定义 - 未读消息计数 RobotCountData = 20206
+## 2.7 消息定义 - 未读消息计数 MIDRobotCountData = 20206
 
 
 |  定义 |  类型|   描述 | 
@@ -162,7 +162,7 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|act|int| 操作：查询未读消息计数， 将未读消息计数清零(不需要响应RobotCountDataRsp) enum {RobotCountDataQuery, RobotCountDataClear}|
+|act|int| 操作：查询未读消息计数， 将未读消息计数清零(不需要响应MIDRobotCountDataRsp) enum {MIDRobotCountDataQuery, MIDRobotCountDataClear}|
 |reqList | array | 消息数组 |
 
 | 定义 |  类型|   描述 | 
@@ -171,7 +171,7 @@
 
 ---
 
-## 2.8 消息定义 - 未读消息计数响应 RobotCountDataRsp = 20207
+## 2.8 消息定义 - 未读消息计数响应 MIDRobotCountDataRsp = 20207
 
 
 |  定义 |  类型|   描述 | 
@@ -187,7 +187,7 @@
 |id| int | 开放功能唯一标识 |
 |count| int | 计数 |
 
-## 2.9 消息定义 - 组合查询请求 RobotGetDataEx = 20208
+## 2.9 消息定义 - 组合查询请求 MIDRobotGetDataEx = 20208
 
 |  定义 |  类型|   描述 | 
 | --- | --- | --- |
@@ -208,7 +208,7 @@
 
 ---
 
-## 2.10 消息定义 - 组合查询响应 RobotGetDataExRsp = 20209
+## 2.10 消息定义 - 组合查询响应 MIDRobotGetDataExRsp = 20209
 
 |  定义 |  类型|   描述 | 
 |---|---|---|

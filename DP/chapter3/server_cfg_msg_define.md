@@ -1,4 +1,4 @@
-## MIDRelayServerDP = MIDCFGBegin+1
+## DPIDRelayServerDP = DPIDCFGBegin+1
 
 *   RelayServer配置
 
@@ -13,7 +13,7 @@
 
 --------------------------------------------------------------------------------------------------------------------------
 
-## MIDMsgServerDP = MIDCFGBegin+2
+## DPIDMsgServerDP = DPIDCFGBegin+2
 
 *  MsgServer配置
 
@@ -27,7 +27,7 @@
  
 -------
 
-## MIDCidOSSConfigDP = MIDCFGBegin+3
+## DPIDCidOSSConfigDP = DPIDCFGBegin+3
 
 *  CidOSSConfig配置
 
@@ -42,7 +42,7 @@
  
 ----------------------------------------------------------------------------------------------------------------------------
 
-## MIDClientOSSConfigDP = MIDCFGBegin+4
+## DPIDClientOSSConfigDP = DPIDCFGBegin+4
 
 *  ClientOSSConfig配置
 

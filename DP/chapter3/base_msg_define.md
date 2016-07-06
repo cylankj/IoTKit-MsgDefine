@@ -1,4 +1,4 @@
-## MIDBaseNet=MIDBaseBegin +1
+## DPIDBaseNet=DPIDBaseBegin +1
 
 * 设备上报网络类型 
 
@@ -21,7 +21,7 @@
 
 ---
 
-## MIDBaseMac = MIDBaseBegin +2
+## DPIDBaseMac = DPIDBaseBegin +2
 
 * 设备上报MAC地址
 
@@ -37,7 +37,7 @@
 
 ---
 
-## MIDBaseSD = MIDBaseBegin +3
+## DPIDBaseSD = DPIDBaseBegin +3
 
 *  设备上报SD卡开关信息
 
@@ -47,11 +47,11 @@
 |time| int64| 时间点 |
 |sdcard|int|是否有卡|
 
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-0
+http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDStatusSdcardTOServer-0
 
 ---
 
-## MIDBaseSDStatus = MIDBaseBegin +4
+## DPIDBaseSDStatus = DPIDBaseBegin +4
 
 *  设备上报SD卡容量信息
 
@@ -71,11 +71,11 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 示例：{id，time,"{"storage":700000,"storage_used":1000,"sdcard_errno":0}"}
 
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-0
+http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDStatusSdcardTOServer-0
 
 ---
 
-## MIDBasePower = MIDBaseBegin +5
+## DPIDBasePower = DPIDBaseBegin +5
 
 *  是否连接电源线
 
@@ -84,11 +84,11 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |id|int| 功能消息唯一标识|
 |power|int| 是否 |
 
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-0
+http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDStatusSdcardTOServer-0
 
 ---
 
-## MIDBaseBattery = MIDBaseBegin +6
+## DPIDBaseBattery = DPIDBaseBegin +6
 
 *  设备上报剩余电量
 
@@ -98,11 +98,11 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |battery|int|电量 百分比|
 
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-0
+http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDStatusSdcardTOServer-0
 
 ---
 
-## MIDBaseVersion = MIDBaseBegin +7
+## DPIDBaseVersion = DPIDBaseBegin +7
 
 * 设备上报软件版本号 
 
@@ -116,7 +116,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 ---
  
-## MIDBaseSysVersion = MIDBaseBegin +8
+## DPIDBaseSysVersion = DPIDBaseBegin +8
 
 *  设备上报系统版本号
 
@@ -130,7 +130,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 ---
  
-## MIDBaseLED = MIDBaseBegin +9
+## DPIDBaseLED = DPIDBaseBegin +9
 
 * 设备指示灯配置
 |  data定义 |    类型| 描述 | 
@@ -139,11 +139,11 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |led|int| 指示灯 |
 
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
+* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDClientCidSetReq-8
 
 ---
 
-## MIDBaseUptime = MIDBaseBegin +10
+## DPIDBaseUptime = DPIDBaseBegin +10
 
 *  上报开机时间消息 
 
@@ -157,7 +157,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 ---
 
-## MIDBaseClientLog = MIDBaseBegin +11
+## DPIDBaseClientLog = DPIDBaseBegin +11
 
 *  提交WIFI信息 
 
@@ -176,11 +176,11 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |encryType |string| 加密方式 |
 |channel|string| 频段 |
 
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientPost-0
+http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDClientPost-0
 
 ---
 
-## MIDBaseCidLog = MIDBaseBegin +12
+## DPIDBaseCidLog = DPIDBaseBegin +12
 
 *  上报日志消息 （3.0新增）
 
@@ -192,7 +192,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
   
 ---
 
-## MIDBaseP2PVersion = MIDBaseBegin +13
+## DPIDBaseP2PVersion = DPIDBaseBegin +13
 
 * 上报P2P版本号 
 
@@ -204,7 +204,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 --- 
 
-## MIDBaseFormatSD = MIDBaseBegin +14
+## DPIDBaseFormatSD = DPIDBaseBegin +14
 
 *  格式化SD卡
 

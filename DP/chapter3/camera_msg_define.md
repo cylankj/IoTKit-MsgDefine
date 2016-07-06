@@ -1,4 +1,4 @@
-## MIDCameraWarnEnable = MIDCameraBegin +1
+## DPIDCameraWarnEnable = DPIDCameraBegin +1
 
 * 设备报警开关配置
 
@@ -8,11 +8,11 @@
 |time| int64| 时间点 |
 |enable|int| 是否开启 |
 
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidPushCidset-7
+* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDCidPushCidset-7
 
 ---
 
-## MIDCameraWarnTime = MIDCameraBegin +2
+## DPIDCameraWarnTime = DPIDCameraBegin +2
 
 *  设备报警时间段配置
 
@@ -29,11 +29,11 @@
 |end_time|int| 结束时间点 |
 |week|int| 每周的星期* |
  
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidPushCidset-7
+* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDCidPushCidset-7
 
 ---
 
-## MIDCameraWarnSensitivity = MIDCameraBegin +3
+## DPIDCameraWarnSensitivity = DPIDCameraBegin +3
 
 *  报警灵敏度配置
 
@@ -41,13 +41,13 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|sensitivity|int| 灵敏度 0为低SENSITIVITY_LOW, 1为中SENSITIVITY_MIDDLE, 2为高SENSITIVITY_HIGH 默认为中 |
+|sensitivity|int| 灵敏度 0为低SENSITIVITY_LOW, 1为中SENSITIVITY_DPIDDLE, 2为高SENSITIVITY_HIGH 默认为中 |
 
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidPushCidset-7
+* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDCidPushCidset-7
 
 ---
 
-## MIDCameraWarnSound = MIDCameraBegin +4
+## DPIDCameraWarnSound = DPIDCameraBegin +4
 
 *  报警提示音配置
 
@@ -57,11 +57,11 @@
 |time| int64| 时间点 |
 |sound|int| -- |
 
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidPushCidset-7
+* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDCidPushCidset-7
 
 ---
 
-## MIDCameraWarnMsg = MIDCameraBegin +5 
+## DPIDCameraWarnMsg = DPIDCameraBegin +5 
 
 *  设备报警消息
 
@@ -80,11 +80,11 @@
 |type|int|海外或国内存储地区。128消息下发填充|
 
 
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDUploadWarn-5
+* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#DPIDUploadWarn-5
 
 ---
 
-## MIDCameraTimeLapse = MIDCameraBegin +6
+## DPIDCameraTimeLapse = DPIDCameraBegin +6
 
 *  延迟摄影设置 (3.0 新增) 
 
@@ -106,7 +106,7 @@
 
 ---
 
-## MIDCameraWonder = MIDCameraBegin +7
+## DPIDCameraWonder = DPIDCameraBegin +7
 
 *  每日精彩消息 (3.0 新增) 
 
@@ -125,7 +125,7 @@
 
 ---
 
-## MIDCameraLive = MIDCameraBegin +8
+## DPIDCameraLive = DPIDCameraBegin +8
 
 *  直播开关 - 摄像头待机 (3.0 新增) 
 
