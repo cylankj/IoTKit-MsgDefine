@@ -5,7 +5,7 @@
 |id     |描述                  |数据类型    |  
 |-------|-------------------|----------|
 | [DPIDRelayServer = DPIDCFGBegin+1](server_cfg_msg_define.md#dpidrelayserver-dpidcfgbegin1)     | RelayServer配置      | string     |
-| [DPIDMsgServer = DPIDCFGBegin+2](server_cfg_msg_define.md#dpidmsgserver-dpidcfgbegin2)     | MsgServer配置        | string     | 
+| [DPIDHeartbeat = DPIDCFGBegin+2](server_cfg_msg_define.md#dpidheartbeat-dpidcfgbegin2)     | 心跳配置        | string     | 
 | [DPIDCidOSSConfig = DPIDCFGBegin+3](server_cfg_msg_define.md#dpidcidossconfig-dpidcfgbegin3)     | CidOSSConfig配置     | string     | 
 | [DPIDClientOSSConfig = DPIDCFGBegin+4](server_cfg_msg_define.md#dpidclientossconfig-dpidcfgbegin4)     | ClientOSSConfig配置  | string     | 
 
