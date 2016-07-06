@@ -204,7 +204,68 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 --- 
 
-## DPIDBaseFormatSD = DPIDBaseBegin +14
+ 
+## DPIDBaseTimezone = DPIDBaseBegin +14
+
+* 设备时区配置
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string| msgpack字符串 |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|timezone|string| 如： Asia/Shanghai。|
+|offset |int| 如东八区： 8*60*60|
+
+* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
+
+----
+ 
+## DPIDBaseIsPushFlow = DPIDBaseBegin +15
+
+* 设备推流配置 
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|isPushFlow|bool|  |
+
+
+* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
+
+----
+ 
+## DPIDBaseIsNTSC = DPIDBaseBegin +16
+
+* 设备电流频率配置
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|isNTSC|bool|  |
+
+
+* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
+
+----
+ 
+## DPIDBaseIsMobile = DPIDBaseBegin +17
+
+* 设备优先使用移动网络配置
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|isMobile|bool|  |
+
+
+* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
+
+----
+
+## DPIDBaseFormatSD = DPIDBaseBegin +18
 
 *  格式化SD卡
 
@@ -217,3 +278,5 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#SDCARD_FORMAT_TO_CID-118
 
 ---
+
+

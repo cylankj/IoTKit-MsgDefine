@@ -1,4 +1,4 @@
-## DPIDRelayServerDP = DPIDCFGBegin+1
+## DPIDRelayServer = DPIDCFGBegin+1
 
 *   RelayServer配置
 
@@ -13,21 +13,22 @@
 
 --------------------------------------------------------------------------------------------------------------------------
 
-## DPIDMsgServerDP = DPIDCFGBegin+2
+## DPIDHeartbeat = DPIDCFGBegin+2
 
-*  MsgServer配置
+*  心跳配置
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64 | 数据更新时间点 |
-|value|string|  msgpack字符串 |
+|heartbeat|int|  秒 |
  
+* 客户端直接文件直接上传到OSS, 所以MsgServer弃用。
 * 原18号消息 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#SERVER_CONFIG-18
  
 -------
 
-## DPIDCidOSSConfigDP = DPIDCFGBegin+3
+## DPIDCidOSSConfig = DPIDCFGBegin+3
 
 *  CidOSSConfig配置
 
@@ -42,7 +43,7 @@
  
 ----------------------------------------------------------------------------------------------------------------------------
 
-## DPIDClientOSSConfigDP = DPIDCFGBegin+4
+## DPIDClientOSSConfig = DPIDCFGBegin+4
 
 *  ClientOSSConfig配置
 

@@ -4,10 +4,10 @@
 
 |id     |描述                  |数据类型    |  
 |-------|-------------------|----------|
-| [DPIDRelayServerDP = DPIDCFGBegin+1](server_cfg_msg_define.md#dpidrelayserverdp-dpidcfgbegin1)     | RelayServer配置      | string     |
-| [DPIDMsgServerDP = DPIDCFGBegin+2](server_cfg_msg_define.md#dpidmsgserverdp-dpidcfgbegin2)     | MsgServer配置        | string     | 
-| [DPIDCidOSSConfigDP = DPIDCFGBegin+3](server_cfg_msg_define.md#dpidcidossconfigdp-dpidcfgbegin3)     | CidOSSConfig配置     | string     | 
-| [DPIDClientOSSConfigDP = DPIDCFGBegin+4](server_cfg_msg_define.md#dpidclientossconfigdp-dpidcfgbegin4)     | ClientOSSConfig配置  | string     | 
+| [DPIDRelayServer = DPIDCFGBegin+1](server_cfg_msg_define.md#dpidrelayserver-dpidcfgbegin1)     | RelayServer配置      | string     |
+| [DPIDMsgServer = DPIDCFGBegin+2](server_cfg_msg_define.md#dpidmsgserver-dpidcfgbegin2)     | MsgServer配置        | string     | 
+| [DPIDCidOSSConfig = DPIDCFGBegin+3](server_cfg_msg_define.md#dpidcidossconfig-dpidcfgbegin3)     | CidOSSConfig配置     | string     | 
+| [DPIDClientOSSConfig = DPIDCFGBegin+4](server_cfg_msg_define.md#dpidclientossconfig-dpidcfgbegin4)     | ClientOSSConfig配置  | string     | 
 
 
 
@@ -26,16 +26,17 @@
 | [DPIDBasePower = DPIDBaseBegin +5](base_msg_define.md#dpidbasepower-dpidbasebegin-5)            | 是否连接电源线                    | 否        | bool       | 是        | 显示         | 无                |无            | 否           | 是 |
 | [DPIDBaseBattery = DPIDBaseBegin +6](base_msg_define.md#dpidbasebattery-dpidbasebegin-6)        | 剩余电量                          | 否        | int        | 是        | 显示         | 无                |无            | 否           | 是 |
 | [DPIDBaseVersion = DPIDBaseBegin +7](base_msg_define.md#dpidbaseversion-dpidbasebegin-7)        | 软件版本号                        | 否        | string     | 是        | 显示         | 无                |无            | 否           | 是 |
-| [DPIDBaseSysVersion = DPIDBaseBegin +8](base_msg_define.md#dpidbasesysversion-dpidbasebegin-8)  |系统版本号                         | 否        | string     | 是        | 显示         | 无                |无            | 否           | 是 |
+| [DPIDBaseSysVersion = DPIDBaseBegin +8](base_msg_define.md#dpidbasesysversion-dpidbasebegin-8)  | 系统版本号                         | 否        | string     | 是        | 显示         | 无                |无            | 否           | 是 |
 | [DPIDBaseLED = DPIDBaseBegin +9](base_msg_define.md#dpidbaseled-dpidbasebegin-9)                | 设备指示灯配置                    | 否        | int        | 是        | 控制         | 无                |无            | 是           | 否 |
 | [DPIDBaseUptime = DPIDBaseBegin +10](base_msg_define.md#dpidbaseuptime-dpidbasebegin-10)        | 开机时间                          | 否        | int        | 是        | 显示         | 无                |无            | 否           | 否 |
 | [DPIDBaseClientLog = DPIDBaseBegin +11](base_msg_define.md#dpidbaseclientlog-dpidbasebegin-11)  | 客户端上报日志消息（提交WIFI信息）| 否        | string     | 否        | 无           | 无                |无            | 否           | 否 |
 | [DPIDBaseCidLog = DPIDBaseBegin +12](base_msg_define.md#dpidbasecidlog-dpidbasebegin-12)        | 设备上报日志消息                  | 否        | string     | 否        | 无           | 无                |无            | 否           | 否 |
 | [DPIDBaseP2PVersion = DPIDBaseBegin +13](base_msg_define.md#dpidbasep2pversion-dpidbasebegin-13)| 设备P2P版本号                     | 否        | int        | 否        | 无           | 无                |无            | 否           | 是 |
-| [DPIDBaseTimezoneOffset = DPIDBaseBegin +14](base_msg_define.md#dpidbaseled-dpidbasebegin-14)   | 设备时区配置                      | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
-| [DPIDBaseIsPushFlow = DPIDBaseBegin +15](base_msg_define.md#dpidbaseled-dpidbasebegin-15)       | 设备推流配置                      | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
-| [DPIDBaseIsNTSC = DPIDBaseBegin +16](base_msg_define.md#dpidbaseled-dpidbasebegin-16)           | 设备电流频率配置                  | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
-| [DPIDBaseIsMobile = DPIDBaseBegin +17](base_msg_define.md#dpidbaseled-dpidbasebegin-17)         | 设备优先使用移动网络配置          | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
+| [DPIDBaseTimezone = DPIDBaseBegin +14](base_msg_define.md#dpidbaseled-dpidbasebegin-14)         | 设备时区配置                      | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
+| [DPIDBaseIsPushFlow = DPIDBaseBegin +15](base_msg_define.md#dpidbaseled-dpidbasebegin-15)       | 设备推流配置                       | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
+| [DPIDBaseIsNTSC = DPIDBaseBegin +16](base_msg_define.md#dpidbaseled-dpidbasebegin-16)           | 设备电流频率配置                   | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
+| [DPIDBaseIsMobile = DPIDBaseBegin +17](base_msg_define.md#dpidbaseled-dpidbasebegin-17)         | 设备优先使用移动网络配置            | 否        | int        | 是        | 控制         | 是                |无            | 是           | 否 |
+| [DPIDBaseFormatSD = DPIDBaseBegin +18](base_msg_define.md#dpidbaseled-dpidbasebegin-18)         | 格式化SD卡                         | 否        | 无        | 是        | 控制         | 是                |无            | 否           | 否 |
 
 ## 四、音视频功能定义 DPIDVideoBegin = 300
 | id                                                                                              |描述                    |是否唯一   |数据类型    |APP可见   |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
