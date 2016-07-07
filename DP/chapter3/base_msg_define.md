@@ -133,6 +133,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 ## DPIDBaseLED = DPIDBaseBegin +9
 
 * 设备指示灯配置
+
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
