@@ -8,7 +8,8 @@
 | [DPIDHeartbeat = DPIDCFGBegin+2](server_cfg_msg_define.md#dpidheartbeat-dpidcfgbegin2)                 | 心跳配置        | string     | 
 | [DPIDCidOSSConfig = DPIDCFGBegin+3](server_cfg_msg_define.md#dpidcidossconfig-dpidcfgbegin3)           | CidOSSConfig配置     | string     | 
 | [DPIDClientOSSConfig = DPIDCFGBegin+4](server_cfg_msg_define.md#dpidclientossconfig-dpidcfgbegin4)     | ClientOSSConfig配置  | string     |
-| [DPIDClientUpgradeConfig = DPIDCFGBegin+5](server_cfg_msg_define.md#dpidclientossconfig-dpidcfgbegin4) | 客户端升级检测地址  | string     | 
+| [DPIDClientUpgradeConfig = DPIDCFGBegin+5](server_cfg_msg_define.md#dpidclientossconfig-dpidcfgbegin4) | 客户端升级检测地址  | string     |
+ 
 
 
 

@@ -40,6 +40,18 @@
  
 * 原128号消息 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#CID_PUSH_OSS_CONFIG-128
 * 注：因为通道已加密，所以去掉消息内加密。
+
+<pre>
+type定义：
+const (
+	OssCNConfig = 1 + iota  //阿里中国
+	OssUSConfig = 2         //阿里美国
+    AwsUSConfig = 3         //亚马逊美国
+)
+</pre>
+
+如果是Aws存储，该配置只下发type = AwsUSConfig， hostname = us-west-2（即为regionName）和bucket = us_jfgyun 字段，Access ID和Key为空，需要通过接口获取安全凭证：http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#CLIENT_GET_AWS_CREDENTIALS_REQ-16306
+      
  
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -77,3 +89,4 @@
 * 原响应消息 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientLoginRsp30-1
 
 ------
+
