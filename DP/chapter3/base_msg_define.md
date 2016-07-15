@@ -209,6 +209,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 ## DPIDBaseTimezone = DPIDBaseBegin +14
 
 * 设备时区配置
+
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
@@ -227,6 +228,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 ## DPIDBaseIsPushFlow = DPIDBaseBegin +15
 
 * 设备推流配置 
+
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
@@ -241,6 +243,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 ## DPIDBaseIsNTSC = DPIDBaseBegin +16
 
 * 设备电流频率配置
+
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
@@ -255,6 +258,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 ## DPIDBaseIsMobile = DPIDBaseBegin +17
 
 * 设备优先使用移动网络配置
+
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
