@@ -1,3 +1,4 @@
+## DPIDVideoBegin = 300
 ## DPIDVideoMic = DPIDVideoBegin +1
 
 *  控制设备麦克风

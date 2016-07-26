@@ -1,3 +1,4 @@
+## DPIDBaseBegin = 200
 ## DPIDBaseNet=DPIDBaseBegin +1
 
 * 设备上报网络类型 

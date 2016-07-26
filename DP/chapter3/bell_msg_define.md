@@ -1,3 +1,4 @@
+## DPIDBellBegin = 400
 ## DPIDBellCallMsg = DPIDBellBegin +1
 
 *  门铃已接通的呼叫状态 
