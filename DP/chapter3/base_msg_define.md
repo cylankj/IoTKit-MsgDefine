@@ -139,7 +139,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|led|int| 指示灯 |
+|led|bool| 指示灯 |
 
 * 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
 
