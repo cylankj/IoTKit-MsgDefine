@@ -143,3 +143,18 @@
 |enable|bool| / |
 
 ---
+
+## DPIDCameraHangMode = DPIDCameraBegin +9
+
+*  直播开关 - 摄像头待机 (3.0 新增) 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|mode|int| 模式：壁挂或吊顶 |
+
+HANG_WALL = 1  壁挂
+HANG_CEIL = 2  吊顶
+
+---

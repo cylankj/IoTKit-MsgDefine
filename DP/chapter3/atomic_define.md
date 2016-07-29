@@ -57,14 +57,15 @@
 
 ## 六、摄像头功能定义 DPIDCameraBegin = 500
 | id                                                                                                                  |描述              |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
-|-------                                                                                                              |----------        |----------|----------|----------|------------ |---------|---------|------|------|
-| [DPIDCameraWarnEnable = DPIDCameraBegin +1](camera_msg_define.md#dpidcamerawarnenable-dpidcamerabegin-1)            | 报警开关配置      | 是        | bool     | 是        | 控制         | 是     |无       | 是 | 否 |
-| [DPIDCameraWarnTime = DPIDCameraBegin +2](camera_msg_define.md#dpidcamerawarntime-dpidcamerabegin-2)                | 报警时间段配置    | 否        | string     | 是        | 控制         | 是     |无       | 是 | 否 |
-| [DPIDCameraWarnSensitivity  = DPIDCameraBegin +3](camera_msg_define.md#dpidcamerawarnsensitivity-dpidcamerabegin-3) | 报警灵敏度配置    | 否        | int     | 是        | 控制         | 是     |无       | 是 | 否 |
-| [DPIDCameraWarnSound = DPIDCameraBegin +4](camera_msg_define.md#dpidcamerawarnsound-dpidcamerabegin-4)              | 报警提示音配置    | 否        | int     | 是        | 控制         | 是     |无       | 是 | 否 |
-| [DPIDCameraWarnMsg = DPIDCameraBegin +5](camera_msg_define.md#dpidcamerawarnmsg-dpidcamerabegin-5)                  | 报警消息          | 否       | string     | 是        | 显示         | 无      |有       | 否 | 是 |
-| [DPIDCameraTimeLapse = DPIDCameraBegin +6](camera_msg_define.md#dpidcameratimelapse-dpidcamerabegin-6)              | 延迟摄影设置      | 否        | string     | 是        | 控制         | 有      |无       | 是 | 否 |
-| [DPIDCameraWonder = DPIDCameraBegin +7](camera_msg_define.md#dpidcamerawonder-dpidcamerabegin-7)                    | 每日精彩消息       | 否       | string     | 是        | 显示         | 无      |无       | 否 | 否 |
-| [DPIDCameraLive = DPIDCameraBegin +8](camera_msg_define.md#dpidcameralive-dpidcamerabegin-8)                        | 是否开启直播 (摄像头待机设置)  | 是 | bool        | 是        | 控制         | 有      |无       | 是 | 否 |
+|-------                                                                                                              |----------        |----------|----------|----------|------------   |---------     |---------|------|------|
+| [DPIDCameraWarnEnable = DPIDCameraBegin +1](camera_msg_define.md#dpidcamerawarnenable-dpidcamerabegin-1)            | 报警开关配置      | 是        | bool     | 是        | 控制         | 是           |无              | 是 | 否 |
+| [DPIDCameraWarnTime = DPIDCameraBegin +2](camera_msg_define.md#dpidcamerawarntime-dpidcamerabegin-2)                | 报警时间段配置    | 否        | string     | 是        | 控制         | 是         |无               | 是 | 否 |
+| [DPIDCameraWarnSensitivity  = DPIDCameraBegin +3](camera_msg_define.md#dpidcamerawarnsensitivity-dpidcamerabegin-3) | 报警灵敏度配置    | 否        | int        | 是        | 控制         | 是         |无               | 是 | 否 |
+| [DPIDCameraWarnSound = DPIDCameraBegin +4](camera_msg_define.md#dpidcamerawarnsound-dpidcamerabegin-4)              | 报警提示音配置    | 否        | int        | 是        | 控制         | 是         |无               | 是 | 否 |
+| [DPIDCameraWarnMsg = DPIDCameraBegin +5](camera_msg_define.md#dpidcamerawarnmsg-dpidcamerabegin-5)                  | 报警消息          | 否        | string     | 是        | 显示         | 无         |有               | 否 | 是 |
+| [DPIDCameraTimeLapse = DPIDCameraBegin +6](camera_msg_define.md#dpidcameratimelapse-dpidcamerabegin-6)              | 延迟摄影设置      | 否        | string     | 是        | 控制         | 有         |无               | 是 | 否 |
+| [DPIDCameraWonder = DPIDCameraBegin +7](camera_msg_define.md#dpidcamerawonder-dpidcamerabegin-7)                    | 每日精彩消息       | 否       | string     | 是        | 显示         | 无         |无               | 否 | 否 |
+| [DPIDCameraLive = DPIDCameraBegin +8](camera_msg_define.md#dpidcameralive-dpidcamerabegin-8)                        | 是否开启直播 (摄像头待机设置)  | 是 | bool   | 是        | 控制         | 有        |无               | 是 | 否 |
+| [DPIDCameraHangMode = DPIDCameraBegin +9](camera_msg_define.md#dpidcamerahangmode-dpidcamerabegin-9)                | 视频模式 (壁挂或吊顶)  | 是    | int        | 是        | 控制         | 有        |无                | 是 | 否 |
 
 
