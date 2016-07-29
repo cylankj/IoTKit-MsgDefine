@@ -146,15 +146,36 @@
 
 ## DPIDCameraHangMode = DPIDCameraBegin +9
 
-*  直播开关 - 摄像头待机 (3.0 新增) 
+*  视频模式 - 壁挂或吊顶 
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|mode|int| 模式：壁挂或吊顶 |
+|mode|int|  如何置放：壁挂或吊顶 |
 
+
+模式定义：
 HANG_WALL = 1  壁挂
 HANG_CEIL = 2  吊顶
+
+---
+
+## DPIDCameraCoord = DPIDCameraBegin +10
+
+*  视频 - 坐标
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string|  msgpack |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|x |int|横坐标|
+|y |int|纵坐标|
+|r |int|半径|
+
 
 ---
