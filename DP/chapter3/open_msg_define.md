@@ -162,7 +162,7 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|act|int| 操作：查询未读消息计数， 将未读消息计数清零(不需要响应MIDRobotCountDataRsp) enum {MIDRobotCountDataQuery, MIDRobotCountDataClear}|
+|act|int| 操作：如果是查询未读消息计数， 响应MIDRobotCountDataRsp；如果是清零未读消息计数，服务器将未读消息计数清零，不响应MIDRobotCountDataRsp。 enum {MIDRobotCountDataQuery, MIDRobotCountDataClear}|
 |reqList | array | 消息数组 |
 
 | 定义 |  类型|   描述 | 

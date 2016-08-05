@@ -54,7 +54,8 @@
 此数据是否需要在APP端以图表形式展示
 如果需要图表：
 * 客户端展示列表时，调用消息ID [MIDRobotGetData = 20200] , limit > 1获取数据。
-* 服务器需要对消息ID，CID及ACCOUNT做TCP消息计数，需要对ACCOUNT做APNS和GCM消息计数; 消息计数复用加菲狗KVS.
+* 客户端获取未读消息计数时，调用消息ID [MIDRobotCountData] MIDRobotCountDataQuery, 服务器需要对消息ID，CID及ACCOUNT做TCP消息计数，需要对ACCOUNT做APNS和GCM消息计数; 消息计数复用加菲狗KVS。
+* 客户端查看未读消息时，调用消息ID [MIDRobotCountData] MIDRobotCountDataClear。
 * 客户端删除消息时，调用消息ID [MIDRobotDelData = 20203]
 
 ## APP多终端是否需要同步
