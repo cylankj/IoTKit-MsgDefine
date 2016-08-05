@@ -16,7 +16,9 @@
 |net|int| WiFi，3G，4G等|
 |ssid|string| 网络名称|
 
-示例： {id, time, "{"net":1,"ssid":"cylan_605"}"}
+设备上线时示例： {id, time, "{"net":1,"ssid":"cylan_605"}"}
+
+设备离线时实例： {id, time, "{"net":0,"ssid":""}"}， 服务器检测到离线后主动推送该消息给客户端。  
 
 * 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidLogin-0
 
