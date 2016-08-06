@@ -1,3 +1,19 @@
+# 通用消息概述
+
+| MID                                                                   |描述                       |  
+|-------                                                                         |-----------------|
+| [MIDRobotGetData = 20200](open_msg_define.md#midrobotgetdata-20200)            | 获取数据     |
+| [MIDRobotGetDataRsp = 20201](open_msg_define.md#MIDRobotGetDataRsp-20201)      | 获取数据响应  |
+| [MIDRobotSetData = 20202](open_msg_define.md#MIDRobotSetData-20202)            | 设置数据     | 
+| [MIDRobotSetDataRsp = 20203](open_msg_define.md#MIDRobotSetDataRsp-20203)      | 设置数据响应  |
+| [MIDRobotDelData = 20204](open_msg_define.md#MIDRobotDelData-20204)            | 删除数据     |
+| [MIDRobotDelDataRsp = 20205](open_msg_define.md#MIDRobotDelDataRsp-20205)      | 删除数据响应  |
+| [MIDRobotCountData = 20206](open_msg_define.md#MIDRobotCountData-20206)        | 未读消息计数  |
+| [MIDRobotCountDataRsp = 20207](open_msg_define.md#MIDRobotCountDataRsp-20207)  | 未读消息计数响应  |
+| [MIDRobotGetDataEx = 20208](open_msg_define.md#MIDRobotGetDataEx-20208)        | 组合查询         |
+| [MIDRobotGetDataExRsp = 20209](open_msg_define.md#MIDRobotGetDataExRsp-20209)  | 组合查询响应     |
+  
+
 # 预定义消息概述
 
 ## 一、全局配置类定义 DPIDCFGBegin = 0
