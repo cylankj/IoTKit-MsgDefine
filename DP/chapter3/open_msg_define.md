@@ -256,6 +256,18 @@
 * 服务器按照时间段范围查询。
 
 
+## 2.3 消息定义 - 客户端操作配置后多终端同步
+
+## MIDRobotSyncData = 20209
+
+结构同 [MIDRobotSetData = 20202](open_msg_define.md#midrobotsetdata-20202) 
+
+## 2.3 消息定义 - 设备端事件触发APP端同步
+
+## MIDRobotPuhsData = 20210 
+
+结构同 [MIDRobotSetData = 20202](open_msg_define.md#midrobotsetdata-20202) 
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 * APP端多条查询消息 - 状态类

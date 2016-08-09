@@ -2,16 +2,18 @@
 
 | MID                                                                   |描述                       |  
 |-------                                                                         |-----------------|
-| [MIDRobotGetData = 20200](open_msg_define.md#midrobotgetdata-20200)            | 获取数据     |
-| [MIDRobotGetDataRsp = 20201](open_msg_define.md#midrobotgetdatarsp-20201)      | 获取数据响应  |
-| [MIDRobotSetData = 20202](open_msg_define.md#midrobotsetdata-20202)            | 设置数据     | 
-| [MIDRobotSetDataRsp = 20203](open_msg_define.md#midrobotsetdatarsp-20203)      | 设置数据响应  |
-| [MIDRobotDelData = 20204](open_msg_define.md#midrobotdeldata-20204)            | 删除数据     |
-| [MIDRobotDelDataRsp = 20205](open_msg_define.md#midrobotdeldatarsp-20205)      | 删除数据响应  |
-| [MIDRobotCountData = 20206](open_msg_define.md#midrobotcountdata-20206)        | 未读消息计数  |
+| [MIDRobotGetData = 20200](open_msg_define.md#midrobotgetdata-20200)            | 获取数据         |
+| [MIDRobotGetDataRsp = 20201](open_msg_define.md#midrobotgetdatarsp-20201)      | 获取数据响应     |
+| [MIDRobotSetData = 20202](open_msg_define.md#midrobotsetdata-20202)            | 设置数据         | 
+| [MIDRobotSetDataRsp = 20203](open_msg_define.md#midrobotsetdatarsp-20203)      | 设置数据响应     |
+| [MIDRobotDelData = 20204](open_msg_define.md#midrobotdeldata-20204)            | 删除数据        |
+| [MIDRobotDelDataRsp = 20205](open_msg_define.md#midrobotdeldatarsp-20205)      | 删除数据响应    |
+| [MIDRobotCountData = 20206](open_msg_define.md#midrobotcountdata-20206)        | 未读消息计数     |
 | [MIDRobotCountDataRsp = 20207](open_msg_define.md#midrobotcountdatarsp-20207)  | 未读消息计数响应  |
 | [MIDRobotGetDataEx = 20208](open_msg_define.md#midrobotgetdataex-20208)        | 组合查询         |
 | [MIDRobotGetDataExRsp = 20209](open_msg_define.md#midrobotgetdataexrsp-20209)  | 组合查询响应     |
+| [MIDRobotSyncData = 20210](open_msg_define.md#midrobotsyncdata-20210)          | 同步消息：用于多终端之间的操作同步 |
+| [MIDRobotPushData = 20211](open_msg_define.md#midrobotpushdata-20211)          | 推送消息：用于设备端触发的推送消息 |
   
 
 # 预定义消息概述
