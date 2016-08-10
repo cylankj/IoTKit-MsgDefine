@@ -155,15 +155,9 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|dataList | array | 消息数组 |
-
-| 元素定义 |  类型|   描述 | 
-|---|---|---|
-|id| int | 开放功能唯一标识 |
-|time| int64| 删除时间点 |
 |ret| int | 返回值 |
 
-* time 原样返回客户端的请求数据，只增加ret作为响应码。
+* 增加ret为响应码。
 
 ##  2.7 消息定义 - 未读消息计数
 
