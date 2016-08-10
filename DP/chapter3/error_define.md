@@ -182,7 +182,7 @@
     ----
 
 
-    // APP 测错误号
+    // APP 侧错误号
     // ErrorInvalidMethod 非法的调用，ex: 摄像头/APP 调用对方才有的功能
     ErrorInvalidMethod = 1000
     
