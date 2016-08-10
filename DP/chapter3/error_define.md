@@ -187,8 +187,20 @@
     ----
 
 
+    // APP 测错误号
+    // ErrorInvalidMethod 非法的调用，ex: 摄像头/APP 调用对方才有的功能
+    ErrorInvalidMethod = 1000
     
+    // ErrorInvalidParameter 非法的调用参数，ex: 登陆不带用户名 
+    ErrorInvalidParameter = 1001
 
-    
+    // ErrorInvalidState 非法的状态， ex: 和摄像头在连接状态再次调用连接
+    ErrorInvalidState = 1002
    
-    
+    // ErrorResolve 解析域名失败
+    ErrorResolve = 1003
+
+    // ErrorConnect 连接服务器失败
+    ErrorConnect = 1004
+
+    ----
