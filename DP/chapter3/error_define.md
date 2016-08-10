@@ -1,10 +1,8 @@
 
     // EOK 成功
-	EOK = 0
+	ErrorOK = 0
     
-    ---
-    
-    // P2P 错误
+    // P2P 错误码
     ErrorP2PDns = 1
     // 旧码 P2P_ERROR_DNS,
     
@@ -37,9 +35,7 @@
     
     ErrorP2PDisconetByUser = 11
     // 旧码 P2P_ERROR_DISCONNECT_BY_USER,
-    
-    -----
-    
+
     //直播类
     
     // ErrorVideoPeerNotExist 对端不在线。
@@ -55,13 +51,13 @@
     ErrorVideoPeerInConnect = 102
     //旧码：CAUSE_PEERINCONNECT      = 102,       正在查看中
     
-    //ErrorVideoPeerNotLogin 本端未登陆
-    ErrorVideoPeerNotLogin = 103
+    //ErrorVideoNotLogin 本端未登陆
+    ErrorVideoNotLogin = 103
     //旧码：CAUSE_CALLER_NOTLOGIN    = 103,      本端未登陆
     
-    ----
 
-    
+    // ret错误码定义
+
     // ErrorUnknown 未知错误
     ErrorUnknown = 120
     // 旧码 EUnknown = 1
@@ -70,11 +66,10 @@
 	ErrorDataBase = 121
     // 旧码 EDataBase = -1
     
-    // ErrorSessionTimeout  会话超时
-	ErrorSessionTimeout = 122
+    // ErrorInvalidSession  未登录或无效的会话，客户端和设备端通用。
+	ErrorInvalidSession = 122
     // 旧码 ESessionTimeout = 2
     
-    ----
     
     // 设备端鉴权。
     //ECIDExceedQuota 厂家CID达到配额。关联消息：注册。
@@ -168,20 +163,20 @@
     ----
     
     // 客户端亲友关系类.
-    //EFriendInvalidAccount 添加好友失败 对方账户未注册
-	EFriendInvalidAccount = 240
+    //ErrorFriendInvalidAccount 添加好友失败 对方账户未注册
+	ErrorFriendInvalidAccount = 240
     // 旧码 EInvalidToAccount = 66
     
-	//EFriendAlready  已经是好友关系
-	EFriendAlready = 241
+	//ErrorFriendAlready  已经是好友关系
+	ErrorFriendAlready = 241
     // 旧码 EAlreadyFriend = 67 
     
-	//EFriendToSelf 不能添加自己为好友
-	EFriendToSelf = 242
+	//ErrorFriendToSelf 不能添加自己为好友
+	ErrorFriendToSelf = 242
     // 旧码 EAddSelf = 68
     
-	//EFriendInvalidRequest 好友请求消息过期
-	EFriendInvalidRequest = 243
+	//ErrorFriendInvalidRequest 好友请求消息过期
+	ErrorFriendInvalidRequest = 243
     // 旧码 EInvalidFriendRequest = 69
      
     ----
