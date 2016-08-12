@@ -130,6 +130,8 @@
 |ossType |int|海外或国内存储地区。128消息下发填充|
 |fileName |string|附件文件名|
 
+注：存储路径为[bucket]/Wonder/[cid]/fileName.jpg。示例：jiafeigou-yf/Wonder/200000000001/1470988436.jpg
+
 ---
 
 ## DPIDCameraLive = DPIDCameraBegin +8
