@@ -82,7 +82,7 @@ const (
 
 
 客户端云存储路径约束：
-用户头像：[bucket]/[account]/photo.jpg，客户端根据ETAG判断头像是否更新。
+用户头像：[bucket]/[account]/photo.jpg，客户端根据ETAG判断头像是否更新。默认头像路径为：[bucket]/image/default.jpg。
 用户反馈的日志：[bucket]/[account]/log/[timestamp].jpg timestamp为文件产生时间，单位秒。
 
 ------
