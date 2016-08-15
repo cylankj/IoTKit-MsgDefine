@@ -69,6 +69,7 @@
 |objValue| Object |由time和value组成的结构 |
 
 | objValue定义 |  类型|   描述 | 
+|---|---|---|
 |time| int64| 更新时间点 |
 |value| int, string, bool, ...| 基础类型： |
 
@@ -245,7 +246,8 @@
 |time| int64| 更新时间点 |
 |objValue| Object |由time和value组成的结构 |
 
-| objValue定义 |  类型|   描述 | 
+| objValue定义 |  类型|   描述 |
+|---|---|---| 
 |time| int64| 更新时间点 |
 |value| int, string, bool, ...| 基础类型： |
 
