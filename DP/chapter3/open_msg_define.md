@@ -63,9 +63,12 @@
 |seq|int64| 序列号 |
 |multiDataList | array | dataList的数组 |
 
-| data定义 |  类型|   描述 | 
+| data（Key - Value结构）定义 |  类型|   描述 | 
 |---|---|---|
-|id| int | 开放功能唯一标识 |
+|id| int | Key，开放功能唯一标识 |
+|objValue| Object |由time和value组成的结构 |
+
+| objValue定义 |  类型|   描述 | 
 |time| int64| 更新时间点 |
 |value| int, string, bool, ...| 基础类型： |
 
@@ -240,6 +243,10 @@
 |---|---|---|
 |id| int | 开放功能唯一标识 |
 |time| int64| 更新时间点 |
+|objValue| Object |由time和value组成的结构 |
+
+| objValue定义 |  类型|   描述 | 
+|time| int64| 更新时间点 |
 |value| int, string, bool, ...| 基础类型： |
 
 
@@ -272,7 +279,7 @@
 {20200, "", "200000001", seq, 1, true, [{4, time},{1, time}]}
     
 响应：
-{20201, "", "", seq, [[{4, time, msgpack(*)}], [{1, time, msgpack(*)}]]}
+{20201, "", "", seq, [[{4, {time, msgpack(*)}], [{1, {time, msgpack(*)}]]}
  
 ---
    
@@ -282,7 +289,7 @@
 {20200, "", "200000001", seq, 2, true, [{5, time}]}
    
 如查询报警消息的响应：
-{20201, "", "", seq, [[{5，time, msgpack(*)},{5, time, msgpack(*)}]]}
+{20201, "", "", seq, [[{5，{time, msgpack(*)}},{5, {time, msgpack(*)}}]]}
    
 ---
    
@@ -292,7 +299,7 @@
 {20208, "", "200000001", seq, 2, true, time, [{5}, {1}]}
    
 如查询报警消息的响应：
-{20209, "", "", seq, [{5，time, msgpack(*)},{1, time, msgpack(*)}]}
+{20209, "", "", seq, [{5，{time, msgpack(*)}},{1, {time, msgpack(*)}}]}
    
 ---
   
