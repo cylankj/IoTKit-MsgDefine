@@ -52,9 +52,9 @@ const (
 * 如果是Aws存储，该配置只下发type = AwsUSConfig， hostname = us-west-2（即为regionName）和bucket = us_jfgyun 字段，Access ID和Key为空，需要通过接口获取安全凭证：http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#CLIENT_GET_AWS_CREDENTIALS_REQ-16306
       
 设备端云存储路径约束：
-* 报警图片：[bucket]/[cid]/[fileName].jpg ， fileName使用图片产生时间timestamp，单位秒。
-* 延时摄影图片:[bucket]/[cid]/[fileName].jpg， fileName使用图片产生时间timestamp，单位秒。
-* 延时摄影合成的影片：[bucket]/[cid]/[fileName].mp4， fileName使用延时摄影开始的时间timestamp，单位秒。
+* 报警图片：[bucket]/[vid]/[cid]/[fileName].jpg ， fileName使用图片产生时间timestamp，单位秒。
+* 延时摄影图片:[bucket]/[vid]/[cid]/[fileName].jpg， fileName使用图片产生时间timestamp，单位秒。
+* 延时摄影合成的影片：[bucket]/[vid]/[cid]/[fileName].mp4， fileName使用延时摄影开始的时间timestamp，单位秒。
 ----------------------------------------------------------------------------------------------------------------------------
 
 ## DPIDClientCloudStorageConfig = DPIDCFGBegin+4
@@ -82,8 +82,8 @@ const (
 
 
 客户端云存储路径约束：
-用户头像：[bucket]/[account]/photo.jpg，客户端根据ETAG判断头像是否更新。默认头像路径为：[bucket]/image/default.jpg。
-用户反馈的日志：[bucket]/[account]/log/[fileName].jpg fileName使用图片产生时间timestamp，单位秒。
+用户头像：[bucket]/[vid]/[account]/photo.jpg，客户端根据ETAG判断头像是否更新。默认头像路径为：[bucket]/image/default.jpg。
+用户反馈的日志：[bucket]/[vid]/[account]/log/[fileName].jpg fileName使用图片产生时间timestamp，单位秒。
 
 ------
 
