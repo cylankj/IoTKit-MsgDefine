@@ -61,12 +61,12 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|multiDataList | array | dataList的数组 |
+|dataList | array | data的数组。|
 
-| data（Key - Value结构）定义 |  类型|   描述 | 
+| data定义 |  类型|   描述 | 
 |---|---|---|
-|id| int | Key，开放功能唯一标识 |
-|objValue| Object |由time和value组成的结构 |
+|id| int | dpid, 开放功能唯一标识 |
+|objValueList| array |objValue的数组。 |
 
 | objValue定义 |  类型|   描述 | 
 |---|---|---|
@@ -243,11 +243,6 @@
 | data定义 |  类型|   描述 | 
 |---|---|---|
 |id| int | 开放功能唯一标识 |
-|time| int64| 更新时间点 |
-|objValue| Object |由time和value组成的结构 |
-
-| objValue定义 |  类型|   描述 |
-|---|---|---| 
 |time| int64| 更新时间点 |
 |value| int, string, bool, ...| 基础类型： |
 
