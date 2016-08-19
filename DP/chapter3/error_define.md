@@ -1,4 +1,3 @@
-
     // EOK 成功
 	ErrorOK = 0
     
@@ -126,6 +125,12 @@
 	ErrorEmailExist = 187
     // 旧码 EEmailExist = 53
     
+    // 手机号码不合规
+	EIsNotPhone = 188
+	
+	// 邮箱账号不合规
+	EIsNotEmail = 189
+    
     ----
     
     // 客户端绑定设备类.
@@ -180,7 +185,12 @@
     // 旧码 EInvalidFriendRequest = 69
      
     ----
-
+    
+    // 获取临时安全凭证
+    // 获取失败
+    EGetCredentials = 260
+    
+    ----
 
     // APP 侧错误号
     // ErrorInvalidMethod 非法的调用，ex: 摄像头/APP 调用对方才有的功能
