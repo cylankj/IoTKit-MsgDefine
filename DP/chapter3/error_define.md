@@ -126,10 +126,10 @@
     // 旧码 EEmailExist = 53
     
     // 手机号码不合规
-	EIsNotPhone = 188
+	ErrorIsNotPhone = 188
 	
 	// 邮箱账号不合规
-	EIsNotEmail = 189
+	ErrorIsNotEmail = 189
     
     ----
     
@@ -188,7 +188,7 @@
     
     // 获取临时安全凭证
     // 获取失败
-    EGetCredentials = 260
+    ErrorGetCredentials = 260
     
     ----
 
