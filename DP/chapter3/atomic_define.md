@@ -90,4 +90,4 @@
 ## 七、帐号相关功能定义 DPIDAccountBegin = 600
 | id                                                                                                                  |描述              |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步  |
 |-------                                                                                                              |----------        |----------|----------|----------|------------   |---------     |---------|------|------|
-| [DPIDAccountBind = DPIDAccountBegin +1](base_msg_define.md#dpidbaseled-dpidaccountbegin-1)                             | 绑定、解绑消息    | 否       | string     | 是       | 显示         | 无              |是            | 否           | 
+| [DPIDAccountBind = DPIDAccountBegin +1](account_msg_define.md#dpidbaseled-dpidaccountbegin-1)                             | 绑定、解绑消息    | 否       | string     | 是       | 显示         | 无              |是            | 否           | 
