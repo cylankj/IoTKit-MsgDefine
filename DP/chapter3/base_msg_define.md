@@ -301,7 +301,7 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |  value定义 |  类型|   描述 | 
 |---|---|---|
 |isBind|bool| true：绑定，false：解绑|
-|account |string||
+|account |string| 强绑帐号 |
 
 ---
 
