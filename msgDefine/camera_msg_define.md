@@ -9,7 +9,6 @@
 |time| int64| 时间点 |
 |enable|bool| 是否开启 |
 
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidPushCidset-3007
 
 ---
 
@@ -30,7 +29,6 @@
 |end_time|int| 结束时间点 |
 |week|int| 每周的星期* |
  
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidPushCidset-3007
 
 ---
 
@@ -43,8 +41,6 @@
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
 |sensitivity|int| 灵敏度 0为低SENSITIVITY_LOW, 1为中SENSITIVITY_DPIDDLE, 2为高SENSITIVITY_HIGH 默认为中 |
-
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidPushCidset-3007
 
 ---
 
@@ -63,8 +59,6 @@
 |sound|int| 报警设备提示音 |
 |sound_long|int| 循环播放时长 |
 
-
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidPushCidset-3007
 
 ---
 
@@ -86,8 +80,6 @@
 |file|int|协商命名规则为：time_id.jpg。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
 |type|int|海外或国内存储地区。128消息下发填充|
 
-
-* http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDUploadWarn-3105
 
 ---
 
@@ -129,8 +121,6 @@
 |msgType|int| 0-附带图片，1-附带视频|
 |ossType |int|海外或国内存储地区。128消息下发填充|
 |fileName |string|附件文件名|
-
-注：存储路径为[bucket]/Wonder/[cid]/fileName.jpg。示例：jiafeigou-yf/Wonder/200000000001/1470988436.jpg
 
 ---
 

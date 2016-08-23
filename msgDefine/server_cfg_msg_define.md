@@ -8,8 +8,6 @@
 |time| int64| 数据更新时间点 |
 |value|string|  msgpack字符串 |
  
- 
-* 原19号消息 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#RELAY_SERVER-19
 
 --------------------------------------------------------------------------------------------------------------------------
 
@@ -22,10 +20,7 @@
 |id|int| 功能消息唯一标识|
 |time| int64 | 数据更新时间点 |
 |heartbeat|int|  秒 |
- 
-* 客户端将文件直接上传到OSS, 所以MsgServer弃用。
-* 原18号消息 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#SERVER_CONFIG-18
- 
+  
 -------
 
 
@@ -46,8 +41,6 @@
 |---|---|---|
 |url|string| 升级地址|
 |isUpgrade|int|是否强制升级|
-
-* 原响应消息 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientLoginRsp30-1
 
 ------
 

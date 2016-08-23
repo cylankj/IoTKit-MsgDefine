@@ -20,7 +20,6 @@
 
 设备离线时实例： {id, time, msgpack(1,"")}， 服务器检测到离线后主动推送该消息给客户端。  
 
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidLogin-3200
 
 ---
 
@@ -36,7 +35,6 @@
 
 示例：{id，time, msgpack("AW:SW:WS:DE:DE:DE")}
 
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidLogin-3200
 
 ---
 
@@ -50,7 +48,6 @@
 |time| int64| 时间点 |
 |sdcard|bool|是否有卡|
 
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-3100
 
 ---
 
@@ -72,10 +69,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |sdcard_errno |int|错误号|
 
 
-示例：{id，time, msgpack([700000,1000,0])}
-
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-3100
-
 ---
 
 ## DPIDBasePower = DPIDBaseBegin +5
@@ -86,8 +79,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |power|bool| 是否 |
-
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-3100
 
 ---
 
@@ -101,8 +92,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |battery|int|电量 百分比|
 
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDStatusSdcardTOServer-3100
-
 ---
 
 ## DPIDBaseVersion = DPIDBaseBegin +7
@@ -114,8 +103,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
 |version|string|  字符串|
- 
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidLogin-0
 
 ---
  
@@ -129,8 +116,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |sysVersion|string|  字符串|
 
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidLogin-0
-
 ---
  
 ## DPIDBaseLED = DPIDBaseBegin +9
@@ -143,8 +128,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |led|bool| 指示灯 |
 
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
-
 ---
 
 ## DPIDBaseUptime = DPIDBaseBegin +10
@@ -156,8 +139,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
 |uptime|int| 开机时间 |
-
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDCidLogin-0
 
 ---
 
@@ -179,8 +160,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |password|string| 密码 |
 |encryType |string| 加密方式 |
 |channel|string| 频段 |
-
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientPost-0
 
 ---
 
@@ -224,7 +203,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |timezone|string| 如： Asia/Shanghai。|
 |offset |int|单位：秒。 如东八区： 8*60*60|
 
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
 
 ----
  
@@ -238,9 +216,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |isPushFlow|bool|  |
 
-
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
-
 ----
  
 ## DPIDBaseIsNTSC = DPIDBaseBegin +16
@@ -252,9 +227,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
 |isNTSC|bool|  |
-
-
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
 
 ----
  
@@ -268,9 +240,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |time| int64| 时间点 |
 |isMobile|bool|  |
 
-
-* 原消息定义 http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89-%E6%94%AF%E6%8C%81%E8%90%9D%E5%8D%9C%E5%A4%B4#MIDClientCidSetReq-8
-
 ----
 
 ## DPIDBaseFormatSD = DPIDBaseBegin +18
@@ -282,8 +251,6 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|int|占位字段，暂未使用|
-
-http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF%E5%AE%9A%E4%B9%89#SDCARD_FORMAT_TO_CID-118
 
 ---
 
