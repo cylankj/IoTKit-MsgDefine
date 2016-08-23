@@ -1,1 +1,0 @@
-打开cmd命令行，进入当前目录，执行命令 gitbook serve, 然后浏览器访问http://localhost:4000 即可实时查看效果。
