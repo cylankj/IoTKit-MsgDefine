@@ -24,8 +24,6 @@
 |-------|-------------------|----------|
 | [DPIDRelayServer = DPIDCFGBegin+1](server_cfg_msg_define.md#dpidrelayserver-dpidcfgbegin1)             | RelayServer配置      | string     |
 | [DPIDHeartbeat = DPIDCFGBegin+2](server_cfg_msg_define.md#dpidheartbeat-dpidcfgbegin2)                 | 心跳配置        | string     | 
-| [DPIDCidCloudStorageConfig = DPIDCFGBegin+3](server_cfg_msg_define.md#dpidcidcloudstorageconfig-dpidcfgbegin3)           | CidCloudStorageConfig配置     | string     | 
-| [DPIDClientCloudStorageConfig = DPIDCFGBegin+4](server_cfg_msg_define.md#dpidclientcloudstorageconfig-dpidcfgbegin4)     | ClientCloudStorageConfig配置  | string     |
 | [DPIDClientUpgradeConfig = DPIDCFGBegin+5](server_cfg_msg_define.md#dpidclientupgradeconfig-dpidcfgbegin5) | 客户端升级检测地址  | string     |
  
 
