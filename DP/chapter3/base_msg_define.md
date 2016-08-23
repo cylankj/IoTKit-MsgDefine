@@ -287,21 +287,5 @@ http://yf.cylan.com.cn:82/redmine/projects/cloudplatform/wiki/%E6%B6%88%E6%81%AF
 
 ---
 
-## DPIDBaseBind = DPIDBaseBegin +19
 
-*  格式化SD卡
-
-|  data定义 |    类型| 描述 | 
-|---|---|---|
-|id|int| 功能消息唯一标识|
-|time| int64| 时间点 |
-|value|string| |
-
-
-|  value定义 |  类型|   描述 | 
-|---|---|---|
-|isBind|bool| true：绑定，false：解绑|
-|account |string| 强绑帐号 |
-
----
 

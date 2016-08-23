@@ -55,7 +55,7 @@
 | [DPIDBaseIsNTSC = DPIDBaseBegin +16](base_msg_define.md#dpidbaseled-dpidbasebegin-16)           | 设备电流频率配置                   | 是         | bool      | 是        | 控制         | 是              |无            | 是           | 否 |
 | [DPIDBaseIsMobile = DPIDBaseBegin +17](base_msg_define.md#dpidbaseled-dpidbasebegin-17)         | 设备优先使用移动网络配置           | 是         | bool       | 是        | 控制         | 是              |无            | 是           | 否 |
 | [DPIDBaseFormatSD = DPIDBaseBegin +18](base_msg_define.md#dpidbaseled-dpidbasebegin-18)         | 格式化SD卡                        | 否         | 无         | 是        | 控制         | 是              |无            | 否           | 否 |
-| [DPIDBaseBind = DPIDBaseBegin +19](base_msg_define.md#dpidbaseled-dpidbasebegin-19)             | 绑定、解绑消息                     | 否         | string     | 是       | 显示         | 无              |是            | 否           | 否 |
+
 
 ## 四、音视频功能定义 DPIDVideoBegin = 300
 | id                                                                                                  |描述                            |是否唯一   |数据类型      |APP可见   |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
@@ -87,3 +87,7 @@
 | [DPIDCameraCoord = DPIDCameraBegin +10](camera_msg_define.md#dpidcameracoord-dpidcamerabegin-10)                    | 视频坐标          | 是        | string     | 是        | 控制         | 有        |无                | 是 | 否 |
 
 
+## 七、帐号相关功能定义 DPIDAccountBegin = 600
+| id                                                                                                                  |描述              |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步  |
+|-------                                                                                                              |----------        |----------|----------|----------|------------   |---------     |---------|------|------|
+| [DPIDAccountBind = DPIDAccountBegin +1](base_msg_define.md#dpidbaseled-dpidaccountbegin-1)                             | 绑定、解绑消息    | 否       | string     | 是       | 显示         | 无              |是            | 否           | 
