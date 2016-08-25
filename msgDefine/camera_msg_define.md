@@ -96,11 +96,8 @@
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|picFile|int| 协商命名规则为：time.jpg。|
-|ossType |int|海外或国内存储地区。128消息下发填充|
-|isOk |bool|接听状态|
-|audio |bool|是否有留言|
-
+|beginTime |int64|开始时间，单位秒|
+|timeDuration |int| 摄影间隔，单位秒（20 ， 60）|
 
 
 ---
