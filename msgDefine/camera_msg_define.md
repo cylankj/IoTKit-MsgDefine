@@ -118,8 +118,8 @@
 |  value定义 |  类型|   描述 | 
 |---|---|---|
 |msgType|int| 0-附带图片，1-附带视频|
-|ossType |int|海外或国内存储地区。128消息下发填充|
-|fileName |string|附件文件名|
+|regionType |int| 阿里或亚马逊的云存储地区。|
+|fileName |string|附件文件名全称。如：图片timestamp.jpg 视频timestamp.mp4 |
 
 ---
 
