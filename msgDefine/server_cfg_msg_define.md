@@ -35,7 +35,7 @@
 
 |  mapKey定义 |  类型|   描述 | 
 |---|---|---|
-|regionType|int|枚举 enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeS3}|
+|regionType|int|枚举 enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeS3USEast1}|
 
  
 |  mapValue定义 |  类型|   描述 | 
