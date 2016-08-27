@@ -97,7 +97,9 @@
 |  value定义 |  类型|   描述 | 
 |---|---|---|
 |beginTime |int64|开始时间，单位秒|
-|timeDuration |int| 摄影间隔，单位秒（20 ， 60）|
+|timeCycle |int| 摄影间隔，单位秒（20 ， 60）|
+|timeDuration |int| 摄影时长，单位秒（如86400为24小时）|
+|isON|bool|任务状态：False表示摄影任务已终止，用户提前结束任务时触发。 |
 
 
 ---
