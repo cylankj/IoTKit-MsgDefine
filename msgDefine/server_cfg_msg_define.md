@@ -23,7 +23,7 @@
   
 -------
 
-## DPIDCloudStorge = DPIDCFGBegin+3
+## DPIDCloudStorage = DPIDCFGBegin+3
 
 *  云存储配置
 
@@ -40,7 +40,7 @@
  
 |  mapValue定义 |  类型|   描述 | 
 |---|---|---|
-|cloudStorgeType|int|枚举 enum{cloudStorgeOSS, cloudStorgeS3}|
+|cloudStorageType|int|枚举 enum{cloudStorageOSS, cloudStorageS3}|
 |bucketName|string| 存储桶|
 |regionName|string|区域|
 |url|string|域名|
