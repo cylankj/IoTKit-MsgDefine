@@ -61,9 +61,9 @@
 |caller| string | 源端标识 |
 |callee| string | 目的端标识 |
 |seq|int64| 序列号 |
-|dataList | array | data的数组。|
+|dataMap | map | key是id, value是objValueList|
 
-| data定义 |  类型|   描述 | 
+| map定义 |  类型|   描述 | 
 |---|---|---|
 |id| int | dpid, 开放功能唯一标识 |
 |objValueList| array |objValue的数组。 |
