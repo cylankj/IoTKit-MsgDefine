@@ -23,7 +23,8 @@
 |id     |描述                  |数据类型    |  
 |-------|-------------------|----------|
 | [DPIDRelayServer = DPIDCFGBegin+1](server_cfg_msg_define.md#dpidrelayserver-dpidcfgbegin1)             | RelayServer配置      | string     |
-| [DPIDHeartbeat = DPIDCFGBegin+2](server_cfg_msg_define.md#dpidheartbeat-dpidcfgbegin2)                 | 心跳配置        | string     | 
+| [DPIDHeartbeat = DPIDCFGBegin+2](server_cfg_msg_define.md#dpidheartbeat-dpidcfgbegin2)                 | 心跳配置        | string     |
+| [DPIDCloudStorge = DPIDCFGBegin+3](server_cfg_msg_define.md#dpidcloudstorage-dpidcfgbegin3)             | 云存储配置        | string     | 
 | [DPIDClientUpgradeConfig = DPIDCFGBegin+5](server_cfg_msg_define.md#dpidclientupgradeconfig-dpidcfgbegin5) | 客户端升级检测地址  | string     |
  
 
