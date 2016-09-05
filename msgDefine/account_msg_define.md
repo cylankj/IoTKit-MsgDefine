@@ -11,6 +11,7 @@
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
+|cid|string| -- |
 |isBind|bool| true：绑定，false：解绑|
 |account |string| 强绑帐号 |
 
@@ -30,6 +31,7 @@
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
+|cid|string| -- |
 |msgType|int| 0-附带图片，1-附带视频|
 |regionType |int| 阿里或亚马逊的云存储地区。|
 |fileName |string|附件文件名全称。如：图片timestamp.jpg 视频timestamp.mp4 |
