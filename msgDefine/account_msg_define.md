@@ -32,6 +32,7 @@
 |  value定义 |  类型|   描述 | 
 |---|---|---|
 |cid|string| -- |
+|time|int64|单位秒。视频或图片生成的时间点|
 |msgType|int| 0-附带图片，1-附带视频|
 |regionType |int| 阿里或亚马逊的云存储地区。|
 |fileName |string|附件文件名全称。如：图片timestamp.jpg 视频timestamp.mp4 |

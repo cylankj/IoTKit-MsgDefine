@@ -48,6 +48,7 @@
 |time| int64| 时间点 |
 |sdcard|bool|是否有卡|
 
+示例：{id，time, msgpack(true)}
 
 ---
 
