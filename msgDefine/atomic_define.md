@@ -51,8 +51,6 @@
 | [DPIDBaseClientLog = DPIDBaseBegin +11](base_msg_define.md#dpidbaseclientlog-dpidbasebegin-11)  | 客户端上报日志消息（提交WIFI信息） | 否         | string     | 否        | 无           | 无              |无            | 否           | 否 |
 | [DPIDBaseCidLog = DPIDBaseBegin +12](base_msg_define.md#dpidbasecidlog-dpidbasebegin-12)        | 设备上报日志消息                  | 否         | string     | 否        | 无           | 无              |无            | 否           | 否 |
 | [DPIDBaseP2PVersion = DPIDBaseBegin +13](base_msg_define.md#dpidbasep2pversion-dpidbasebegin-13)| 设备P2P版本号                     | 是         | int        | 否        | 无           | 无             |无            | 否           | 是 |
-
-
 | [DPIDBaseTimezone = DPIDBaseBegin +14](base_msg_define.md#dpidbaseled-dpidbasebegin-14)         | 设备时区配置                      | 否         | int        | 是        | 控制         | 是              |无            | 是           | 否 |
 | [DPIDBaseIsPushFlow = DPIDBaseBegin +15](base_msg_define.md#dpidbaseled-dpidbasebegin-15)       | 设备推流配置                      | 是         | bool       | 是        | 控制         | 是              |无            | 是           | 否 |
 | [DPIDBaseIsNTSC = DPIDBaseBegin +16](base_msg_define.md#dpidbaseled-dpidbasebegin-16)           | 设备电流频率配置                   | 是         | bool      | 是        | 控制         | 是              |无            | 是           | 否 |
