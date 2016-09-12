@@ -65,8 +65,8 @@
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|storage|int|卡容量 单位byte|
-|storage_used|int|已用空间 单位byte|
+|storage|int64|卡容量 单位byte|
+|storage_used|int64|已用空间 单位byte|
 |sdcard_errno |int|错误号|
 
 
