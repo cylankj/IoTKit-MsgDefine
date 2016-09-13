@@ -13,8 +13,19 @@
 
 |  value定义 |  类型|   描述 |
 |---|---|---|
-|net|int| WiFi，3G，4G等|
+|net|int| 特征值|
 |ssid|string| 网络名称|
+
+
+| net| 特征值|  描述 |
+|---|---|---|
+|NET_CONNECT | -1 | #绑定后的连接中 |
+|NET_OFFLINE |  0 | #不在线 |
+|NET_WIFI    |  1 | #WIFI网络 |
+|NET_2G      |  2 | #2G网络 |
+|NET_3G      |  3 | #3G网络 |
+|NET_4G      |  4 | #4G网络  |   
+|NET_5G      |  5 | #5G网络  |   
 
 设备上线时示例： {id, time, msgpack(1,"cylan_605")}
 
