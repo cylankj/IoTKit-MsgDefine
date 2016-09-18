@@ -144,7 +144,7 @@
     ErrorGetCredentials = 260
     
     // 消息格式错误
-    ErrorMsgDefine = 261
+    ErrorInvalidMsg = 261
     
     ----
 
