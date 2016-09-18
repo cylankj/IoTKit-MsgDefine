@@ -143,6 +143,9 @@
     // 获取失败
     ErrorGetCredentials = 260
     
+    // 消息格式错误
+    ErrorMsgDefine = 261
+    
     ----
 
     // APP 侧错误号
