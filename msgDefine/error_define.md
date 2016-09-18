@@ -1,7 +1,10 @@
     // EOK 成功
 	ErrorOK = 0
     
+    ---
+
     // P2P 错误码
+
     ErrorP2PDns = 1
     
     ErrorP2PSocket = 2
@@ -24,7 +27,8 @@
     
     ErrorP2PDisconetByUser = 11
 
-    
+    ------
+
     // 对端不在线
     ErrorVideoPeerNotExist = 100 
 
@@ -36,7 +40,10 @@
     
     // 本端未登陆
     ErrorVideoNotLogin = 103
-    
+
+    -----
+
+    // 通用类
     // 未知错误
     ErrorUnknown = 120
     
@@ -45,6 +52,11 @@
     
     // 未登录或无效的会话，客户端和设备端通用
 	ErrorInvalidSession = 122
+   
+    // 消息格式错误
+    ErrorInvalidMsg = 123
+
+    ------
 
     // 设备端鉴权
     // 厂家CID达到配额。关联消息：注册。
@@ -142,9 +154,7 @@
     // 获取临时安全凭证
     // 获取失败
     ErrorGetCredentials = 260
-    
-    // 消息格式错误
-    ErrorInvalidMsg = 261
+
     
     ----
 
