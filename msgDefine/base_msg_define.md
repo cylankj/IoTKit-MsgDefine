@@ -1,5 +1,5 @@
 ## DPIDBaseBegin = 200
-## DPIDBaseNet=DPIDBaseBegin +1
+## DPIDBaseNet = DPIDBaseBegin + 1
 
 * 设备上报网络类型 
 
@@ -34,7 +34,7 @@
 
 ---
 
-## DPIDBaseMac = DPIDBaseBegin +2
+## DPIDBaseMac = DPIDBaseBegin + 2
 
 * 设备上报MAC地址
 
@@ -49,7 +49,7 @@
 
 ---
 
-## DPIDBaseSD = DPIDBaseBegin +3
+## DPIDBaseSD = DPIDBaseBegin + 3
 
 *  设备上报SD卡开关信息
 
@@ -63,7 +63,7 @@
 
 ---
 
-## DPIDBaseSDStatus = DPIDBaseBegin +4
+## DPIDBaseSDStatus = DPIDBaseBegin + 4
 
 *  设备上报SD卡容量信息
 
@@ -83,7 +83,7 @@
 
 ---
 
-## DPIDBasePower = DPIDBaseBegin +5
+## DPIDBasePower = DPIDBaseBegin + 5
 
 *  是否连接电源线
 
@@ -94,7 +94,7 @@
 
 ---
 
-## DPIDBaseBattery = DPIDBaseBegin +6
+## DPIDBaseBattery = DPIDBaseBegin + 6
 
 *  设备上报剩余电量
 
@@ -106,7 +106,7 @@
 
 ---
 
-## DPIDBaseVersion = DPIDBaseBegin +7
+## DPIDBaseVersion = DPIDBaseBegin + 7
 
 * 设备上报软件版本号 
 
@@ -118,7 +118,7 @@
 
 ---
  
-## DPIDBaseSysVersion = DPIDBaseBegin +8
+## DPIDBaseSysVersion = DPIDBaseBegin + 8
 
 *  设备上报系统版本号
 
@@ -130,7 +130,7 @@
 
 ---
  
-## DPIDBaseLED = DPIDBaseBegin +9
+## DPIDBaseLED = DPIDBaseBegin + 9
 
 * 设备指示灯配置
 
@@ -142,7 +142,7 @@
 
 ---
 
-## DPIDBaseUptime = DPIDBaseBegin +10
+## DPIDBaseUptime = DPIDBaseBegin + 10
 
 *  上报开机时间消息 
 
@@ -154,7 +154,7 @@
 
 ---
 
-## DPIDBaseClientLog = DPIDBaseBegin +11
+## DPIDBaseClientLog = DPIDBaseBegin + 11
 
 *  提交WIFI信息 
 
@@ -175,7 +175,7 @@
 
 ---
 
-## DPIDBaseCidLog = DPIDBaseBegin +12
+## DPIDBaseCidLog = DPIDBaseBegin + 12
 
 *  上报日志消息 （3.0新增）
 
@@ -187,7 +187,7 @@
   
 ---
 
-## DPIDBaseP2PVersion = DPIDBaseBegin +13
+## DPIDBaseP2PVersion = DPIDBaseBegin + 13
 
 * 上报P2P版本号 
 
@@ -200,7 +200,7 @@
 --- 
 
  
-## DPIDBaseTimezone = DPIDBaseBegin +14
+## DPIDBaseTimezone = DPIDBaseBegin + 14
 
 * 设备时区配置
 
@@ -218,7 +218,7 @@
 
 ----
  
-## DPIDBaseIsPushFlow = DPIDBaseBegin +15
+## DPIDBaseIsPushFlow = DPIDBaseBegin + 15
 
 * 设备推流配置 
 
@@ -230,7 +230,7 @@
 
 ----
  
-## DPIDBaseIsNTSC = DPIDBaseBegin +16
+## DPIDBaseIsNTSC = DPIDBaseBegin + 16
 
 * 设备电流频率配置
 
@@ -242,7 +242,7 @@
 
 ----
  
-## DPIDBaseIsMobile = DPIDBaseBegin +17
+## DPIDBaseIsMobile = DPIDBaseBegin + 17
 
 * 设备优先使用移动网络配置
 
@@ -254,7 +254,7 @@
 
 ----
 
-## DPIDBaseFormatSD = DPIDBaseBegin +18
+## DPIDBaseFormatSD = DPIDBaseBegin + 18
 
 *  格式化SD卡
 
@@ -267,7 +267,7 @@
 ---
 
 
-## DPIDBaseBind = DPIDBaseBegin +19
+## DPIDBaseBind = DPIDBaseBegin + 19
 
 *  格式化SD卡
 

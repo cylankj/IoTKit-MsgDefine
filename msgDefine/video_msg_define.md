@@ -1,5 +1,5 @@
 ## DPIDVideoBegin = 300
-## DPIDVideoMic = DPIDVideoBegin +1
+## DPIDVideoMic = DPIDVideoBegin + 1
 
 *  控制设备麦克风
 
@@ -12,7 +12,7 @@
   
 ---
 
-## DPIDVideoSpeaker = DPIDVideoBegin +2
+## DPIDVideoSpeaker = DPIDVideoBegin + 2
 
 *  控制设备喇叭
 
@@ -24,7 +24,7 @@
 
  ---
 
-## DPIDVideoAutoRecord = DPIDVideoBegin +3
+## DPIDVideoAutoRecord = DPIDVideoBegin + 3
  
 * 自动录像配置
 
@@ -37,7 +37,7 @@
 
 ---
 
-## DPIDVideoDirection = DPIDVideoBegin +4
+## DPIDVideoDirection = DPIDVideoBegin + 4
 
 *  控制设备画面翻转
 

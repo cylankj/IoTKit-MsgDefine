@@ -38,8 +38,8 @@
 
 | id                                                                                              |描述                               |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值      | 是否展示图表 | APP多终端是否需要同步 | 是否推送消息到APP端 |
 |-------                                                                                          |----------                         |---------- |----------  |---------- |------------  |---------     |---------     |------        |------|
-| [DPIDBaseNet = DPIDBaseBegin +1](base_msg_define.md#dpidbasenetdpidbasebegin-1)                 | 网络类型                          | 否        | string     | 是        | 显示         | 无             |无            | 否           | 是 |
-| [DPIDBaseMac = DPIDBaseBegin +2](base_msg_define.md#dpidbasemac-dpidbasebegin-2)                | MAC地址                           | 是        | string     | 是        | 显示         | 无             |无            | 否           | 否 |
+| [DPIDBaseNet = DPIDBaseBegin +1](base_msg_define.md#dpidbasenetdpid--basebegin--1)                 | 网络类型                          | 否        | string     | 是        | 显示         | 无             |无            | 否           | 是 |
+| [DPIDBaseMac = DPIDBaseBegin +2](base_msg_define.md#dpidbasemac--dpidbasebegin--2)                | MAC地址                           | 是        | string     | 是        | 显示         | 无             |无            | 否           | 否 |
 | [DPIDBaseSD = DPIDBaseBegin +3](base_msg_define.md#dpidbasesd-dpidbasebegin-3)                  | 是否接入SD卡                      | 是        | bool       | 是        | 显示         | 无              |无            | 否           | 是 |
 | [DPIDBaseSDStatus = DPIDBaseBegin +4](base_msg_define.md#dpidbasesdstatus-dpidbasebegin-4)      | SD卡容量信息                      | 否        | string     | 是        | 显示（实时）  | 无              |无            | 否           | 是 |
 | [DPIDBasePower = DPIDBaseBegin +5](base_msg_define.md#dpidbasepower-dpidbasebegin-5)            | 是否连接电源线                    | 是         | bool       | 是        | 显示         | 无              |无            | 否           | 是 |

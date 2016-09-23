@@ -1,4 +1,4 @@
-## DPIDRelayServer = DPIDCFGBegin+1
+## DPIDRelayServer = DPIDCFGBegin + 1
 
 *   RelayServer配置
 
@@ -11,7 +11,7 @@
 
 --------------------------------------------------------------------------------------------------------------------------
 
-## DPIDHeartbeat = DPIDCFGBegin+2
+## DPIDHeartbeat = DPIDCFGBegin + 2
 
 *  心跳配置
 
@@ -23,7 +23,7 @@
   
 -------
 
-## DPIDCloudStorage = DPIDCFGBegin+3
+## DPIDCloudStorage = DPIDCFGBegin + 3
 
 *  云存储配置
 
@@ -48,7 +48,7 @@
 
 ------
 
-## DPIDClientUpgradeConfig = DPIDCFGBegin+5
+## DPIDClientUpgradeConfig = DPIDCFGBegin + 5
 
 *  ClientUpgradeConfig配置
 

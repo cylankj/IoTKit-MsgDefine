@@ -1,4 +1,4 @@
-## DPIDAccountBind = DPIDAccountBegin +1
+## DPIDAccountBind = DPIDAccountBegin + 1
 
 *  强制绑定，解绑消息
 
@@ -18,7 +18,7 @@
 ---
 
 
-## DPIDAccountWonder = DPIDAccountBegin +2
+## DPIDAccountWonder = DPIDAccountBegin + 2
 
 *  每日精彩消息 (3.0 新增) 
 
