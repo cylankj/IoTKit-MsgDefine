@@ -280,7 +280,8 @@
 |  value定义 |  类型|   描述 | 
 |---|---|---|
 |isBind|bool| true: 绑定；false：解绑|
-|account |string |isBind = true，则是绑定帐号；isBind = false， 则是解绑帐号|
+|account |string |如果isBind = true，则是绑定帐号；如果isBind = false， 则是解绑帐号|
+|oldAccount |string |如果isBind = true，并且该设备被其他帐号（oldAccount）绑定，则该字段有值，否则该字段为空。|
 
 ---
 
