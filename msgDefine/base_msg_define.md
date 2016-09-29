@@ -286,4 +286,14 @@
 ---
 
 
+## DPIDBaseSdkVersion = DPIDBaseBegin + 20
 
+*  设备上报SDK版本号
+
+|  data定义 |    类型| 描述 |
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|version|string|  字符串|
+
+---

@@ -57,6 +57,7 @@
 | [DPIDBaseIsMobile = DPIDBaseBegin + 17](base_msg_define.md#dpidbaseismobile--dpidbasebegin--17)      | 设备优先使用移动网络配置           | 是         | bool       | 是        | 控制         | 是              |无            | 是           | 否 |
 | [DPIDBaseFormatSD = DPIDBaseBegin + 18](base_msg_define.md#dpidbaseformatsd--dpidbasebegin--18)    | 格式化SD卡                        | 否         | 无         | 是        | 控制         | 是              |无            | 否           | 否 |
 | [DPIDBaseBind = DPIDBaseBegin + 19](base_msg_define.md#dpidbasebind--dpidbasebegin--19)            | 绑定和解绑记录                        | 否         | string      | 是        | 显示         | 无              |无            | 否           | 否 |
+| [DPIDBaseSdkVersion = DPIDBaseBegin + 20](base_msg_define.md#dpidbasesdkversion--dpidbasebegin--20)        | SDK版本号                        | 是        | string     | 是        | 显示         | 无              |无            | 否           | 是 |
 
 
 ## 四、音视频功能定义 DPIDVideoBegin = 300
