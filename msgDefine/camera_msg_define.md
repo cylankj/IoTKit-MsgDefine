@@ -131,8 +131,8 @@
 
 
 模式定义：
-HANG_WALL = 1  壁挂
-HANG_CEIL = 2  吊顶
+MODE_TOP  = 0  吊顶
+MODE_WALL = 1  壁挂
 
 ---
 
