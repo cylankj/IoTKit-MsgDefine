@@ -93,4 +93,10 @@
 | id                                                                                                                  |描述              |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值    | 是否展示图表    |
 |-------                                                                                                              |----------        |----------|----------  |----------|------------  |---------     |----------------|
 | [DPIDAccountBind = DPIDAccountBegin + 1](account_msg_define.md#dpidaccountbind--dpidaccountbegin--1)                   | 绑定、解绑消息    | 否       | string     | 是        | 显示         | 无           |是              | 
-| [DPIDAccountWonder = DPIDAccountBegin + 2](account_msg_define.md#dpidaccountwonder--dpidaccountbegin--2)               | 每日精彩消息      | 否       | string     | 是        | 显示         | 无           |无              | 
+| [DPIDAccountWonder = DPIDAccountBegin + 2](account_msg_define.md#dpidaccountwonder--dpidaccountbegin--2)               | 每日精彩消息      | 否       | string     | 是        | 显示         | 无           |无              |
+
+## 七、系统相关功能定义 DPIDSystemBegin = 700 
+
+| id                                                                                                                  |描述              |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值    | 是否展示图表    |
+|-------                                                                                                              |----------        |----------|----------  |----------|------------  |---------     |----------------|
+| [DPIDSystemMsg = DPIDSystemBegin + 1](system_msg_define.md#dpidsystemmsg--dpidsystembegin--1)                       | 系统消息通知    | 否       | string     | 是        | 显示         | 无           |是              |
