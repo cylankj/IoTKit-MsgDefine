@@ -79,7 +79,7 @@
 | [DPIDAccountBind = DPIDAccountBegin + 1](account_msg_define.md#dpidaccountbind--dpidaccountbegin--1)                   | 绑定、解绑消息    | 否       | string     | 是        | 显示         | 无           |是              | 
 | [DPIDAccountWonder = DPIDAccountBegin + 2](account_msg_define.md#dpidaccountwonder--dpidaccountbegin--2)               | 每日精彩消息      | 否       | string     | 是        | 显示         | 无           |无              |
 
-## 七、系统相关功能定义 DPIDSystemBegin = 700 
+## 八、系统相关功能定义 DPIDSystemBegin = 700 
 
 | id                                                                                                                  |描述              |是否唯一   |数据类型    |APP可见    |显示/控制     |是否有返回值    | 是否展示图表    |
 |-------                                                                                                              |----------        |----------|----------  |----------|------------  |---------     |----------------|
@@ -87,4 +87,11 @@
 
 
 # 企业自定义消息概述
+
+## 一、自定义消息定义 
+
+| id  |  类型 | 描述  |
+| ---    |  ---  |  ---  |
+| [DPIDUserDefinedBegin = VIDUint32 << 32 + 30001](msg_user_defined.md#dpiduserdefinedbegin)   | uint64 | 自定义消息起始值 |
+| [DPIDUserDefinedEnd   = VIDUint32 << 32 + 40000](msg_user_defined.md#dpiduserdefinedbegin)   | uint64 | 自定义消息结束值 |
 
