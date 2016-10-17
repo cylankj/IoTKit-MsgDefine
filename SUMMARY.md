@@ -7,6 +7,7 @@
  * [摄像头消息定义](msgDefine/camera_msg_define.md)
  * [门铃消息定义](msgDefine/bell_msg_define.md)
  * [帐号相关消息定义](msgDefine/account_msg_define.md)
+ * [企业自定义消息概述](msgDefine/msg_user_defined.md)
  * [错误码定义](msgDefine/error_define.md)
  
 
