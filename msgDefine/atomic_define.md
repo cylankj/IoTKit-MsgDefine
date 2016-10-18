@@ -86,7 +86,7 @@
 | [DPIDSystemMsg = DPIDSystemBegin + 1](system_msg_define.md#dpidsystemmsg--dpidsystembegin--1)                       | 系统消息通知    | 否       | string     | 是        | 显示         | 无           |是              |
 
 
-# 企业自定义消息概述
+# 企业自定义消息
 
 ## 一、自定义消息定义 
 
