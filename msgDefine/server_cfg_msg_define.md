@@ -19,7 +19,7 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64 | 数据更新时间点 |
-|heartbeat|int|  秒 |
+|heartbeat|int|  单位秒 |
   
 -------
 

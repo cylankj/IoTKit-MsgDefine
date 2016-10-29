@@ -150,7 +150,7 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|uptime|int64| 开机时间 |
+|uptime|int| 开机时间，单位秒 |
 
 ---
 
@@ -213,7 +213,7 @@
 |  value定义 |  类型|   描述 | 
 |---|---|---|
 |timezone|string| 如： Asia/Shanghai。|
-|offset |int|单位：秒。 如东八区： 8*60*60|
+|offset |int|如东八区： 8*60*60，单位秒|
 
 
 ----
