@@ -19,13 +19,13 @@
 
 | net| 特征值|  描述 |
 |---|---|---|
-|NET_CONNECT | -1 | #绑定后的连接中 |
-|NET_OFFLINE |  0 | #不在线 |
-|NET_WIFI    |  1 | #WIFI网络 |
-|NET_2G      |  2 | #2G网络 |
-|NET_3G      |  3 | #3G网络 |
-|NET_4G      |  4 | #4G网络  |   
-|NET_5G      |  5 | #5G网络  |   
+|NET_CONNECT | -1 | 绑定后的连接中 |
+|NET_OFFLINE |  0 | 不在线 |
+|NET_WIFI    |  1 | WIFI网络 |
+|NET_2G      |  2 | 2G网络 |
+|NET_3G      |  3 | 3G网络 |
+|NET_4G      |  4 | 4G网络  |   
+|NET_5G      |  5 | 5G网络  |   
 
 设备上线时示例： {id, time, msgpack(1,"cylan_605")}
 
@@ -262,14 +262,14 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|value|int|占位字段，暂未使用|
+|value|int|占位字段，置空|
 
 ---
 
 
 ## DPIDBaseBind = DPIDBaseBegin + 19
 
-*  格式化SD卡
+*  绑定，解绑信息
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
