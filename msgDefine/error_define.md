@@ -118,6 +118,9 @@
     
     // 设备别名已存在。
 	ErrorCIDAliasExist = 202
+	
+    // ErrorCIDNotBind 设备未绑定，不可操作未绑定设备。
+	ErrorCIDNotBind = 203
     
     ----
     
