@@ -1,3 +1,4 @@
+## 全局配置类定义 DPIDCFGBegin = 0
 ## DPIDRelayServer = DPIDCFGBegin + 1
 
 *   RelayServer配置

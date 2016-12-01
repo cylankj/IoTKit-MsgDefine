@@ -73,6 +73,9 @@
     
     // 帐号或密码错误。
 	ErrorLoginInvalidPass = 161
+	
+    // 第三方帐号登陆： access_token 验证失败。
+	ErrorOpenLoginInvalidToken = 162
     
     ---
 

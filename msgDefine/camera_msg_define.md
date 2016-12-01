@@ -40,7 +40,7 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|sensitivity|int| 灵敏度 0为低SENSITIVITY_LOW, 1为中SENSITIVITY_DPIDDLE, 2为高SENSITIVITY_HIGH 默认为中 |
+|sensitivity|int| 灵敏度 0为低SENSITIVITY_LOW, 1为中SENSITIVITY_MIDDLE, 2为高SENSITIVITY_HIGH 默认为中 |
 
 ---
 
@@ -56,7 +56,7 @@
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|sound|int| 报警设备提示音 |
+|sound|int| 报警设备提示音 ：0 是静音， 1是汪汪声，2是警报声|
 |sound_long|int| 循环播放时长 |
 
 

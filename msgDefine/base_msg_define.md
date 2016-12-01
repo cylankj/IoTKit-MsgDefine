@@ -152,26 +152,6 @@
 |time| int64| 时间点 |
 |uptime|int| 开机时间，单位秒 |
 
----
-
-## DPIDBaseClientLog = DPIDBaseBegin + 11
-
-*  提交WIFI信息 
-
-|  data定义 |    类型| 描述 | 
-|---|---|---|
-|id|int| 功能消息唯一标识|
-|time| int64| 时间点 |
-|value|string| msgpack字符串 |
-
-
-|  value定义 |  类型|   描述 | 
-|---|---|---|
-|postType|int| 0-绑定，1-设置WiFi|
-|SSID |string| / |
-|password|string| 密码 |
-|encryType |string| 加密方式 |
-|channel|string| 频段 |
 
 ---
 
@@ -295,5 +275,26 @@
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
 |version|string|  字符串|
+
+---
+
+
+## DPIDBaseCtrlLog = DPIDBaseBegin + 21
+
+*  开启客户端和设备端日志功能, 到截止时间后自动停止。
+*  终端逻辑：终端将当前时间戳now和timeEnd比较，如果now <= timeEnd, 向日志服务写入日志；如果now > timeEnd, 停止写入日志。
+*  服务器逻辑：如果客户端和设备端在线，主动推送；如果不在线，上线时自动获取。
+
+|  data定义 |    类型| 描述 |
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string|  msgpack字符串 |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|ip|string| 日志服务器地址 |
+|port|int| 日志服务器端口|
+|timeEnd|int| 结束时间点，单位秒。|
 
 ---

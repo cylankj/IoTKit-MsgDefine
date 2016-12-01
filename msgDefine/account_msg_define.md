@@ -1,6 +1,7 @@
+## 帐号相关功能定义 DPIDAccountBegin = 600
 ## DPIDAccountBind = DPIDAccountBegin + 1
 
-*  强制绑定，解绑消息
+*  强制绑定，解绑消息的记录
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -39,7 +40,7 @@
 
 ## DPIDAccountShare = DPIDAccountBegin + 3
 
-*  分享或取消分享设备给好友
+*  分享或取消分享设备给好友的消息记录
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -57,7 +58,7 @@
 
 ## DPIDAccountIsShared = DPIDAccountBegin + 4
 
-*  被好友分享或取消分享设备
+*  被好友分享或取消分享设备的消息记录
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -71,3 +72,18 @@
 |cid|string| -- |
 |isShare|bool| true：分享，false：取消分享|
 |account |string| 对方帐号 |
+
+---
+
+## DPIDAccountLog = DPIDAccountBegin + 5
+
+*  提交WIFI信息 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string| 格式已OK的字符串 |
+
+以设置WiFi为例，
+客户端实际上发的value为： 设置WiFi：SSID[XiaoLan],密码[123456]，加密方式[WAP2], 频段[2.4G]
