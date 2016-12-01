@@ -10,7 +10,7 @@
    * [DPID - 企业自定义消息](msgDefine/msg_user_defined.md)
  * [错误码定义](msgDefine/error_define.md)
 
- #### [其他](document)
- * [第三方帐号授权登录说明](document/3rd_account_login_authentication.md)
+#### [其他](document)
+ * [第三方账号系统校验access_token](document/3rd_account_login_authentication.md)
 
 
