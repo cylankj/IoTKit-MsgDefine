@@ -30,7 +30,7 @@ Step4：通过验证，open_id在萝卜头平台合法使用。
 
 **协议：** 支持HTTP， HTTPS。
 
-**HTTP[S]请求**
+**HTTP[S] GET 请求**
 
 |请求参数|必须|字段类型|说明|
 | --- | --- | --- | ---|
@@ -52,7 +52,7 @@ Step4：通过验证，open_id在萝卜头平台合法使用。
 | --- | --- | --- |
 |expired_at| int64| 毫秒， access_token的过期时间戳(如：1433075493123)|
 |open_id|string|授权用户对应的唯一标识|
-|client_id|string | 授权方对应的标识|
+|vid|string | 萝卜头平台的企业编号：四位36进制字符串 |
 
 
 
@@ -62,7 +62,7 @@ Step4：通过验证，open_id在萝卜头平台合法使用。
 URL?access_token=********
 
 **Token有效时的响应：**
-{"code":"200","message":"","value":{"expired_at":1433075493，"open_id":"YMpfqmaiwUIpJg6m5YuYzZajnE7c1","client_id":"Go2B3GHe75JYYdo1VWeO"},"redirect":""}
+{"code":"200","message":"","value":{"expired_at":1433075493，"open_id":"YMpfqmaiwUIpJg6m5YuYzZajnE7c1","vid":"00FF"},"redirect":""}
 
 **Token失效时的响应：**
 {"code":"100002","message":"token 已失效","redirect":"","value":""}
