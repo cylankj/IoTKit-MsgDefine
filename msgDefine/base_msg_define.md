@@ -51,7 +51,7 @@
 
 ## DPIDBaseSD = DPIDBaseBegin + 3
 
-*  设备上报SD卡开关信息
+*  废弃： 设备上报SD卡开关信息
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -65,7 +65,7 @@
 
 ## DPIDBaseSDStatus = DPIDBaseBegin + 4
 
-*  设备上报SD卡容量信息
+*  设备上报SD卡容量信息， 
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -78,7 +78,8 @@
 |---|---|---|
 |storage|int64|卡容量 单位byte|
 |storage_used|int64|已用空间 单位byte|
-|sdcard_errno |int|错误号|
+|sdcard_errno |int|错误号。0 正常； 非0错误，需要格式化|
+|sdcard|bool|是否有卡|
 
 
 ---
@@ -296,5 +297,22 @@
 |ip|string| 日志服务器地址 |
 |port|int| 日志服务器端口|
 |timeEnd|int| 结束时间点，单位秒。|
+
+---
+
+## DPIDBaseSDInfo = DPIDBaseBegin + 22
+
+*  是否插入SD卡及错误的信息 本消息是服务器对 DPIDBaseSDStatus（根据sdcard和sdcard_errno）去重后存储, 用于APP端的消息中心。
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string|  msgpack字符串 |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|sdcard|bool|是否有卡|
+|sdcard_errno |int|错误号。0 正常； 非0错误，需要格式化|
 
 ---

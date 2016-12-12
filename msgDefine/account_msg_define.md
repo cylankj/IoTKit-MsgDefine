@@ -87,3 +87,4 @@
 
 以设置WiFi为例，
 客户端实际上发的value为： 设置WiFi：SSID[XiaoLan],密码[123456]，加密方式[WAP2], 频段[2.4G]
+

@@ -24,7 +24,6 @@
 |-------                                                                                          |----------                         |---------- |----------  |---------- |------------  |---------     |---------     |------        |------|
 | [DPIDBaseNet = DPIDBaseBegin + 1](base_msg_define.md#dpidbasenetdpid-basebegin-1)                | 网络类型                          | 否        | string     | 是        | 显示         | 无             |无            | 否           | 是 |
 | [DPIDBaseMac = DPIDBaseBegin + 2](base_msg_define.md#dpidbasemac-dpidbasebegin-2)                | MAC地址                           | 是        | string     | 是        | 显示         | 无             |无            | 否           | 否 |
-| [DPIDBaseSD = DPIDBaseBegin + 3](base_msg_define.md#dpidbasesd-dpidbasebegin-3)                  | 是否接入SD卡                      | 是        | bool       | 是        | 显示         | 无              |无            | 否           | 是 |
 | [DPIDBaseSDStatus = DPIDBaseBegin + 4](base_msg_define.md#dpidbasesdstatus-dpidbasebegin-4)      | SD卡容量信息                      | 否        | string     | 是        | 显示（实时）  | 无              |无            | 否           | 是 |
 | [DPIDBasePower = DPIDBaseBegin + 5](base_msg_define.md#dpidbasepower-dpidbasebegin-5)            | 是否连接电源线                    | 是         | bool       | 是        | 显示         | 无              |无            | 否           | 是 |
 | [DPIDBaseBattery = DPIDBaseBegin + 6](base_msg_define.md#dpidbasebattery-dpidbasebegin-6)        | 剩余电量                          | 否        | int        | 是        | 显示（实时）  | 无              |无            | 否           | 是 |
@@ -42,7 +41,7 @@
 | [DPIDBaseBind = DPIDBaseBegin + 19](base_msg_define.md#dpidbasebind-dpidbasebegin-19)            | 绑定和解绑记录                        | 否         | string      | 是        | 显示         | 无              |无            | 否           | 否 |
 | [DPIDBaseSdkVersion = DPIDBaseBegin + 20](base_msg_define.md#dpidbasesdkversion-dpidbasebegin-20)        | SDK版本号                        | 是        | string     | 是        | 显示         | 无              |无            | 否           | 是 |
 | [DPIDBaseCtrlLog = DPIDBaseBegin + 21](base_msg_define.md#dpidbasectrllog-dpidbasebegin-21)        | 开启客户端和设备端日志                        | 是        | string     | 是        | 控制         | 无              |无            | 否           | 是 |
-
+| [DPIDBaseSDInfo = DPIDBaseBegin + 22](base_msg_define.md#dpidbasesdinfo-dpidbasebegin-22)                  | 是否插入SD卡及错误的信息                      | 是        | bool       | 是        | 显示         | 无              |无            | 否           | 是 |
 
 ## 四、音视频功能定义 DPIDVideoBegin = 300
 | id                                                                                                  |描述                            |是否唯一   |数据类型      |APP可见   |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
