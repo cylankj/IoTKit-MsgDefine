@@ -79,6 +79,7 @@
 |is_record|int|摄像头是否在录像中。客户端【消息中心】->【历史视频】按钮根据该字段显示。注：由于正在录制的视频需要半小时后才能查看，所以客户端对最新报警与当前时间比对，小于半小时不显示按钮|
 |file|int|协商命名规则为：time_id.jpg， id取值范围[1,2,3]。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
 |type|int|海外或国内存储地区。128消息下发填充|
+|tly|string|陀螺仪， '0' 平视； '1' 俯视|
 
 
 ---
@@ -107,7 +108,7 @@
 
 ---
 
-## DPIDCameraLive = DPIDCameraBegin + 8
+## DPIDCameraStandby = DPIDCameraBegin + 8
 
 *  直播开关 - 摄像头待机 (3.0 新增) 
 
@@ -115,7 +116,7 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|enable|bool| / |
+|enable|bool| True: 待机； False： 正常工作|
 
 ---
 
