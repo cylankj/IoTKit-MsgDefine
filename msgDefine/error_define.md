@@ -77,6 +77,8 @@
     // 第三方帐号登陆： access_token 验证失败。
 	ErrorOpenLoginInvalidToken = 162
     
+    // SDK正在初始化，请等待
+    ErrorIniting = 163
     ---
 
     // 客户端帐号类.
@@ -123,8 +125,11 @@
     // 设备别名已存在。
 	ErrorCIDAliasExist = 202
 	
-    // ErrorCIDNotBind 设备未绑定，不可操作未绑定设备。
+    // 设备未绑定，不可操作未绑定设备。
 	ErrorCIDNotBind = 203
+	
+	// 设备已经被其他账号绑定。
+	ErrorCIDBinded = 204
     
     ----
     

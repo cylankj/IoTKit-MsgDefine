@@ -194,7 +194,7 @@
 |  value定义 |  类型|   描述 | 
 |---|---|---|
 |timezone|string| 如： Asia/Shanghai。|
-|offset |int|如东八区： 8*60*60，单位秒|
+|offset |int|如东八区： 8\*60\*60=28800，单位秒|
 
 
 ----
@@ -225,13 +225,13 @@
  
 ## DPIDBaseIsMobile = DPIDBaseBegin + 17
 
-* 设备优先使用移动网络配置
+* 设备优先使用移动网络配置。
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|isMobile|bool|  |
+|isMobile|bool| True 在WiFi可用的时候，优先使用移动网络， False 在WiFi可用的时候，优先使用WiFi, WiFi不可用的时候，再使用移动网络。|
 
 ----
 
@@ -315,4 +315,14 @@
 |sdcard|bool|是否有卡|
 |sdcard_errno |int|错误号。0 正常； 非0错误，需要格式化|
 
----
+----
+ 
+## DPIDBaseIsExistMobile = DPIDBaseBegin + 23
+
+* 设备端是否存在可用的移动网络。
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|isExistMobile|bool| True 有sim卡，并且正常可用（不欠费，有流量）； False 不可用。|

@@ -42,6 +42,11 @@
 | [DPIDBaseSdkVersion = DPIDBaseBegin + 20](base_msg_define.md#dpidbasesdkversion-dpidbasebegin-20)        | SDK版本号                        | 是        | string     | 是        | 显示         | 无              |无            | 否           | 是 |
 | [DPIDBaseCtrlLog = DPIDBaseBegin + 21](base_msg_define.md#dpidbasectrllog-dpidbasebegin-21)        | 开启客户端和设备端日志                        | 是        | string     | 是        | 控制         | 无              |无            | 否           | 是 |
 | [DPIDBaseSDInfo = DPIDBaseBegin + 22](base_msg_define.md#dpidbasesdinfo-dpidbasebegin-22)                  | 是否插入SD卡及错误的信息                      | 是        | bool       | 是        | 显示         | 无              |无            | 否           | 是 |
+| [DPIDBaseIsExistMobile = DPIDBaseBegin + 23](base_msg_define.md#dpidbaseisexistmobile-dpidbasebegin-17)    | 设备是否存在可用的移动网络配置           | 是         | bool       | 是        | 显示         | 是              |无            | 是           | 否 |
+
+
+
+
 
 ## 四、音视频功能定义 DPIDVideoBegin = 300
 | id                                                                                                  |描述                            |是否唯一   |数据类型      |APP可见   |显示/控制     |是否有返回值   | 是否展示图表    | APP多终端是否需要同步 | 是否推送消息到APP端 |
