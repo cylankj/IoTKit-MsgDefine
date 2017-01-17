@@ -1,5 +1,5 @@
 #### [消息定义](msgDefine)
- * [说明 (instruction)](msgDefine/atomic_description.md)
+ * [说明 (instruction)](dpid_msg_define/atomic_description.md)
  * [DPID - 消息定义 (msg_define）](dpid_msg_define/index.md)
    * [DPID（0 - 99） - 全局配置类消息定义 (config)](dpid_msg_define/server_cfg_msg_define.md)
    * [DPID（200 - 299） - 基础消息定义 (base)](dpid_msg_define/base_msg_define.md)
