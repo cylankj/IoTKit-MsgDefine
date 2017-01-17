@@ -1,7 +1,6 @@
     // EOK 成功
-	ErrorOK = 0
     
-    ---
+    ------
 
     // P2P 错误码
 
@@ -26,6 +25,10 @@
     ErrorP2PChannel = 10
     
     ErrorP2PDisconetByUser = 11
+    
+    ErrorP2PUnKnown12 = 12
+    
+    ErrorP2PRTCPTimeout = 13
 
     ------
 
@@ -55,12 +58,15 @@
    
     // 消息格式错误
     ErrorInvalidMsg = 123
+    
+    // 消息速率超过限制，请控制合理流速（100个每秒）
+    ErrorMsgRateExceedLimit = 124
 
     ------
 
     // 设备端鉴权
     // 厂家CID达到配额。关联消息：注册。
-	ECIDExceedQuota = 140
+	ErrorCIDExceedQuota = 140
     
     // SN签名验证失败。关联消息：登陆。
 	ErrorCIDSNVerifyFailed = 141
@@ -69,7 +75,7 @@
     
     // 客户端登陆类.
     // vid, bundleID, vkey校验失败。
-	ErrorLoginInvalidVKey = 160
+	   = 160
     
     // 帐号或密码错误。
 	ErrorLoginInvalidPass = 161
@@ -111,6 +117,12 @@
 	
 	// 邮箱账号不合规
 	ErrorIsNotEmail = 189
+	
+    // 忘记密码时，邮箱或手机号不存在时报错
+    ErrorInvalidPhoneNumber = 190
+	
+	// 第三方账号设置密码超时
+	ErrorSetPassTimeout = 191
 	
     
     ----
@@ -160,14 +172,14 @@
      
     ----
     
-    // 获取临时安全凭证
+    // 云存储 获取临时安全凭证
     // 获取失败
     ErrorGetCredentials = 260
 
     
     ----
 
-    // APP 侧错误号
+    // APP 端错误号
     // 非法的调用，ex: 摄像头/APP 调用对方才有的功能
     ErrorInvalidMethod = 1000
     
@@ -183,4 +195,81 @@
     // 连接服务器失败
     ErrorConnect = 1004
 
-    ----
+-----
+
+## SD卡错误码
+    // 未知错误
+    ErrorSDUnknown = 2001   
+
+    // 输入参数有误
+    ErrorSDInvParam = 2002   
+
+    // 没有空闲空间
+    ErrorSDNoSpace = 2003   
+
+    // 没有可用的存储设备
+    ErrorSDNoDevice = 2004   
+
+    // 要写入的帧数据长度过长，簇中放不下
+    ErrorSDTooLarge = 2005   
+
+    // 没有记录
+    ErrorSDNoRecords = 2006   
+
+    // 录像中不能进行一些操作
+    ErrorSDRecording = 2007   
+
+    // 格式化过程中
+    ErrorSDFormating =  2008   
+
+    // 写失败
+    ErrorSDWrite = 2009   
+
+    // 内存申请失败
+    ErrorSDNoMemory = 2010  
+
+    // 读失败
+    ErrorSDRead = 2011  
+
+    // 检索/读取过程中不能进行一些操作
+    ErrorSDOperating = 2012  
+
+    // 列表检索过程中不能进行一些操作
+    ErrorSDListSearching = 2013  
+
+    // 已存在句柄
+    ErrorSDExistHandle = 2014  
+
+    // 要写入的帧pts异常
+    ErrorSDInvPTS = 2015  
+
+    // 存储设备上的文件系统过旧
+    ErrorSDFSVersionOld = 2020  
+
+    // 存储设备上的文件系统较新
+    ErrorSDFSVersionNew = 2021  
+
+    // 文件系统无法识别
+    ErrorSDFSDamaged = 2022  
+
+    // 存储设备读写出错
+    ErrorSDFSReadWrite = 2023  
+
+    // 未正常关闭存储设备(需要进行断电恢复)
+    ErrorSDFSDirty = 2024  
+
+    // 文件系统未初始化或已关闭
+    ErrorSDFSInitialized = 2025  
+
+    // 文件系统索引块异常(需要进行数据恢复)
+    ErrorSDFIDXAbnormal = 2026  
+    
+    // 历史录像已读完
+    ErrorSDHistoryAll = 2030
+
+    // 历史录像读取失败
+    ErrorSDFileIO   = 2031
+    
+    // 历史录像卡读取失败,同 ErrorSDRead
+    ErrorSDIO     = 2032
+

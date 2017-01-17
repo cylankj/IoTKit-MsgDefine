@@ -100,6 +100,6 @@
 
 | id  |  类型 | 描述  |
 | ---    |  ---  |  ---  |
-| [DPIDUserDefinedBegin = VIDUint32 << 32 + 30001](msg_user_defined.md#dpiduserdefinedbegin)   | uint64 | 自定义消息起始值 |
-| [DPIDUserDefinedEnd   = VIDUint32 << 32 + 40000](msg_user_defined.md#dpiduserdefinedbegin)   | uint64 | 自定义消息结束值 |
+| [DPIDUserDefinedBegin = VIDUint32 << 32 + 30001](user_defined_msg.md#dpiduserdefinedbegin)   | uint64 | 自定义消息起始值 |
+| [DPIDUserDefinedEnd   = VIDUint32 << 32 + 40000](user_defined_msg.md#dpiduserdefinedbegin)   | uint64 | 自定义消息结束值 |
 

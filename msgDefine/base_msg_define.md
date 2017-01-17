@@ -81,6 +81,7 @@
 |sdcard_errno |int|错误号。0 正常； 非0错误，需要格式化|
 |sdcard|bool|是否有卡|
 
+[sdcard_errno 定义](error_define.md#sd卡错误码)
 
 ---
 
@@ -325,4 +326,8 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|isExistMobile|bool| True 有sim卡，并且正常可用（不欠费，有流量）； False 不可用。|
+|value|string|  msgpack字符串 |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|sim|int|0 没卡, 1 正常,  2 pin, 3 puk|
