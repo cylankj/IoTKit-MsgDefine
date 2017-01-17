@@ -1,5 +1,5 @@
 ## 全局配置类定义 DPIDCFGBegin = 0
-## DPIDRelayServer = DPIDCFGBegin + 1
+## DPIDRelayServer = 1
 
 *   RelayServer配置
 
@@ -12,7 +12,7 @@
 
 --------------------------------------------------------------------------------------------------------------------------
 
-## DPIDHeartbeat = DPIDCFGBegin + 2
+## DPIDHeartbeat = 2
 
 *  心跳配置
 
@@ -24,7 +24,7 @@
   
 -------
 
-## DPIDCloudStorage = DPIDCFGBegin + 3
+## DPIDCloudStorage = 3
 
 *  云存储配置
 
@@ -49,7 +49,7 @@
 
 ------
 
-## DPIDClientUpgradeConfig = DPIDCFGBegin + 5
+## DPIDClientUpgradeConfig = 5
 
 *  ClientUpgradeConfig配置
 

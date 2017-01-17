@@ -1,5 +1,5 @@
 ## DPIDBaseBegin = 200
-## DPIDBaseNet = DPIDBaseBegin + 1
+## DPIDBaseNet = 201
 
 * 设备上报网络类型 
 
@@ -34,7 +34,7 @@
 
 ---
 
-## DPIDBaseMac = DPIDBaseBegin + 2
+## DPIDBaseMac=202
 
 * 设备上报MAC地址
 
@@ -49,7 +49,7 @@
 
 ---
 
-## DPIDBaseSD = DPIDBaseBegin + 3
+## DPIDBaseSD = 203
 
 *  废弃： 设备上报SD卡开关信息
 
@@ -63,7 +63,7 @@
 
 ---
 
-## DPIDBaseSDStatus = DPIDBaseBegin + 4
+## DPIDBaseSDStatus = 204
 
 *  设备上报SD卡容量信息， 
 
@@ -85,7 +85,7 @@
 
 ---
 
-## DPIDBasePower = DPIDBaseBegin + 5
+## DPIDBasePower = 205
 
 *  是否连接电源线
 
@@ -96,7 +96,7 @@
 
 ---
 
-## DPIDBaseBattery = DPIDBaseBegin + 6
+## DPIDBaseBattery = 206
 
 *  设备上报剩余电量
 
@@ -108,7 +108,7 @@
 
 ---
 
-## DPIDBaseVersion = DPIDBaseBegin + 7
+## DPIDBaseVersion = 207
 
 * 设备上报软件版本号 
 
@@ -120,7 +120,7 @@
 
 ---
  
-## DPIDBaseSysVersion = DPIDBaseBegin + 8
+## DPIDBaseSysVersion = 208
 
 *  设备上报系统版本号
 
@@ -132,7 +132,7 @@
 
 ---
  
-## DPIDBaseLED = DPIDBaseBegin + 9
+## DPIDBaseLED = 209
 
 * 设备指示灯配置
 
@@ -144,7 +144,7 @@
 
 ---
 
-## DPIDBaseUptime = DPIDBaseBegin + 10
+## DPIDBaseUptime = 210
 
 *  上报开机时间消息 
 
@@ -157,7 +157,7 @@
 
 ---
 
-## DPIDBaseCidLog = DPIDBaseBegin + 12
+## DPIDBaseCidLog = 212
 
 *  上报日志消息 （3.0新增）
 
@@ -169,7 +169,7 @@
   
 ---
 
-## DPIDBaseP2PVersion = DPIDBaseBegin + 13
+## DPIDBaseP2PVersion = 213
 
 * 上报P2P版本号 
 
@@ -182,7 +182,7 @@
 --- 
 
  
-## DPIDBaseTimezone = DPIDBaseBegin + 14
+## DPIDBaseTimezone = 214
 
 * 设备时区配置
 
@@ -200,7 +200,7 @@
 
 ----
  
-## DPIDBaseIsPushFlow = DPIDBaseBegin + 15
+## DPIDBaseIsPushFlow = 215
 
 * 设备推流配置 
 
@@ -212,7 +212,7 @@
 
 ----
  
-## DPIDBaseIsNTSC = DPIDBaseBegin + 16
+## DPIDBaseIsNTSC = 216
 
 * 设备电流频率配置
 
@@ -224,7 +224,7 @@
 
 ----
  
-## DPIDBaseIsMobile = DPIDBaseBegin + 17
+## DPIDBaseIsMobile = 217
 
 * 设备优先使用移动网络配置。
 
@@ -236,7 +236,7 @@
 
 ----
 
-## DPIDBaseFormatSD = DPIDBaseBegin + 18
+## DPIDBaseFormatSD = 218
 
 *  格式化SD卡
 
@@ -249,7 +249,7 @@
 ---
 
 
-## DPIDBaseBind = DPIDBaseBegin + 19
+## DPIDBaseBind = 219
 
 *  绑定，解绑信息
 
@@ -268,7 +268,7 @@
 ---
 
 
-## DPIDBaseSdkVersion = DPIDBaseBegin + 20
+## DPIDBaseSdkVersion = 220
 
 *  设备上报SDK版本号
 
@@ -281,7 +281,7 @@
 ---
 
 
-## DPIDBaseCtrlLog = DPIDBaseBegin + 21
+## DPIDBaseCtrlLog = 221
 
 *  开启客户端和设备端日志功能, 到截止时间后自动停止。
 *  终端逻辑：终端将当前时间戳now和timeEnd比较，如果now <= timeEnd, 向日志服务写入日志；如果now > timeEnd, 停止写入日志。
@@ -301,7 +301,7 @@
 
 ---
 
-## DPIDBaseSDInfo = DPIDBaseBegin + 22
+## DPIDBaseSDInfo = 222
 
 *  是否插入SD卡及错误的信息 本消息是服务器对 DPIDBaseSDStatus（根据sdcard和sdcard_errno）去重后存储, 用于APP端的消息中心。
 
@@ -318,7 +318,7 @@
 
 ----
  
-## DPIDBaseIsExistMobile = DPIDBaseBegin + 23
+## DPIDBaseIsExistMobile = 223
 
 * 设备端是否存在可用的移动网络。
 

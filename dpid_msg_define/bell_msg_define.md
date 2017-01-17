@@ -1,5 +1,5 @@
 ## DPIDBellBegin = 400
-## DPIDBellCallMsg = DPIDBellBegin + 1
+## DPIDBellCallMsg = 401
 
 *  门铃已呼叫状态 
 
@@ -20,7 +20,7 @@
 
 ---
 
-## DPIDBellLeaveMsg = DPIDBellBegin + 2
+## DPIDBellLeaveMsg = 402
 
 *  门铃留言设置 (3.0 新增)
 

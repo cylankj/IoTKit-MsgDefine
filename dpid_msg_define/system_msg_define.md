@@ -1,4 +1,5 @@
-## DPIDSystemMsg = DPIDSystemBegin + 1
+## 系统相关功能定义 DPIDSystemBegin = 700 
+## DPIDSystemMsg = 701
 
 *  系统消息通知
 

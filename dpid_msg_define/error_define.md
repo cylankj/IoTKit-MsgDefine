@@ -268,8 +268,8 @@
     ErrorSDHistoryAll = 2030
 
     // 历史录像读取失败
-    ErrorSDFileIO   = 2031
+    ErrorSDFileIO = 2031
     
     // 历史录像卡读取失败,同 ErrorSDRead
-    ErrorSDIO     = 2032
+    ErrorSDIO = 2032
 

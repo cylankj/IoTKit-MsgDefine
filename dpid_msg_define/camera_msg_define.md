@@ -1,5 +1,5 @@
 ## DPIDCameraBegin = 500
-## DPIDCameraWarnEnable = DPIDCameraBegin + 1
+## DPIDCameraWarnEnable = 501
 
 * 设备报警开关配置
 
@@ -12,7 +12,7 @@
 
 ---
 
-## DPIDCameraWarnTime = DPIDCameraBegin + 2
+## DPIDCameraWarnTime = 502
 
 *  设备报警时间段配置
 
@@ -32,7 +32,7 @@
 
 ---
 
-## DPIDCameraWarnSensitivity = DPIDCameraBegin + 3
+## DPIDCameraWarnSensitivity = 503
 
 *  报警灵敏度配置
 
@@ -44,7 +44,7 @@
 
 ---
 
-## DPIDCameraWarnSound = DPIDCameraBegin + 4
+## DPIDCameraWarnSound = 504
 
 *  报警提示音配置
 
@@ -62,7 +62,7 @@
 
 ---
 
-## DPIDCameraWarnMsg = DPIDCameraBegin + 5 
+## DPIDCameraWarnMsg = 505 
 
 *  设备报警消息
 
@@ -84,7 +84,7 @@
 
 ---
 
-## DPIDCameraTimeLapse = DPIDCameraBegin + 6
+## DPIDCameraTimeLapse = 506
 
 *  延迟摄影设置 (3.0 新增) 
 
@@ -108,7 +108,7 @@
 
 ---
 
-## DPIDCameraStandby = DPIDCameraBegin + 8
+## DPIDCameraStandby = 508
 
 *  直播开关 - 摄像头待机 (3.0 新增) 
 
@@ -120,7 +120,7 @@
 
 ---
 
-## DPIDCameraHangMode = DPIDCameraBegin + 9
+## DPIDCameraHangMode = 509
 
 *  视频模式 - 壁挂或吊顶 
 
@@ -137,7 +137,7 @@ MODE_WALL = 1  壁挂
 
 ---
 
-## DPIDCameraCoord = DPIDCameraBegin + 10
+## DPIDCameraCoord = 510
 
 *  视频 - 坐标
 

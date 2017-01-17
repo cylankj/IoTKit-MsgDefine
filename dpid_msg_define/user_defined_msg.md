@@ -1,6 +1,6 @@
 ## 企业自定义消息 DPIDUserDefinedBegin = VIDUint32 << 32 + 30000
 
-## DPIDUserDefinedBegin =  VIDUint32 << 32 + 30001
+## DPIDUserDefinedBegin = VIDUint32 << 32 + 30001
 
 * 自定义消息个数共 10000 个 .
 * 生成规则：
@@ -24,7 +24,7 @@
       
    
       
-## DPIDUserDefinedEnd   = VIDUint32 << 32 + 40000
+## DPIDUserDefinedEnd = VIDUint32 << 32 + 40000
 
 * 二进制计算示例：
 
