@@ -124,6 +124,9 @@
 	// 第三方账号设置密码超时
 	ErrorSetPassTimeout = 191
 	
+	// 十分钟内获取验证码超过3次
+	ErrorGetCodeTooFrequent = 192
+	
     
     ----
     
@@ -194,6 +197,13 @@
 
     // 连接服务器失败
     ErrorConnect = 1004
+    
+    
+    ---
+    
+    // DP 操作错误号
+    // 每日精彩收藏夹达到上线（50条）
+    ErrorWonderFavoriteExceedLimit = 1050
 
 -----
 

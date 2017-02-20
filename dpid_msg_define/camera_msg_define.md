@@ -155,3 +155,21 @@ MODE_WALL = 1  壁挂
 
 
 ---
+
+## DPIDCameraWarnAndWonder = 511
+
+*  报警消息与每日精彩的收藏关系。
+*  使用[MIDRobotSetDataByTime=20216](mid_msg_define/mid_define.md#midrobotsetdatabytime20216)增加关联关系，time 使用 DPIDCameraWarnMsg = 505 消息中的time赋值。
+*  使用[MIDRobotGetDataByTime=20218](mid_msg_define/mid_define.md#midrobotgetdatabytime20218)获取关联关系，time 使用 DPIDCameraWarnMsg = 505 消息中的time查询。
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string| msgpack字符串 |
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|file|int|目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都收藏就是0b111|
+
