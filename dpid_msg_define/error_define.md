@@ -75,7 +75,7 @@
     
     // 客户端登陆类.
     // vid, bundleID, vkey校验失败。
-	   = 160
+	ErrorLoginInvalidVKey = 160
     
     // 帐号或密码错误。
 	ErrorLoginInvalidPass = 161
