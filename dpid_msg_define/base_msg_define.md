@@ -49,17 +49,26 @@
 
 ---
 
-## DPIDBaseSD = 203
+## DPIDBaseFormatSDAck = 203
 
-*  废弃： 设备上报SD卡开关信息 / 客户端查询 
+*  设备格式化SD卡的响应 
+*  对应请求[DPIDBaseFormatSD = 218](base_msg_define.md#dpidbaseformatsd-218)
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|storage|int64|卡容量 单位byte|
+|storage_used|int64|已用空间 单位byte|
+|sdcard_errno |int|错误号。0 正常； 非0错误，需要格式化|
 |sdcard|bool|是否有卡|
 
-示例：{id，time, msgpack(true)}
+[sdcard_errno 定义](error_define.md#sd卡错误码)
 
 ---
 
@@ -146,13 +155,15 @@
 
 ## DPIDBaseUptime = 210
 
-*  上报开机时间消息 / 客户端查询  
+*  上报开机时间戳消息 / 客户端查询  
+
+
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|uptime|int| 开机时间，单位秒 |
+|uptime|int| 开机时间戳，单位秒。示例（2017-02-22 18: 57 :37）：1487761057 |
 
 
 ---
@@ -239,12 +250,13 @@
 ## DPIDBaseFormatSD = 218
 
 *  格式化SD卡 / 客户端查询 
+*  响应[DPIDBaseFormatSDAck = 203](base_msg_define.md#dpidbaseformatsdack-203)
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|value|int|占位字段，置空|
+|value|int| 占位，默认0 |
 
 ---
 

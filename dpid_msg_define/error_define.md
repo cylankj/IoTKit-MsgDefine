@@ -23,7 +23,7 @@
     ErrorP2PConnectionCheck = 9
     
     ErrorP2PChannel = 10
-    
+    // 对端断开
     ErrorP2PDisconetByUser = 11
     
     ErrorP2PUnKnown12 = 12
@@ -65,11 +65,17 @@
     ------
 
     // 设备端鉴权
-    // 厂家CID达到配额。关联消息：注册。
+    // 厂家CID达到配额，请到萝卜头平台申请配额。关联消息：注册。
 	ErrorCIDExceedQuota = 140
     
-    // SN签名验证失败。关联消息：登陆。
+    // SN签名验证失败， sn、signature及公钥不匹配。 关联消息：登陆。
 	ErrorCIDSNVerifyFailed = 141
+	
+	// 公钥不存在, 请到萝卜头平台上传您的公钥（注意，请保管好您的私钥，不要泄漏）。关联消息：登陆。
+	ErrorPublicKeyNotExist = 142
+	
+	// CID重复。关联消息：登陆。
+    ErrorCIDIsDuplicate = 143
     
     ----
     

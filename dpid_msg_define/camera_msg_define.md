@@ -64,7 +64,7 @@
 
 ## DPIDCameraWarnMsg = 505 
 
-*  设备报警消息
+*  （兼容2.0版设备）设备报警消息
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -78,9 +78,9 @@
 |time| int| 时间点，单位秒 |
 |is_record|int|摄像头是否在录像中。客户端【消息中心】->【历史视频】按钮根据该字段显示。注：由于正在录制的视频需要半小时后才能查看，所以客户端对最新报警与当前时间比对，小于半小时不显示按钮|
 |file|int|协商命名规则为：time_id.jpg， id取值范围[1,2,3]。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
-|type|int|海外或国内存储地区。128消息下发填充|
-|tly|string|陀螺仪， '0' 平视； '1' 俯视|
+|regionType|int|enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeOSSEU, regionTypeOSSSG}。填充128消息下发的数据|
 
+存储路径：                [bucket]/[cid]/[timestamp]_[id].jpg ， 文件名使用图片产生时间，单位秒。
 
 ---
 
@@ -105,18 +105,24 @@
 
 ---
 
-
----
-
 ## DPIDCameraStandby = 508
 
 *  直播开关 - 摄像头待机 (3.0 新增) 
+*  APP根据待机参数自行组合控制设备工作模式；即APP需要主动调用MIDRobotSetData接口发送DPIDBaseLED， DPIDCameraWarnEnable ， DPIDBaseLED， DPIDVideoAutoRecord 消息给设备端。
+*  该消息不需要发送给设备端。
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|enable|bool| True: 待机； False： 正常工作|
+|value|string| msgpack |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|standby|bool| true：待机，false：正常工作|
+|warnEnable|bool| 是否开启报警，见 DPIDCameraWarnEnable = 501 |
+|led|bool| 设备指示灯，见 DPIDBaseLED = 209 |
+|auto_record|int| 自动录像配置， 见 DPIDVideoAutoRecord = 303 |
 
 ---
 
@@ -172,4 +178,29 @@ MODE_WALL = 1  壁挂
 |  value定义 |  类型|   描述 | 
 |---|---|---|
 |file|int|目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都收藏就是0b111|
+
+
+---
+
+## DPIDCameraWarnMsgV3 = 512 
+
+*  （3.0版设备）设备报警消息
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|time| int| 时间点，单位秒 |
+|is_record|int|摄像头是否在录像中。客户端【消息中心】->【历史视频】按钮根据该字段显示。注：由于正在录制的视频需要半小时后才能查看，所以客户端对最新报警与当前时间比对，小于半小时不显示按钮|
+|file|int|协商命名规则为：time_id.jpg， id取值范围[1,2,3]。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
+|regionType|int|enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeOSSEU, regionTypeOSSSG}。填充 DPIDCloudStorage = 3 消息下发的数据|
+
+存储路径：                [bucket]/cid/[vid]/[cid]/[timestamp]_[id].jpg ， 文件名使用图片产生时间，单位秒。
+
+---
 

@@ -86,5 +86,7 @@
 |value|string| 格式已OK的字符串 |
 
 以设置WiFi为例，
-客户端实际上发的value为： 设置WiFi：SSID[XiaoLan],密码[123456]，加密方式[WAP2], 频段[2.4G]
+客户端实际上发的value为： CID[200000000001], 设置WiFi：SSID[XiaoLan],密码[123456]，加密方式[WAP2], 频段[2.4G]
+服务器记录该消息到用户日志。
+
 
