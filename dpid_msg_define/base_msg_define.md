@@ -51,7 +51,7 @@
 
 ## DPIDBaseFormatSDAck = 203
 
-*  设备格式化SD卡的响应 
+*  格式化SD卡的响应 
 *  对应请求[DPIDBaseFormatSD = 218](base_msg_define.md#dpidbaseformatsd-218)
 
 |  data定义 |    类型| 描述 | 
@@ -101,6 +101,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
+|time| int64| 时间点 |
 |power|bool| 是否 |
 
 ---
@@ -163,7 +164,7 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |time| int64| 时间点 |
-|uptime|int| 开机时间戳，单位秒。示例（2017-02-22 18: 57 :37）：1487761057 |
+|powerOn|int| 开机时间戳，单位秒。示例（2017-02-22 18: 57 :37）：1487761057|
 
 
 ---
@@ -249,7 +250,7 @@
 
 ## DPIDBaseFormatSD = 218
 
-*  格式化SD卡 / 客户端查询 
+*  格式化SD卡 
 *  响应[DPIDBaseFormatSDAck = 203](base_msg_define.md#dpidbaseformatsdack-203)
 
 |  data定义 |    类型| 描述 | 

@@ -25,9 +25,9 @@
  
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|begin_time|int| 开始时间点 ，单位秒|
-|end_time|int| 结束时间点 ，单位秒|
-|week|int| 每周的星期*， 从低位到高位代表周一到周日。如0b00000001代表周一，0b01000000代表周日 |
+|begin_time|int| 开始时间点，距离零点的秒数，单位秒。按位标识，低八位标识秒，次低八位标识分钟。示例：00:00, 该值为0|
+|end_time|int| 结束时间点，距离零点的秒数，单位秒。按位标识，低八位标识秒，次低八位标识分钟。示例：23:59, 二进制为 10111 00111011，该值为5947|
+|week|int| 每周的星期*， 从低位到高位代表周一到周日。如0b00000001代表周一，0b01000000代表周日。示例：一,二,三,四,五,六,七, 该值为127|
  
 
 ---
@@ -79,6 +79,7 @@
 |is_record|int|摄像头是否在录像中。客户端【消息中心】->【历史视频】按钮根据该字段显示。注：由于正在录制的视频需要半小时后才能查看，所以客户端对最新报警与当前时间比对，小于半小时不显示按钮|
 |file|int|协商命名规则为：time_id.jpg， id取值范围[1,2,3]。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
 |regionType|int|enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeOSSEU, regionTypeOSSSG}。填充128消息下发的数据|
+|tly|string| 全景设备陀螺仪| 
 
 存储路径：                [bucket]/[cid]/[timestamp]_[id].jpg ， 文件名使用图片产生时间，单位秒。
 
@@ -129,6 +130,7 @@
 ## DPIDCameraHangMode = 509
 
 *  视频模式 - 壁挂或吊顶 
+*  2.* 设备仍在使用1114，服务器处理 3.* APP 与 2.* 设备兼容。
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -146,6 +148,7 @@ MODE_WALL = 1  壁挂
 ## DPIDCameraCoord = 510
 
 *  视频 - 坐标
+*  2.* 设备仍在使用1114，服务器处理 3.* APP 与 2.* 设备兼容。
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
@@ -158,8 +161,8 @@ MODE_WALL = 1  壁挂
 |x |int|横坐标|
 |y |int|纵坐标|
 |r |int|半径|
-
-
+|w |int|分辨率 宽|
+|h |int|分辨率 高|
 ---
 
 ## DPIDCameraWarnAndWonder = 511
@@ -199,6 +202,7 @@ MODE_WALL = 1  壁挂
 |is_record|int|摄像头是否在录像中。客户端【消息中心】->【历史视频】按钮根据该字段显示。注：由于正在录制的视频需要半小时后才能查看，所以客户端对最新报警与当前时间比对，小于半小时不显示按钮|
 |file|int|协商命名规则为：time_id.jpg， id取值范围[1,2,3]。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
 |regionType|int|enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeOSSEU, regionTypeOSSSG}。填充 DPIDCloudStorage = 3 消息下发的数据|
+|tly|string| 全景设备陀螺仪| 
 
 存储路径：                [bucket]/cid/[vid]/[cid]/[timestamp]_[id].jpg ， 文件名使用图片产生时间，单位秒。
 
