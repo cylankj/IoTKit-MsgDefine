@@ -62,7 +62,7 @@ Step4：通过验证，open_id在萝卜头平台合法使用。
 URL?access_token=********
 
 **Token有效时的响应：**
-{"code":"200","message":"","value":{"expired_at":1433075493，"open_id":"YMpfqmaiwUIpJg6m5YuYzZajnE7c1","vid":"00FF"},"redirect":""}
+{"code":"200","message":"","value":{"expired_at":1433075493000，"open_id":"YMpfqmaiwUIpJg6m5YuYzZajnE7c1","vid":"00FF"},"redirect":""}
 
 **Token失效时的响应：**
 {"code":"100002","message":"token 已失效","redirect":"","value":""}
