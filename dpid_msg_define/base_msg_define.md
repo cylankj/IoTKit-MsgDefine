@@ -206,7 +206,7 @@
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|timezone|string| 如： Asia/Shanghai。|
+|timezone|string| 如： Asia/Shanghai。注：请使用标准的时区字符串，参考：[wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)|
 |offset |int|如东八区： 8\*60\*60=28800，单位秒|
 
 

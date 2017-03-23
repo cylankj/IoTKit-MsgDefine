@@ -53,3 +53,4 @@
 |regionType|int|enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeOSSEU, regionTypeOSSSG}。填充 DPIDCloudStorage = 3 消息下发的数据。|
 
 存储路径：               [bucket]/cid/[vid]/[cid]/[timestamp].jpg  
+
