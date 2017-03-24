@@ -330,6 +330,7 @@
 |sdcard|bool|是否有卡|
 |sdcard_errno |int|错误号。0 正常； 非0错误，需要格式化|
 
+
 ----
  
 ## DPIDBaseIsExistMobile = 223

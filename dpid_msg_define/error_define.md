@@ -27,7 +27,7 @@
     ErrorP2PDisconetByUser = 11
     
     ErrorP2PUnKnown12 = 12
-    
+    // 对端超时断开  
     ErrorP2PRTCPTimeout = 13
 
     ------
