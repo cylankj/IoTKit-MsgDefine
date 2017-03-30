@@ -70,7 +70,7 @@
 | [DPIDCameraWarnMsg = 505](camera_msg_define.md#dpidcamerawarnmsg--505)                  | 报警消息          | 否        | string     | 是        | 显示         | 无         |有               | 否 | 是 |
 | [DPIDCameraTimeLapse = 506](camera_msg_define.md#dpidcameratimelapse--506)              | 延迟摄影设置      | 否        | string     | 是        | 控制         | 有         |无               | 是 | 否 |
 | [DPIDCameraStandby = 508](camera_msg_define.md#dpidcamerastandby--508)                        | 是否开启直播 (摄像头待机设置)  | 是 | bool   | 是        | 控制         | 有        |无               | 是 | 否 |
-| [DPIDCameraHangMode = 509](camera_msg_define.md#dpidcamerahangmode--509)                | 视频模式 (壁挂或吊顶)  | 是    | int        | 是        | 控制         | 有        |无                | 是 | 否 |
+| [DPIDCameraHangMode = 509](camera_msg_define.md#dpidcamerahangmode--509)                | 视频模式 (壁挂或吊顶)  | 是    | string        | 是        | 控制         | 有        |无                | 是 | 否 |
 | [DPIDCameraCoord = 510](camera_msg_define.md#dpidcameracoord--510)                    | 视频坐标          | 是        | string     | 是        | 控制         | 有        |无                | 是 | 否 |
 
 
