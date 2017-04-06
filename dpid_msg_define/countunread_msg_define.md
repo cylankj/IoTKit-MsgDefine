@@ -1,6 +1,8 @@
 ## 简化客户端获取计数方式：通过MIDRobotGetData, MIDRobotGetMultiData, MIDRobotGetDataEx获取未读计数，逐渐放弃MIDRobotCountUnReadData接口。
 
-## DPIDCountUnReadBegin = 1000
+----
+## 1.设备类未读消息计数
+## DPIDCountUnReadCIDBegin = 1000
 
 ## DPIDCountUnReadCameraWarnMsg = 1001 
 
@@ -8,7 +10,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |count|int|  msgpack字符串|
 
@@ -20,7 +22,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |count|int|  msgpack字符串|
 
@@ -32,7 +34,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |count|int|  msgpack字符串|
 
@@ -44,12 +46,12 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |count|int|  msgpack字符串|
 
  
-[DPIDBellLeaveMsg = 402](bell_msg_define.md#dpidbellleavemsg-402)
+[DPIDBellCallMsg = 401](bell_msg_define.md#dpidbellcallmsg-401)
 
 ## DPIDCountUnReadBellCallMsgV3 = 1005
 
@@ -57,11 +59,72 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |count|int|  msgpack字符串|
 
-[DPIDBellCallMsgV3 = 403](bell_msg_define.md#dpidbellcallmsg-403)
+[DPIDBellCallMsgV3 = 403](bell_msg_define.md#dpidbellcallmsgv3-403)
 
 
+
+-----
+
+# 帐号类未读消息计数
+
+## DPIDCountUnReadAccountBegin = 1000
+
+## DPIDCountUnReadAccountBind = 1101
+
+* 未读消息计数
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|time| int64| 时间点 |
+|count|int|  msgpack字符串|
+[DPIDAccountBind = 601](account_msg_define.md#dpidaccountbind-601)
+
+## DPIDCountUnReadAccountWonder = 1102
+
+* 未读消息计数
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|time| int64| 时间点 |
+|count|int|  msgpack字符串|
+[DPIDAccountWonder = 602](account_msg_define.md#dpidaccountwonder-602)
+
+## DPIDCountUnReadAccountShare = 1103
+
+* 未读消息计数
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|time| int64| 时间点 |
+|count|int|  msgpack字符串|
+[DPIDAccountShare = 603](account_msg_define.md#dpidaccountshare-603)
+
+## DPIDCountUnReadAccountIsShared = 1104
+
+* 未读消息计数
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|time| int64| 时间点 |
+|count|int|  msgpack字符串|
+[DPIDAccountIsShared = 604](account_msg_define.md#dpidaccountisshared-604)
+
+## DPIDCountUnReadSystemMsg = 1105
+
+* 未读消息计数 - 未支持
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|time| int64| 时间点 |
+|count|int|  msgpack字符串|
+[DPIDSystemMsg = 701](system_msg_define.md#dpidsystemmsg-701)
 

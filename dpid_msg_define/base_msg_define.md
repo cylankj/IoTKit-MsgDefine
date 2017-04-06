@@ -6,7 +6,7 @@
 
 |  data定义 |  类型|   描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串|
 
@@ -40,7 +40,7 @@
 
 |  data定义 |  类型|   描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |mac|string| 无|
 
@@ -56,7 +56,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串|
 
@@ -78,7 +78,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串|
 
@@ -100,7 +100,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |power|bool| 是否 |
 
@@ -112,7 +112,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |battery|int|电量 百分比|
 
@@ -124,7 +124,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |version|string|  字符串|
 
@@ -136,7 +136,7 @@
 
 |  data定义 |    类型| 描述 |
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |sysVersion|string|  字符串|
 
@@ -148,7 +148,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |led|bool| 指示灯 |
 
@@ -162,7 +162,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |powerOn|int| 开机时间戳，单位秒。示例（2017-02-22 18: 57 :37）：1487761057|
 
@@ -175,7 +175,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |log|string| 格式已OK的字符串 |
   
@@ -187,7 +187,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 数据更新时间点 |
 |version|int|  p2p版本 |
 
@@ -200,7 +200,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string| msgpack字符串 |
 
@@ -218,7 +218,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |isPushFlow|bool|  |
 
@@ -230,7 +230,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |isNTSC|bool|  |
 
@@ -242,7 +242,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |isMobile|bool| True 在WiFi可用的时候，优先使用移动网络， False 在WiFi可用的时候，优先使用WiFi, WiFi不可用的时候，再使用移动网络。|
 
@@ -255,7 +255,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|int| 占位，默认0 |
 
@@ -268,7 +268,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string |msgpack字符串 |
 
@@ -287,7 +287,7 @@
 
 |  data定义 |    类型| 描述 |
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |version|string|  字符串|
 
@@ -303,7 +303,7 @@
 
 |  data定义 |    类型| 描述 |
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串 |
 
@@ -321,7 +321,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串 |
 
@@ -339,7 +339,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |sim|int|0 未知, 1 没卡,  2 user's PIN, 3 user's PUK, 4 network PIN, 5 正常|
 
@@ -351,7 +351,7 @@
 
 |  data定义 |    类型| 描述 |
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |filename| string | YYYYMMDD_HHmm 示例：20161222_1122 |
 

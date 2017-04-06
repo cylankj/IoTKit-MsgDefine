@@ -5,7 +5,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|-- |
 
@@ -25,7 +25,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string| msgpack字符串 |
 
@@ -44,7 +44,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string| |
 
@@ -62,7 +62,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string| |
 
@@ -81,7 +81,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string| 格式已OK的字符串 |
 

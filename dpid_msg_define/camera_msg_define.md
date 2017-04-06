@@ -5,7 +5,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |enable|bool| 是否开启 |
 
@@ -18,7 +18,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串 |
  
@@ -38,7 +38,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |sensitivity|int| 灵敏度 0为低SENSITIVITY_LOW, 1为中SENSITIVITY_MIDDLE, 2为高SENSITIVITY_HIGH 默认为中 |
 
@@ -50,7 +50,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串 |
 
@@ -68,7 +68,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串|
 
@@ -91,7 +91,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string| msgpack字符串 |
 
@@ -114,7 +114,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string| msgpack |
 
@@ -134,7 +134,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |tly|string|全景设备陀螺仪。‘0’俯视, ‘1’ 平视。|
 
@@ -147,7 +147,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack |
 
@@ -168,7 +168,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string| msgpack字符串 |
 
@@ -186,7 +186,7 @@
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
-|id|int| 功能消息唯一标识|
+|id|long| 功能消息唯一标识|
 |time| int64| 时间点 |
 |value|string|  msgpack字符串|
 
