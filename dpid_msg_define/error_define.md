@@ -1,8 +1,8 @@
-    // EOK 成功
+    // EOK = 0 成功
     
     ------
 
-    // P2P 错误码
+### P2P 错误码
 
     ErrorP2PDns = 1
     
@@ -46,7 +46,7 @@
 
     -----
 
-    // 通用类
+### 通用类
     // 未知错误
     ErrorUnknown = 120
     
@@ -64,7 +64,7 @@
 
     ------
 
-    // 设备端鉴权
+### 设备端鉴权
     // 厂家CID达到配额，请到萝卜头平台申请配额。关联消息：注册。
 	ErrorCIDExceedQuota = 140
     
@@ -77,9 +77,19 @@
 	// CID重复。关联消息：登陆。
     ErrorCIDIsDuplicate = 143
     
+    // ErrorCIDNotRegistered CID未注册
+	ErrorCIDNotRegistered = 144
+    
     ----
     
-    // 客户端登陆类.
+### 设备端功能类
+
+    // 双鱼眼摄像头电量低于5%
+    ErrorCIDLowBattery = 150
+    
+    ---
+    
+### 客户端登陆类.
     // vid, bundleID, vkey校验失败。
 	ErrorLoginInvalidVKey = 160
     
@@ -93,7 +103,7 @@
     ErrorIniting = 163
     ---
 
-    // 客户端帐号类.
+### 客户端帐号类.
     // 短信验证码错误。
 	ErrorSMSCodeNotMatch = 180  
     
@@ -136,7 +146,7 @@
     
     ----
     
-    // 客户端绑定设备类.
+### 客户端绑定设备类.
     // CID不存在。关联消息：客户端绑定。
     ErrorCIDNotExist = 200
     
@@ -169,7 +179,7 @@
     
     ----
     
-    // 客户端亲友关系类.
+### 客户端亲友关系类.
 	// 已经是好友关系
 	ErrorFriendAlready = 241
     
@@ -188,7 +198,7 @@
     
     ----
 
-    // APP 端错误号
+### APP 端错误号
     // 非法的调用，ex: 摄像头/APP 调用对方才有的功能
     ErrorInvalidMethod = 1000
     
@@ -207,13 +217,24 @@
     
     ---
     
-    // DP 操作错误号
+### DP 操作错误号
     // 每日精彩收藏夹达到上线（50条）
     ErrorWonderFavoriteExceedLimit = 1050
+    
+    
+### 萝卜头平台 OSSAPI 操作错误号
+    // 设备未开启云存储服务
+    ErrorOSSAPIDeviceNotOpen = 1100    
+    
+    // 设备云存储服务过期
+    ErrorOSSAPIDeviceExpired = 1101    
+    
+    // 用户关闭云存储服务
+    ErrorOSSAPIUserOFFUploading = 1102    
 
 -----
 
-## SD卡错误码
+### SD卡错误码
     // 未知错误
     ErrorSDUnknown = 2001   
 
