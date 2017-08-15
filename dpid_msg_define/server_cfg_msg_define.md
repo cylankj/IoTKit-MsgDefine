@@ -56,7 +56,7 @@
 | 功能名称 |云存储路径 |说明 | 生命周期 |
 |--- |--- |--- |--- |
 |用户头像 |[bucket]/image/[account].jpg|--- |永久保留 |
-
+|用户反馈的日志 |[bucket]/log/[account]_[MMddHHmm]_(Android-Phone|IOS-Phone)[sessid].zip |两个月|
 
 2.4.6 运营版的设备端云存储路径约束：
 
@@ -64,7 +64,7 @@
 |--- |--- |--- |--- |
 |报警图片 | [bucket]/[cid]/[timestamp]_[id].jpg | 文件名使用图片产生时间，单位秒; id特征值为1，2，3。 |15 天|
 |门铃截图 | [bucket]/[cid]/[timestamp].jpg | 文件名使用图片产生时间，单位秒。 |15 天|
-|3g狗的apns配置 | [bucket]/package/apns.xml| \ | 永久保留 |
+|3g狗的apns配置 | [bucket]/apns/apns.xml| \ | 永久保留 |
 |wifi狗报警声音 | [bucket]/package/alert.pcm[u] /package/wang.pcm[u]| \ |永久保留 |
 
 3.0 (对接VID,VKEY) 客户端云存储路径约束：

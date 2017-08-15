@@ -7,7 +7,7 @@
 |  data定义 |  类型|   描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串|
 
 
@@ -26,10 +26,11 @@
 |NET_3G      |  3 | 3G网络 |
 |NET_4G      |  4 | 4G网络  |   
 |NET_5G      |  5 | 5G网络  |   
+|NET_WIRED   |  10 | 有线网络  |   
 
 设备上线时示例： {id, time, msgpack(1,"cylan_605")}
 
-设备离线时实例： {id, time, msgpack(1,"")}， 服务器检测到离线后主动推送该消息给客户端。  
+设备离线时实例： {id, time, msgpack(0,"")}， 服务器检测到离线后主动推送该消息给客户端。  
 
 
 ---
@@ -41,7 +42,7 @@
 |  data定义 |  类型|   描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |mac|string| 无|
 
 示例：{id，time, msgpack("AW:SW:WS:DE:DE:DE")}
@@ -49,15 +50,15 @@
 
 ---
 
-## DPIDBaseFormatSDAck = 203
+## DPIDBaseFormatSDAck = 203 
 
-*  格式化SD卡的响应 
-*  对应请求[DPIDBaseFormatSD = 218](base_msg_define.md#dpidbaseformatsd-218)
+*  格式化SD卡的响应
+*  客户端调用 [MIDRobotSetData](mid_msg_define/mid_define.md#midrobotsetdata20202) 接口发送格式化命令 [DPIDBaseFormatSD = 218](base_msg_define.md#dpidbaseformatsd-218)，设备端响应结果给服务器，服务器主动推送 [MIDRobotPushData](mid_msg_define/mid_define.md#midrobotputdata20211) 接口 [DPIDBaseFormatSDAck = 203](base_msg_define.md#dpidbaseformatsdack-203) 给客户端。
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串|
 
 
@@ -74,12 +75,14 @@
 
 ## DPIDBaseSDStatus = 204
 
-*  设备上报SD卡容量信息 / 客户端查询 
+*  设备SD卡容量信息 / 客户端查询 
+*  实时向设备发起查询请求：仅适合用户主动触发场景，节省功耗（需要避免高频次调用：如主页列表，消息中心等） 
+*  APP端 调用 MIDRobotGetData 类接口获取，服务器使用 MIDRobotPushData 推送给APP端。
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串|
 
 
@@ -101,7 +104,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |power|bool| 是否 |
 
 ---
@@ -113,7 +116,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |battery|int|电量 百分比|
 
 ---
@@ -125,7 +128,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |version|string|  字符串|
 
 ---
@@ -137,7 +140,7 @@
 |  data定义 |    类型| 描述 |
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |sysVersion|string|  字符串|
 
 ---
@@ -149,7 +152,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |led|bool| 指示灯 |
 
 ---
@@ -163,7 +166,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |powerOn|int| 开机时间戳，单位秒。示例（2017-02-22 18: 57 :37）：1487761057|
 
 
@@ -176,7 +179,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |log|string| 格式已OK的字符串 |
   
 ---
@@ -201,7 +204,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string| msgpack字符串 |
 
 |  value定义 |  类型|   描述 | 
@@ -219,7 +222,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |isPushFlow|bool|  |
 
 ----
@@ -231,7 +234,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |isNTSC|bool|  |
 
 ----
@@ -243,20 +246,20 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |isMobile|bool| True 在WiFi可用的时候，优先使用移动网络， False 在WiFi可用的时候，优先使用WiFi, WiFi不可用的时候，再使用移动网络。|
 
 ----
 
 ## DPIDBaseFormatSD = 218
 
-*  格式化SD卡 
-*  响应[DPIDBaseFormatSDAck = 203](base_msg_define.md#dpidbaseformatsdack-203)
+*  格式化SD卡命令
+*  使用方式参考 [DPIDBaseFormatSDAck = 203](base_msg_define.md#dpidbaseformatsdack-203)
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|int| 占位，默认0 |
 
 ---
@@ -269,7 +272,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string |msgpack字符串 |
 
 |  value定义 |  类型|   描述 | 
@@ -288,7 +291,7 @@
 |  data定义 |    类型| 描述 |
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |version|string|  字符串|
 
 ---
@@ -304,7 +307,7 @@
 |  data定义 |    类型| 描述 |
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串 |
 
 |  value定义 |  类型|   描述 | 
@@ -315,14 +318,16 @@
 
 ---
 
-## DPIDBaseSDInfo = 222
+## DPIDBaseSDInfoOnOff = 222
 
-*  客户端查询是否插入SD卡及错误的信息，本消息是服务器对 DPIDBaseSDStatus（根据sdcard和sdcard_errno）去重后存储, 用于APP端的消息中心。
+* 1 设备端 SD 卡插拔消息， 服务器使用 MIDRobotPushData 推送给APP端。
+* 2 APP端的消息中心， APP端 调用 MIDRobotGetData 类接口获取。
+
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串 |
 
 |  value定义 |  类型|   描述 | 
@@ -336,13 +341,15 @@
 ## DPIDBaseIsExistMobile = 223
 
 * 设备端是否存在可用的移动网络。
+* 设备端插入和拔出sim卡均会上报该消息。
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |sim|int|0 未知, 1 没卡,  2 user's PIN, 3 user's PUK, 4 network PIN, 5 正常|
 
+---
 
 ## DPIDBaseCtrlLogUploadFile = 224
 
@@ -352,6 +359,64 @@
 |  data定义 |    类型| 描述 |
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |filename| string | YYYYMMDD_HHmm 示例：20161222_1122 |
 
+---
+
+## DPIDBaseIsExistNetWired = 225
+
+* 设备端是否存在可用的有线网络。
+* 设备端插入和拔出网线均会上报该消息。
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|int| 占位，默认0 |
+
+--- 
+
+## DPIDBaseIsNetWired = 226
+
+* 客户端配置/设备端查询 设备是否使用有线网络 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|isWiredNet|bool| True 使用有线网络， False 不使用有线网络。|
+
+--- 
+
+## DPIDBasePrivateIP = 227
+
+* 客户端查询/设备端上发 内网IP地址
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|IP|string| 内网IP地址。示例：192.168.0.1 |
+
+## DPIDBaseUpgradeStatus = 228
+
+* 设备端上报升级状态
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|int| 0 未升级，1 升级中  |
+
+## DPIDBaseVoltage = 229
+
+*  设备上报电压 / 客户端查询 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|voltage|int|电压 0 低电压（表示电量不足）， 1 正常|
+
+---

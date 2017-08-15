@@ -6,7 +6,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string| |
 
 
@@ -24,5 +24,5 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string| |

@@ -86,7 +86,8 @@
 
     // 双鱼眼摄像头电量低于5%
     ErrorCIDLowBattery = 150
-    
+    // timezone时区为空，关联消息：设备端获取夏令时接口。
+    ErrorCIDTimezoneEmpty = 151
     ---
     
 ### 客户端登陆类.
@@ -96,7 +97,7 @@
     // 帐号或密码错误。
 	ErrorLoginInvalidPass = 161
 	
-    // 第三方帐号登陆： access_token 验证失败。
+    // 第三方帐号登陆： 鉴权URL无效，或 open_id access_token 验证失败。
 	ErrorOpenLoginInvalidToken = 162
     
     // SDK正在初始化，请等待
@@ -180,6 +181,9 @@
     ----
     
 ### 客户端亲友关系类.
+    // 添加好友失败 对方账户未注册
+	EFriendInvalidAccount = 240
+	
 	// 已经是好友关系
 	ErrorFriendAlready = 241
     
@@ -309,4 +313,33 @@
     
     // 历史录像卡读取失败,同 ErrorSDRead
     ErrorSDIO = 2032
+    
 
+----
+
+### gray灰度发布
+    
+    // 参数错误
+	GrayInvalidParam = -2
+    
+    // 命令错误
+	GrayUnknownCmd = -1
+    
+    // 成功
+	GrayOK = 0
+    
+    // 服务器异常
+	GrayServiceError = 1
+    
+    // 未知错误
+	GrayUnknownError = 2
+    
+    // 账号错误
+	GrayAccountError = 3
+    
+    // Token错误
+	GrayTokenError = 4
+    
+    // 服务器资源不足
+	GrayResourceInsufficient = 5
+    

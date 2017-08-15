@@ -11,7 +11,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 
 [DPIDCameraWarnMsg = 505](camera_msg_define.md#dpidcamerawarnmsg-505)
@@ -23,7 +23,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 
 [DPIDCameraWarnMsgV3 = 512](camera_msg_define.md#dpidcamerawarnmsgv3-512)
@@ -35,7 +35,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 
 [DPIDBaseSDInfo = 222](base_msg_define.md#dpidbasesdinfo-222)
@@ -43,11 +43,12 @@
 ## DPIDCountUnReadBellCallMsg = 1004
 
 * 未读消息计数：（兼容2.0版设备）门铃已呼叫状态 
+* 特别说明：只记录未接听的消息计数（isOK == 0）
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 
  
@@ -56,11 +57,12 @@
 ## DPIDCountUnReadBellCallMsgV3 = 1005
 
 * 未读消息计数：（3.0版设备）门铃已呼叫状态 
+* 特别说明：只记录未接听的消息计数（isOK == 0）
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 
 [DPIDBellCallMsgV3 = 403](bell_msg_define.md#dpidbellcallmsgv3-403)
@@ -80,7 +82,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 [DPIDAccountBind = 601](account_msg_define.md#dpidaccountbind-601)
 
@@ -91,7 +93,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 [DPIDAccountWonder = 602](account_msg_define.md#dpidaccountwonder-602)
 
@@ -102,7 +104,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 [DPIDAccountShare = 603](account_msg_define.md#dpidaccountshare-603)
 
@@ -113,7 +115,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 [DPIDAccountIsShared = 604](account_msg_define.md#dpidaccountisshared-604)
 
@@ -124,7 +126,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |count|int|  msgpack字符串|
 [DPIDSystemMsg = 701](system_msg_define.md#dpidsystemmsg-701)
 

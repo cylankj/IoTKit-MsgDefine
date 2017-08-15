@@ -6,7 +6,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |enable|bool| 是否开启 |
 
 
@@ -19,7 +19,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串 |
  
  
@@ -39,7 +39,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |sensitivity|int| 灵敏度 0为低SENSITIVITY_LOW, 1为中SENSITIVITY_MIDDLE, 2为高SENSITIVITY_HIGH 默认为中 |
 
 ---
@@ -51,7 +51,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串 |
 
 |  value定义 |  类型|   描述 | 
@@ -69,7 +69,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串|
 
 
@@ -80,8 +80,12 @@
 |file|int|协商命名规则为：time_id.jpg， id取值范围[1,2,3]。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
 |regionType|int|enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeOSSEU, regionTypeOSSSG}。填充128消息下发的数据|
 |tly|string| 全景设备陀螺仪。'0'俯视, '1' 平视。| 
+|objects|int数组| 检测到的物体类型。人1，猫2，狗3，车辆4。例子，检测到人和猫：[1,2]。 | 
+|humanNum|int| 检测到的人形的个数。 | 
 
 存储路径：                [bucket]/[cid]/[timestamp]_[id].jpg ， 文件名使用图片产生时间，单位秒。
+
+objects 定义参考：[物体检测枚举类型定义](dpid_msg_define/camera_msg_define.md#物体检测枚举类型定义)
 
 ---
 
@@ -92,7 +96,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string| msgpack字符串 |
 
 
@@ -115,7 +119,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string| msgpack |
 
 |  value定义 |  类型|   描述 | 
@@ -135,7 +139,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |tly|string|全景设备陀螺仪。‘0’俯视, ‘1’ 平视。|
 
 ---
@@ -148,7 +152,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack |
 
 |  value定义 |  类型|   描述 | 
@@ -162,20 +166,20 @@
 
 ## DPIDCameraWarnAndWonder = 511
 
-*  报警消息与每日精彩的收藏关系。
-*  使用[MIDRobotSetDataByTime=20216](mid_msg_define/mid_define.md#midrobotsetdatabytime20216)增加关联关系，time 使用 DPIDCameraWarnMsg = 505 消息中的time赋值。
-*  使用[MIDRobotGetDataByTime=20218](mid_msg_define/mid_define.md#midrobotgetdatabytime20218)获取关联关系，time 使用 DPIDCameraWarnMsg = 505 消息中的time查询。
+*  报警消息 DPIDCameraWarnMsg 与 每日精彩 DPIDAccountWonder 的收藏关系。
+*  使用[MIDRobotSetDataByTime=20216](mid_msg_define/mid_define.md#midrobotsetdatabytime20216)。
+*  使用[MIDRobotGetDataByTime=20218](mid_msg_define/mid_define.md#midrobotgetdatabytime20218)。
 
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| 时间点， 单位毫秒。 赋值为 DPIDCameraWarnMsg 中的 timeMsec + index (file 字段代表的1，2，4)|
 |value|string| msgpack字符串 |
 
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|ctime|int64|每日精彩收藏时间|
+|ctimeMsec|int64|每日精彩收藏时间， 单位毫秒。 DPIDAccountWonder 中的 timeMsec |
 
 
 ---
@@ -187,7 +191,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|long| 功能消息唯一标识|
-|time| int64| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |value|string|  msgpack字符串|
 
 
@@ -202,4 +206,46 @@
 存储路径：                [bucket]/cid/[vid]/[cid]/[timestamp]_[id].jpg ， 文件名使用图片产生时间，单位秒。
 
 ---
+
+## DPIDCameraResolution = 513
+
+* 分辨率
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|Resolution|int| 分辨率 0自动 1标清 2高清 |
+
+## DPIDCameraWarnInterval = 514
+
+* 报警间隔 
+* 默认值： 客户端和设备端自设置，服务端不干涉。
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|sec|int| 秒 |
+
+## DPIDCameraObjectDetect = 515
+
+* 物体检测
+* 默认值： 客户端和设备端自设置，服务端不干涉。
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|objects| int数组 | 开启物体检测的类型。如果数组为空，则不开启。人1，猫2，狗3，车辆4。例子：需要检测人和猫：[1,2]。 |
+
+#### 物体检测枚举类型定义
+[
+TypePerson = 1
+TypeCat = 2
+TypeDog = 3
+TypeCar = 4
+]
+
+---  
 
