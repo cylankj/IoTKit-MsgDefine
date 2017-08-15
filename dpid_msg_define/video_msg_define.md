@@ -6,7 +6,7 @@
 |  data定义 |    类型| 描述 | 
 |---|---|---|
 |id|int| 功能消息唯一标识|
-|int64| int| 时间点 |
+|timeMsec| int64| DP时间点, 毫秒 |
 |mike|bool| 开启/关闭麦克风 |
 
   
