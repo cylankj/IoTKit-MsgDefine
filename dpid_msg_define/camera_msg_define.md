@@ -82,6 +82,8 @@
 |tly|string| 全景设备陀螺仪。'0'俯视, '1' 平视。| 
 |objects|int数组| 检测到的物体类型。人1，猫2，狗3，车辆4。例子，检测到人和猫：[1,2]。 | 
 |humanNum|int| 检测到的人形的个数。 | 
+|face_id|string数组|检测到的物体的标识，例子，检测到A和B：[face_id_A,face_id_B] --20170929 加入faceid
+|is_video|int|0-图片报警，1-视频报警 --20181204
 
 存储路径：                [bucket]/[cid]/[timestamp]_[id].jpg ， 文件名使用图片产生时间，单位秒。
 
@@ -157,11 +159,13 @@ objects 定义参考：[物体检测枚举类型定义](dpid_msg_define/camera_m
 
 |  value定义 |  类型|   描述 | 
 |---|---|---|
-|x |int|横坐标|
-|y |int|纵坐标|
-|r |int|半径|
-|w |int|分辨率 宽|
-|h |int|分辨率 高|
+|x |int|横坐标 x<1920|
+|y |int|纵坐标 y<1080|
+|r |int|半径   r<1080|
+|w |int|分辨率 宽 w<=1920|
+|h |int|分辨率 高 h<=1080|
+
+ 
 ---
 
 ## DPIDCameraWarnAndWonder = 511
@@ -247,5 +251,435 @@ TypeDog = 3
 TypeCar = 4
 ]
 
+---
+## DPIDCameraLiveRtmpCtrl = 516
+
+* 720双目摄像机直播推流开关控制指令
+* 客户端设置/服务端推送/设备端执行
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 |
+|---|---|---|
+| url |string| rtmp推流地址。示例：rtmp://a.rtmp.youtube.com/live2|
+| enable |int| 特征值： 0 关闭直播； 1 开启直播|
+|liveType|int|直播类型：1 facebook; 2 youtube; 3 weibo; 4 rtmp  
+
+
+---
+## DPIDCameraLiveRtmpStatus = 517
+
+* 720双目摄像机直播推流状态上报
+* 设备端上报/服务端推送/客户端查询
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 |
+|---|---|---|
+|liveType|int|直播类型：1 facebook; 2 youtube; 3 weibo; 4 rtmp
+| url |string| rtmp推流地址。示例：rtmp://a.rtmp.youtube.com/live2|
+| flag |int| 状态特征值： 1 准备直播； 2 直播中； 3 直播结束；|
+|timestamp|int|开始直播的时间戳，其它情况置位0
+| error |int| 错误特征值： 0 正确； 1 错误；|
 ---  
 
+## DPIDSetFaceIdStatus = 518
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string| msgpack字符串 |
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|face_ids|[]string|面孔标识id|
+|status|int| 0 变为陌生人，1 变为熟人, 2 删除，3 清空缓存| 
+
+---
+## DPIDCameraWarnArea = 519
+
+* 摄像机侦测区域
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串 |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|enable|bool|是否开启|
+|rects|array| 侦测区域，如:[[x1,y1,x2,y2],[x1,y1,x2,y2],...] | 
+
+|  rect定义 |  类型|   描述 | 
+|---|---|---|
+|left|float|左上x|
+|top|float|左上y|
+|right|float|右下x|
+|bottom|float| 右下y |
+
+---
+
+## DPIDCameraInfrared = 520
+
+* 摄像机红外增强识别开关
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|enable|bool|  是否开启 |
+
+---
+
+## DPIDCameraTakePicture = 521
+
+* 摄像机拍照
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|enable|bool|  是否拍照 |
+
+---
+
+## DPIDCameraTakePictureAck = 522
+
+* 摄像机拍照响应
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string| msgpack字符串 |
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|ret|int|返回码，0成功，非0失败|
+|ossType|int|oss节点|
+|time|int64| 拍照时间，单位：秒，照片oss上的存储路径:[cid]/tmp/[time].jpg，如：200000004808/tmp/1511315306.jpg| 
+|url|string|oss路径，服务器提供给2.0app使用，设备不用填写|
+|width |int|图片分辨率宽度（分辨率为1920*1080，则其值为1920）|
+|height|int|图片分辨率高度（分辨率为1920*1080，则其值为1080）|
+
+---
+
+## DPIDCameraWeChatPushCid = 523
+
+* 微信推送开关
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|enable|bool|  是否开启 |
+
+---
+
+## DPIDCameraInfraRedCid = 524
+
+* 红外夜视状态
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|status|int| 0 自动，1 关闭, 2 开启| 
+
+---
+
+## DPIDCameraUploadImage = 525
+
+* 上传报警大图
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|int| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|enable|bool| true:上传报警大图， false:不上传报警大图| 
+
+---
+
+## DPIDCameraAIWarnMsg = 526 
+
+*  AI设备报警消息
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|time| int| 时间点，单位秒 |
+|is_record|int|摄像头是否在录像中。客户端【消息中心】->【历史视频】按钮根据该字段显示。注：由于正在录制的视频需要半小时后才能查看，所以客户端对最新报警与当前时间比对，小于半小时不显示按钮|
+|file|int|协商命名规则为：time_id.jpg， id取值范围[1,2,3]。目前有三张图片，用位来表示。第一张0b001。第二张0b010。第三张0b100。三张都有就是0b111|
+|regionType|int|enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeOSSEU, regionTypeOSSSG}。填充128消息下发的数据|
+|persons|object数组|检测到的人物信息 |
+
+|  person定义 |  类型|   描述 | 
+|---|---|---|
+|name|string| 名称 |
+|sex|string|性别，男：male，女：female|
+|age|string|年龄|
+
+---
+
+## DPIDCameraAddPersonMsg = 527 
+
+*  AI添加熟人消息
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|name|string|  姓名 |
+
+---
+
+## DPIDCameraWarnVideoMsg = 528 
+
+*  （兼容2.0版设备）设备报警消息视频流
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|time| int| 时间点，单位秒 |
+|is_record|int|摄像头是否在录像中。客户端【消息中心】->【历史视频】按钮根据该字段显示。注：由于正在录制的视频需要半小时后才能查看，所以客户端对最新报警与当前时间比对，小于半小时不显示按钮|
+|regionType|int|enum{regionTypeOSSCN = 1, regionTypeOSSUS, regionTypeOSSEU, regionTypeOSSSG}。填充128消息下发的数据|
+
+存储路径：                [bucket]/[cid]/[timestamp].xxx ， 文件名使用视频产生时间，单位秒。
+
+---
+
+## DPIDCameraAIFaceSizeMsg = 529
+
+*  人脸识别尺寸设置
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|x| int| x轴像素大小 |
+|y| int| Y轴像素大小 |
+
+---
+
+## DPIDCameraWarnVideoAndImgType = 530 
+
+*  （兼容2.0版设备）设备报警消息视频流和图片选择类型
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|type|int|  1:图片报警消息  2:视频报警消息|
+
+---
+
+## DPIDCameraFaceEnable = 531
+
+* AI检测开关配置（即AI设备开启人脸抓拍功能）
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|enable|bool| 是否开启 |
+
+---
+
+## DPIDCameraFaceNumber = 532
+
+* AI摄像头单机库容
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|used|int| 以使用 |
+|total|int| 总量 |
+
+---
+## DPIDCameraGpsEnable = 533
+
+* 上报gps信息开关配置（设备端根据这个值来决定是否启用上报GPS数据）
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|int| 启用GPS上报:0--不启用，1--启用 |
+
+---
+## DPIDCameraName = 534
+
+* 设备名称（客户要给设备写一个唯一标识，故需要将webapp设置的设备名称推送给设备）
+
+|  data定义 |    类型| 描述 |
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string| 设备名称|
+
+---
+
+## DPIDPersonFeatrue = 535
+
+* 注册人脸特征值
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|person_id|string| -- |
+|person_name|string| 人物名称 |
+|age|string| 年龄 |
+|sex|string| 性别 |
+|tags|[]string| 人物标签，字符串数组 |
+|faces|[]face| 人脸属性 |
+
+|  face定义 |  类型|   描述 | 
+|---|---|---|
+|face_id|string| -- |
+|featrues|[]float32| 特征值 |
+
+---
+
+## DPIDCameraWebGateway = 536
+
+* 设备web网关开关(萝卜头后台管理中配置)
+
+|  data定义 |    类型| 描述 |
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|int| web网关:0--不启用，1--启用 |
+
+---
+
+## DPIDCameraShakingMachine = 537
+
+* 摇头机方向控制，透传消息
+
+|data定义|类型|描述|
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|value定义|类型|描述 |
+|---|---|---|
+|direction|int|方向|
+|angle|int|角度|
+
+---
+
+## DPIDCameraScript = 538
+
+* 下发脚本给设备(萝卜头后台管理中配置)
+
+|  data定义 |    类型| 描述 |
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string| 脚本文本 |
+
+---
+
+## DPIDCameraShakingEnd = 539
+
+* 摇头机方向控制，透传消息(摇头机"是否到头")
+
+|  data定义 |    类型| 描述 |
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|int| msgpack字符串 |
+
+---
+
+## DPIDCameraTemp = 540
+
+* 设备端临时记录数据，查验设备问题用
+
+|  data定义 |    类型| 描述 |
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string| 设备端自定义类型 |
+
+---
+## DPIDCameraFocus = 541
+
+* 设备调焦（在webapp上面操作）
+
+|data定义|类型|描述|
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|value定义|类型|描述 |
+|---|---|---|
+|zoom|int|变倍|
+|focus|int|聚焦|
+|aperture |int|光圈|
+
+---
+## DPIDPreset = 542
+
+* 设备预置位
+
+|data定义|类型|描述|
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|  msgpack字符串|
+
+
+|value定义|类型|描述 |
+|---|---|---|
+|type|int|1-生成新的预置位，2-使用已存在预置位,3-删除预置位|
+|index|int|预置位序号|
+
+---

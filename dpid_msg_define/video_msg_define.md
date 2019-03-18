@@ -58,7 +58,7 @@
 |---|---|---|
 |id|int| 功能消息唯一标识|
 |timeMsec| int64| DP时间点, 毫秒 |
-|recordEnable|bool| 0 关闭，1开启|
+|recordEnable|bool| 开启/关闭|
 
  
   

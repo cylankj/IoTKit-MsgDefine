@@ -419,4 +419,24 @@
 |timeMsec| int64| DP时间点, 毫秒 |
 |voltage|int|电压 0 低电压（表示电量不足）， 1 正常|
 
+## DPIDBaseRegion = 230
+
+*  服务端记录 / 客户端查询 
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|region|int|设备所在区域（设备登陆过才有记录）。CN:1，US:2，EU:3，SG:4。|
+
+## DPIDBaseLocalConf = 231
+
+*  获取 / 设置设备配置
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value|string|msgpack(json)|
+
 ---

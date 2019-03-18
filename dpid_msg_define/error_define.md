@@ -143,6 +143,12 @@
 	
 	// 十分钟内获取验证码超过3次
 	ErrorGetCodeTooFrequent = 192
+
+    // ErrorSendSmsFailed 短信接口调用失败
+	// 旧码 ESendSmsFailed = 19
+	ErrorSendSmsFailed = 193
+    // 帐号下有设备(含被分享设备)未删除
+	ErrorHasDevice = 194
 	
     
     ----
@@ -162,6 +168,19 @@
 	
 	// 设备已经被其他账号绑定。
 	ErrorCIDBinded = 204
+    
+    // 设备验证码不匹配
+	ErrorInvalidCode = 205
+
+	// 设备被自己绑定
+	ErrorCIDBindSelf = 206
+    
+    // APP上报与设备上报cid不匹配
+    ErrorCIDDiffer = 207
+    
+    // ErrorCIDBindTimeout 绑定等待180s超时
+	ErrorCIDBindTimeout = 208
+
     
     ----
     
@@ -235,6 +254,9 @@
     
     // 用户关闭云存储服务
     ErrorOSSAPIUserOFFUploading = 1102    
+    
+    // 用户首次开启云存储服务
+    ErrorOSSAPIUserOnUploading = 1103       
 
 -----
 

@@ -80,3 +80,71 @@
 |enbale|bool| 是否开启 |
 |beginTime|int64| 开始时间，单位秒 |
 |endTime|int64| 结束时间，单位秒 |
+
+## DPIDChangeLockPassword = 405
+
+* 修改开锁密码
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value| string | msgpack字符串 |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|oldPassw|string| 原密码 |
+|newPassw|string| 新密码 |
+
+## DPIDChangeLockPasswordAck = 406
+
+* 修改开锁密码响应
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|ret| int | 返回码，0成功，非0失败 |
+
+## DPIDChangeLockStatus = 407
+
+* 开锁指令
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value| string | msgpack字符串 |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|password|string| 开锁密码 |
+|status|int| 枚举 0-锁 1-开 |
+
+## DPIDChangeLockStatusAck = 408
+
+* 开锁响应
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value| string | msgpack字符串 |
+
+|  value定义 |  类型|   描述 | 
+|---|---|---|
+|ret|int| 0-成功 1-失败 2-密码错误 |
+
+## DPIDBellRing = 409
+
+* 客户端操作门铃响铃，透传DP，使用透传类接口发送数据
+
+|  data定义 |    类型| 描述 |
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|value| string | msgpack字符串 |
+
+|  value定义 |  类型|   描述 |
+|---|---|---|
+|duration|int| 响铃时长 |

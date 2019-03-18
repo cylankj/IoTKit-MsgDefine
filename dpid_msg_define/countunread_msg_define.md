@@ -67,6 +67,18 @@
 
 [DPIDBellCallMsgV3 = 403](bell_msg_define.md#dpidbellcallmsgv3-403)
 
+## DPIDCountUnReadCameraAIWarnMsg = 1006 
+
+*  未读消息计数：AI设备报警消息
+
+|  data定义 |    类型| 描述 | 
+|---|---|---|
+|id|long| 功能消息唯一标识|
+|timeMsec| int64| DP时间点, 毫秒 |
+|count|int|  msgpack字符串|
+
+[DPIDCameraAIWarnMsg = 526](camera_msg_define.md#dpidcameraaiwarnmsg-526)
+
 
 
 -----

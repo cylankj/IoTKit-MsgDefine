@@ -86,6 +86,7 @@
 | 报警和门铃截图 | [bucket]/cid/[vid]/[cid]/[timestamp]_[id].jpg |文件名使用图片产生时间，单位秒; id特征值为1，2，3。| 15 天|
 | 延时摄影图片| [bucket]/long/[vid]/[cid]/tmp/%04d.jpg | 文件名使用自然数左边补零格式化为四位字符串。 临时目录，服务器主动删除。| 临时 |
 | 设备端上传日志|[bucket]/log/[vid]/[cid]/[timestamp].zip|文件名使用上传时间戳，单位秒|两个月|
+|AI设备端抠图 |[bucket]/long/[vid]/[account]/AI/[cid]/[face_id].jpg|文件名使用 萝卜头平台 分配的face_id。 |永久保留 |
 
 
 
